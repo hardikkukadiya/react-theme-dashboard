@@ -1,6 +1,6 @@
 export const projectsTableData = [
   {
-    img: "/img/logo-xd.svg",
+    img: "/img/twitter.png",
     name: "Material XD Version",
     members: [
       { img: "/img/team-1.jpeg", name: "Romina Hadid" },
@@ -12,7 +12,7 @@ export const projectsTableData = [
     completion: 60,
   },
   {
-    img: "/img/logo-atlassian.svg",
+    img: "/img/twitter.png",
     name: "Add Progress Track",
     members: [
       { img: "/img/team-2.jpeg", name: "Ryan Tompson" },
@@ -44,7 +44,7 @@ export const projectsTableData = [
     completion: 100,
   },
   {
-    img: "/img/logo-jira.svg",
+    img: "/img/twitter.png",
     name: "Add the New Pricing Page",
     members: [{ img: "/img/team-4.jpeg", name: "Alexander Smith" }],
     budget: "$500",
