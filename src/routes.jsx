@@ -6,17 +6,15 @@ import {
   ServerStackIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/solid";
-import { FiShoppingCart } from "react-icons/fi";
+import {FiShoppingCart} from "react-icons/fi"  
 import { LuListTodo } from "react-icons/lu";
 import { FaFileArrowUp, FaRegCalendar } from "react-icons/fa6";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { FaQuestionCircle } from "react-icons/fa";
-
-// Lazy load components
-const Home = lazy(() => import("@/pages/dashboard/Home"));
-const Profile = lazy(() => import("@/pages/dashboard/Profile"));
-const SignIn = lazy(() => import("@/pages/auth/SignIn"));
-const SignUp = lazy(() => import("@/pages/auth/SignUp"));
+const Home = lazy(() => import("./pages/dashboard/home"));
+const Profile = lazy(() => import("./pages/dashboard/profile"));
+const SignIn = lazy(() => import("./pages/auth/sign-in"));
+const SignUp = lazy(() => import("./pages/auth/sign-up"));
 const Order = lazy(() => import("./pages/dashboard/Order"));
 const Products = lazy(() => import("./pages/dashboard/Products"));
 const Invoice = lazy(() => import("./pages/dashboard/Invoice"));
@@ -28,6 +26,19 @@ const Calendar = lazy(() => import("./pages/dashboard/Calendar"));
 const ChatBox = lazy(() => import("./pages/dashboard/ChatBox"));
 const Faq = lazy(() => import("./pages/dashboard/Faq"));
 const ProductsDemo = lazy(() => import("./pages/dashboard/ProductsDemo"));
+// import { SignIn, SignUp } from "@/pages/auth";
+// import { Home, Profile} from "@/pages/dashboard";
+// import Order from "./pages/dashboard/Order";
+// import Products from "./pages/dashboard/Products";
+// import Invoice from "./pages/dashboard/Invoice";
+// import TodoList from "./pages/dashboard/TodoList";
+// import Email from "./pages/dashboard/Email";
+// import DashboardDemo from "./pages/dashboard/DashboardDemo";
+// import FileManager from "./pages/dashboard/FileManager";
+// import Calendar from "./pages/dashboard/Calendar";
+// import ChatBox from "./pages/dashboard/ChatBox";
+// import Faq from "./pages/dashboard/Faq";
+// import ProductsDemo from "./pages/dashboard/ProductsDemo";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -39,97 +50,97 @@ export const routes = [
     pages: [
       {
         icon: <HomeIcon {...icon} />,
-        name: "Dashboard",
+        name: "dashboard",
         path: "/home",
         element: <Home />,
       },
       {
         icon: <HomeIcon {...icon} />,
-        name: "Dashboard Demo",
+        name: "Dashboard demo",
         path: "/dashboardDemo",
         element: <DashboardDemo />,
-      },
-      {
+      },     
+       {
         icon: <FiShoppingCart {...icon} />,
         name: "Invoice",
         path: "/invoice",
         element: <Invoice />,
       },
-      {
+          {
         icon: <LuListTodo {...icon} />,
-        name: "Todo",
+        name: "todo",
         path: "/todo",
         element: <TodoList />,
       },
-      {
+       {
         icon: <TableCellsIcon {...icon} />,
         name: "Email",
         path: "/email",
         element: <Email />,
       },
-      {
+       {
         icon: <FaFileArrowUp {...icon} />,
         name: "File Manager",
         path: "/fileManager",
         element: <FileManager />,
       },
-      {
-        icon: <IoChatbubbleEllipsesOutline {...icon} />,
+       {
+         icon: <IoChatbubbleEllipsesOutline {...icon} />,
         name: "Chat Box",
         path: "/chatBox",
         element: <ChatBox />,
       },
-      {
+       {
         icon: <FaRegCalendar {...icon} />,
         name: "Calendar",
         path: "/calendar",
         element: <Calendar />,
-      },
-      {
+      },      
+        {
         icon: <FiShoppingCart {...icon} />,
         name: "Products",
         path: "/products",
         element: <Products />,
       },
-      {
+        {
         icon: <FiShoppingCart {...icon} />,
-        name: "Products Demo",
+        name: "ProductsDemo",
         path: "/productsDemo",
         element: <ProductsDemo />,
       },
       {
         icon: <FiShoppingCart {...icon} />,
-        name: "Order",
+        name: "order",
         path: "/order",
         element: <Order />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
-        name: "Profile",
+        name: "profile",
         path: "/profile",
         element: <Profile />,
-      },
+      },   
       {
         icon: <FaQuestionCircle {...icon} />,
-        name: "FAQ",
+        name: "faq",
         path: "/faq",
         element: <Faq />,
-      },
+      },                          
     ],
   },
   {
-    title: "Auth Pages",
+    title: "auth pages",
     layout: "auth",
     pages: [
       {
         icon: <ServerStackIcon {...icon} />,
-        name: "Sign In",
+        name: "sign in",
         path: "/sign-in",
         element: <SignIn />,
       },
       {
         icon: <RectangleStackIcon {...icon} />,
-        name: "Sign Up",
+        name: "sign up",
         path: "/sign-up",
         element: <SignUp />,
       },
