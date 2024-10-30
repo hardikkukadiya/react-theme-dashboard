@@ -212,7 +212,7 @@ const UserDashboardCard = () => {
         <div className="h-[400px] overflow-y-auto custom px-4">
           <ul className="space-y-4">
             <SocialListItem
-              imgSrc="/img/twitter-logo.svg"
+              imgSrc="/img/twitter.png"
               platform="Twitter"
               count={175}
               growth={45}
@@ -221,7 +221,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4">
             <SocialListItem
-              imgSrc="/img/twitter-logo.svg"
+              imgSrc="/img/twitter.png"
               platform="Twitter"
               count={175}
               growth={45}
@@ -230,7 +230,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4">
             <SocialListItem
-              imgSrc="/img/twitter-logo.svg"
+              imgSrc="/img/twitter.png"
               platform="Twitter"
               count={175}
               growth={45}
@@ -239,7 +239,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4">
             <SocialListItem
-              imgSrc="/img/twitter-logo.svg"
+              imgSrc="/img/twitter.png"
               platform="Twitter"
               count={175}
               growth={45}
@@ -248,7 +248,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4">
             <SocialListItem
-              imgSrc="/img/twitter-logo.svg"
+              imgSrc="/img/twitter.png"
               platform="Twitter"
               count={175}
               growth={45}
@@ -257,7 +257,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4">
             <SocialListItem
-              imgSrc="/img/twitter-logo.svg"
+              imgSrc="/img/twitter.png"
               platform="Twitter"
               count={175}
               growth={45}
