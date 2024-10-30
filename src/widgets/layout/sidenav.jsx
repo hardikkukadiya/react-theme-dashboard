@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { useMaterialTailwindController, setOpenSidenav } from "../../context";
 import { useState } from "react";
+import { setActive } from "@material-tailwind/react/components/Tabs/TabsContext";
 
 export function Sidenav({ brandImg, brandName, routes }) {
   const [controller, dispatch] = useMaterialTailwindController();
@@ -78,10 +79,9 @@ export function Sidenav({ brandImg, brandName, routes }) {
                           : sidenavType === "dark"
                           ? "white"
                           : "blue-gray"
-                      }
+                      }                    
                       className="flex items-center gap-4 px-4 capitalize"
-                      fullWidth
-                    >
+                      fullWidth>
                       {icon}
                       <Typography
                         color="inherit"
