@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import { CgCloseO } from "react-icons/cg";
 import {
   Avatar,
