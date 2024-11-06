@@ -2,14 +2,12 @@ import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import { CgCloseO } from "react-icons/cg";
 import {
-  Avatar,
   Button,
   IconButton,
   Typography,
 } from "@material-tailwind/react";
 import { useMaterialTailwindController, setOpenSidenav } from "../../context";
 import { useState } from "react";
-import { setActive } from "@material-tailwind/react/components/Tabs/TabsContext";
 
 export function Sidenav({ brandImg, brandName, routes }) {
   const [controller, dispatch] = useMaterialTailwindController();

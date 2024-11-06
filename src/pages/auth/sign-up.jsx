@@ -7,11 +7,11 @@ import { IoLogoGoogle } from "react-icons/io5";
 
 export function SignUp() {
   return (
-    <section class="bg-gray-100 py-10 lg:py-[40px]">
-      <div class="container">
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full px-4">
-            <div class=" max-w-[525px] mx-auto  text-center bg-white
+    <section className="bg-gray-100 py-10 lg:py-[40px]">
+      <div className="container">
+        <div className="flex flex-wrap -mx-4">
+          <div className="w-full px-4">
+            <div className=" max-w-[525px] mx-auto  text-center bg-white
                rounded-lg
                relative
                overflow-hidden
@@ -22,11 +22,11 @@ export function SignUp() {
                ">
               <div className="text-2xl text-[#577fec] mb-7">Join Us Today</div>              
               <form>               
-                <div class="mb-6">
+                <div className="mb-6">
                   <input
                     type="text"
                     placeholder="Enter your Email"
-                    class="
+                    className="
                         w-full
                         rounded-md
                         border
@@ -42,11 +42,11 @@ export function SignUp() {
                         "
                   />
                 </div>
-                <div class="mb-6">
+                <div className="mb-6">
                   <input
                     type="password"
                     placeholder="Enter Password Here"
-                    class="
+                    className="
                         w-full
                         rounded-md
                         border
@@ -80,11 +80,11 @@ export function SignUp() {
                   }
                   containerProps={{ className: "-ml-2.5" }}
                 />
-                <div class="mb-10">
+                <div className="mb-10">
                   <input
                     type="submit"
                     value="Register now"
-                    class="
+                    className="
                         w-full
                         rounded-md
                         border
@@ -101,12 +101,12 @@ export function SignUp() {
                   />
                 </div>
               </form>
-              <p class="text-base mb-6 text-[#adadad]">Connect With</p>
-              <div class="flex justify-between -mx-2 mb-12">
-                <div class="px-2 w-full">
+              <p className="text-base mb-6 text-[#adadad]">Connect With</p>
+              <div className="flex justify-between -mx-2 mb-12">
+                <div className="px-2 w-full">
                   <div
 
-                    class="
+                    className="
                         flex
                         h-11
                         items-center
@@ -119,10 +119,10 @@ export function SignUp() {
                     <span><FaFacebookF size={20} color="white" /></span>
                   </div>
                 </div>
-                <div class="px-2 w-full">
+                <div className="px-2 w-full">
                   <div
 
-                    class="
+                    className="
                         flex
                         h-11
                         items-center
@@ -135,10 +135,10 @@ export function SignUp() {
                     <span><FaTwitter size={20} color="white" /></span>
                   </div>
                 </div>
-                <div class="px-2 w-full">
+                <div className="px-2 w-full">
                   <div
 
-                    class="
+                    className="
                         flex
                         h-11
                         items-center

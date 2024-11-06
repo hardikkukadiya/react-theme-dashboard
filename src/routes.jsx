@@ -135,13 +135,13 @@ export const routes = [
       {
         icon: <ServerStackIcon {...icon} />,
         name: "sign in",
-        path: "/sign-in",
+        path: "/auth/sign-in",
         element: <SignIn />,
       },
       {
         icon: <RectangleStackIcon {...icon} />,
         name: "sign up",
-        path: "/sign-up",
+        path: "/auth/sign-up",
         element: <SignUp />,
       },
     ],

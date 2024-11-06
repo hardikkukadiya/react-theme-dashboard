@@ -4,11 +4,11 @@ import { IoLogoGoogle } from "react-icons/io5";
 
 export function SignIn() {
   return (
-       <section class="bg-gray-100 py-10 lg:py-[40px]">
-            <div class="container">
-          <div class="flex flex-wrap -mx-4">
-            <div class="w-full px-4">
-              <div class=" max-w-[525px] mx-auto  text-center bg-white
+       <section className="bg-gray-100 py-10 lg:py-[40px]">
+            <div className="container">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full px-4">
+              <div className=" max-w-[525px] mx-auto  text-center bg-white
                rounded-lg
                relative
                overflow-hidden
@@ -18,9 +18,9 @@ export function SignIn() {
                md:px-[60px]
                ">
                                 <span className="text-2xl text-[#577fec]">Sign In</span>
-                <div class="mb-10 md:mb-10 text-center">
+                <div className="mb-10 md:mb-10 text-center">
                   <div                
-                    class="inline-block mx-auto">                                         
+                    className="inline-block mx-auto">                                         
                     <div className="flex justify-center items-center text-center gap-3">                  
                     <img loading="lazy" src="/img/khanakLogo.png" alt=""  className="h-12 w-12"/>
                       <span className="text-xl">Khanak Dashboard</span>
@@ -28,11 +28,11 @@ export function SignIn() {
                                      </div>
                                 </div>
                 <form>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
                       type="name"
                       placeholder="Enter your name"
-                      class="
+                      className="
                         w-full
                         rounded-md
                         border
@@ -48,11 +48,11 @@ export function SignIn() {
                         "
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
                       type="text"
                       placeholder="Enter your Email"
-                      class="
+                      className="
                         w-full
                         rounded-md
                         border
@@ -68,11 +68,11 @@ export function SignIn() {
                         "
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
                       type="password"
                       placeholder="Enter Password Here"
-                      class="
+                      className="
                         w-full
                         rounded-md
                         border
@@ -88,11 +88,11 @@ export function SignIn() {
                         "
                     />
                   </div>
-                  <div class="mb-10">
+                  <div className="mb-10">
                     <input
                       type="submit"
                       value="Sign In"
-                      class="
+                      className="
                         w-full
                         rounded-md
                         border
@@ -108,12 +108,12 @@ export function SignIn() {
                     />
                   </div>
                 </form>
-                <p class="text-base mb-6 text-[#adadad]">Connect With</p>
-                <div class="flex justify-between -mx-2 mb-12">
-                  <div class="px-2 w-full">
+                <p className="text-base mb-6 text-[#adadad]">Connect With</p>
+                <div className="flex justify-between -mx-2 mb-12">
+                  <div className="px-2 w-full">
                     <div
                        
-                      class="
+                      className="
                         flex
                         h-11
                         items-center
@@ -126,10 +126,10 @@ export function SignIn() {
                       <span><FaFacebookF size={20} color="white"/></span>
                     </div>
                   </div>
-                  <div class="px-2 w-full">
+                  <div className="px-2 w-full">
                     <div
                        
-                      class="
+                      className="
                         flex
                         h-11
                         items-center
@@ -142,10 +142,10 @@ export function SignIn() {
                       <span><FaTwitter size={20} color="white" /></span>
                     </div>
                   </div>
-                  <div class="px-2 w-full">
+                  <div className="px-2 w-full">
                     <div
                        
-                      class="
+                      className="
                         flex
                         h-11
                         items-center
@@ -160,7 +160,7 @@ export function SignIn() {
                   </div>
                 </div>
                 <a
-                  class="
+                  className="
                   text-base
                   inline-block
                   mb-2
@@ -168,9 +168,9 @@ export function SignIn() {
                   hover:underline hover:text-primary" >
                   Forget Password?
                 </a>
-                <p class="text-base text-[#adadad]">
+                <p className="text-base text-[#adadad]">
                   Not a member yet?
-                  <a class="text-primary hover:underline">
+                  <a className="text-primary hover:underline">
                     Sign Up
                   </a>
                 </p>
