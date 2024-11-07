@@ -149,7 +149,7 @@ const FileManager = () => {
               </div>
             </div>
           </div>
-          <div className="h-auto sm:h-[420px] bg-white rounded-md p-4 overflow-y-auto custom">
+          <div className="h-auto sm:h-[420px] bg-white rounded-md p-3 overflow-y-auto custom">
             <div className="flex justify-between">
               <span className="text-lg sm:text-xl text-blue-600">45.5 GB</span>
               <span className="text-lg sm:text-xl text-gray-600">50 GB</span>
