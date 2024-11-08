@@ -58,24 +58,24 @@ const Products = () => {
     setEdit(true);
   };
   
-  // const handleDelete = (index) => {
-  //   const updatedProducts = products.filter((_, i) => i !== index);
-  //   setProducts(updatedProducts);
-  //   toast.success("Product deleted");
+  const handleDelete = (index) => {
+    const updatedProducts = products.filter((_, i) => i !== index);
+    setProducts(updatedProducts);
+    toast.success("Product deleted");
+  };
+  // const handleDeleteClick = (index) => {
+  //   setDeleteIndex(index); // Set the index of the item to delete
+  //   setOpen(true); // Open the confirmation dialog
   // };
-  const handleDeleteClick = (index) => {
-    setDeleteIndex(index); // Set the index of the item to delete
-    setOpen(true); // Open the confirmation dialog
-  };
-  const handleDelete = () => {
-    if (deleteIndex !== null) {
-      const updatedProducts = products.filter((_, i) => i !== deleteIndex);
-      setProducts(updatedProducts);
-      toast.success("Product deleted");
-      setOpen(false); // Close the dialog
-      setDeleteIndex(null); // Reset the deleteIndex
-    }
-  };
+  // const handleDelete = () => {
+  //   if (deleteIndex !== null) {
+  //     const updatedProducts = products.filter((_, i) => i !== deleteIndex);
+  //     setProducts(updatedProducts);
+  //     toast.success("Product deleted");
+  //     setOpen(false); // Close the dialog
+  //     setDeleteIndex(null); // Reset the deleteIndex
+  //   }
+  // };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -276,7 +276,7 @@ const Products = () => {
                         <IconButton onClick={() => handleView(index)} variant="text">
                           <AiOutlineEye color="#2377FC" size={18} />
                         </IconButton>
-                      <IconButton onClick={() => handleDeleteClick(index)} variant="text">
+                      <IconButton onClick={() => handleDelete(index)} variant="text">
                           <RiDeleteBinLine color="#FF5200" size={18} />
                         </IconButton>
                     </td>
