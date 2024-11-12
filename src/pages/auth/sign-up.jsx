@@ -7,8 +7,8 @@ import { IoLogoGoogle } from "react-icons/io5";
 
 export function SignUp() {
   return (
-    <section className="bg-gray-100 py-10 lg:py-[40px]">
-      <div className="container">
+    <section className="bg-gray-100 min-h-screen py-10">
+      <div className="">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div className=" max-w-[525px] mx-auto  text-center bg-white
@@ -72,7 +72,7 @@ export function SignUp() {
                       I agree the&nbsp;
                       <a
                         href="#"
-                        className="font-normal text-black transition-colors hover:text-gray-900 underline"
+                        className="font-normal text-black transition-colors hover:text-blue-500 underline"
                       >
                         Terms and Conditions
                       </a>

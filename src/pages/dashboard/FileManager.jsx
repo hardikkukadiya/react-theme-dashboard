@@ -61,7 +61,7 @@ const FileManager = () => {
   
   return (
     <div className="mt-5">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <div className="space-y-4">
           <div className="h-auto sm:h-[600px] bg-white rounded-md p-4 overflow-y-auto">
             <div className="h-16 flex items-center">

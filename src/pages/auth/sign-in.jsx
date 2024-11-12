@@ -1,14 +1,15 @@
 import { FaFacebookF, FaTwitter } from "react-icons/fa6";
 import { IoLogoGoogle } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 
 export function SignIn() {
   return (
-       <section className="bg-gray-100 py-10 lg:py-[40px]">
-            <div className="container">
+       <section className="bg-gray-100 min-h-screen py-10">
+            <div className="">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
-              <div className=" max-w-[525px] mx-auto  text-center bg-white
+              <div className="max-w-[525px] mx-auto  text-center bg-white
                rounded-lg
                relative
                overflow-hidden
@@ -165,16 +166,15 @@ export function SignIn() {
                   inline-block
                   mb-2
                   text-[#adadad]
-                  hover:underline hover:text-primary" >
+                  hover:underline hover:text-blue-500" >
                   Forget Password?
                 </a>
                 <p className="text-base text-[#adadad]">
                   Not a member yet?
-                  <a className="text-primary hover:underline">
+                <Link to={"/auth/auth/sign-up"} className="text-primary hover:text-blue-500 hover:underline">
                     Sign Up
-                  </a>
-                </p>
-              
+                  </Link>
+                </p>              
               </div>
             </div>
           </div>
