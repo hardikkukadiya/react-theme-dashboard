@@ -64,7 +64,7 @@ const Invoice = () => {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <div className="max-w-5xl mt-10 mx-auto pb-8">
+          <div className="min-w-full mt-10 mx-auto pb-8">
             <table className="min-w-full border-collapse border border-gray-200">
               <thead>
                 <tr className="border border-b-2 border-white">
