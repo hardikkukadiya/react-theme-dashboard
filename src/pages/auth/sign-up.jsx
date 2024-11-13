@@ -4,6 +4,7 @@ import {
 } from "@material-tailwind/react";
 import { FaFacebookF, FaTwitter } from "react-icons/fa6";
 import { IoLogoGoogle } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export function SignUp() {
   return (
@@ -70,12 +71,12 @@ export function SignUp() {
                       className="flex items-center justify-start font-medium"
                     >
                       I agree the&nbsp;
-                      <a
-                        href="#"
+                      <Link
+                        to={"/"}
                         className="font-normal text-black transition-colors hover:text-blue-500 underline"
                       >
                         Terms and Conditions
-                      </a>
+                      </Link>
                     </Typography>
                   }
                   containerProps={{ className: "-ml-2.5" }}

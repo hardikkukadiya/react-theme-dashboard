@@ -63,7 +63,7 @@ const ChatBox = () => {
 
     return (
         <div className='mt-5'>
-            <div className="flex flex-col bg-white rounded-md md:flex-row "> 
+            <div className="flex flex-col bg-white rounded-md md:flex-row min-h-screen"> 
                 <div className="w-full md:w-[33%] p-4 border-r">
                     <div className="flex items-center space-x-3">
                         <img loading="lazy" src="/img/team-2.jpeg" alt="User Avatar" className="w-10 h-10 rounded-full" />
@@ -111,10 +111,10 @@ const ChatBox = () => {
 
                     <div className="mt-6">
                         <h3 className="text-gray-500">RECENT CHATS</h3>
-                        <div className="mt-3 space-y-1 overflow-y-auto custom h-52 ">
+                        <div className="mt-3 space-y-1 overflow-y-auto custom h-[50vh]">
                             <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="https://i.pravatar.cc/40?img=1" alt="Chat User" className="w-8 h-8 rounded-full" />
+                                    <img loading="lazy" src="/img/team-4.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
                                         <p className="font-medium">Louis Litt</p>
                                         <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
@@ -125,7 +125,7 @@ const ChatBox = () => {
 
                             <div className="flex items-center justify-between bg-[#dcedff] p-3 cursor-pointer">
                                 <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="https://i.pravatar.cc/40?img=2" alt="Chat User" className="w-8 h-8 rounded-full" />
+                                    <img loading="lazy" src="/img/team-2.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
                                         <p className="font-medium">Harvey Specter</p>
                                         <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun...</p>
@@ -135,7 +135,7 @@ const ChatBox = () => {
                             </div>
                             <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="https://i.pravatar.cc/40?img=1" alt="Chat User" className="w-8 h-8 rounded-full" />
+                                    <img loading="lazy" src="/img/team-3.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
                                         <p className="font-medium">Louis Litt</p>
                                         <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
@@ -145,7 +145,7 @@ const ChatBox = () => {
                             </div>
                             <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="https://i.pravatar.cc/40?img=1" alt="Chat User" className="w-8 h-8 rounded-full" />
+                                    <img loading="lazy" src="/img/team-4.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
                                         <p className="font-medium">Louis Litt</p>
                                         <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
@@ -155,7 +155,7 @@ const ChatBox = () => {
                             </div>
                             <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="https://i.pravatar.cc/40?img=1" alt="Chat User" className="w-8 h-8 rounded-full" />
+                                    <img loading="lazy" src="/img/team-2.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
                                         <p className="font-medium">Louis Litt</p>
                                         <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
@@ -165,7 +165,7 @@ const ChatBox = () => {
                             </div>
                             <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="https://i.pravatar.cc/40?img=1" alt="Chat User" className="w-8 h-8 rounded-full" />
+                                    <img loading="lazy" src="/img/team-1.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
                                         <p className="font-medium">Louis Litt</p>
                                         <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
@@ -177,7 +177,7 @@ const ChatBox = () => {
                     </div>
                 </div>
 
-                <div className="flex-grow w-full md:w-3/4 flex flex-col justify-between h-[550px]">
+                <div className="flex-grow w-full md:w-3/4 flex flex-col justify-between h-[100vh]">
                     <div className="flex-grow p-6 space-y-4 overflow-y-auto custom">
                         {messages.length === 0 ? (
                             <p className="bg-gray-200 text-gray-700 p-3 rounded-lg max-w-xs">
@@ -190,7 +190,7 @@ const ChatBox = () => {
                                     className={`flex ${msg.sender === 'user' ? 'justify-end' : 'items-start'} space-x-2`}
                                 >
                                     {msg.sender === 'user' ? null : (
-                                        <img loading="lazy" src="https://i.pravatar.cc/40?img=2" alt="Avatar" className="w-10 h-10 rounded-full" />
+                                        <img loading="lazy" src="/img/team-1.jpeg" alt="Avatar" className="w-10 h-10 rounded-full" />
                                     )}
                                     <div>
                                         {msg.type === 'text' ? (
@@ -212,7 +212,7 @@ const ChatBox = () => {
                         )}
                     </div>
 
-                    <div className="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4 shadow-md">
+                    <div className="flex flex-row items-center h-16 w-full px-4">
                         <div>
                             <button onClick={() => fileInputRef.current.click()} className="flex items-center justify-center text-gray-500 hover:text-gray-600">
                                 <span><FiPaperclip size={20} /></span>

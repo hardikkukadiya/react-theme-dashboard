@@ -44,7 +44,7 @@ export function Home() {
       <div className="mb-6 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4">
         {loading
           ? Array.from({ length: 4 }).map((_, index) => (
-              <Skeleton key={index} className="h-24" />
+              <Skeleton key={index} className="h-28" />
             ))
           : statisticsCardsData.map(({ icon, title, footer, ...rest }) => (
               <StatisticsCard
