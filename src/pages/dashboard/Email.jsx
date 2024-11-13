@@ -67,7 +67,7 @@ const Email = () => {
               <span>Compose</span>
             </div>
           </div>
-          <div className="px-2 pt-4 pb-8 border-r border-gray-300 h-[450px] overflow-y-auto custom">
+          <div className="px-2 pt-4 pb-8 border-r border-gray-300 max-h-screen overflow-y-auto custom">
             <ul className="space-y-2">
               <li>
                 <div className="bg-gray-500 bg-opacity-30 text-blue-600 flex items-center justify-between py-1.5 px-4 rounded cursor-pointer">
@@ -230,13 +230,13 @@ const Email = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gray-100 mb-6 rounded-md overflow-y-auto h-[450px] custom">
+          <div className="bg-gray-100 mb-6 rounded-md overflow-y-auto max-h-screen custom">
             {selectedEmail ? (
-              <div>
+              <div className="p-4">
                 <EmailProfile email={selectedEmail} />
                 <button
                   onClick={handleBackClick}
-                  className="px-4 py-2 bg-blue-500 text-white rounded mt-4"
+                  className="px-4 py-2 bg-blue-500 text-white rounded mt-2.5"
                 >
                   Back to Email List
                 </button>

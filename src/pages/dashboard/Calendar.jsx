@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Calendar as BigCalendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -49,15 +49,28 @@ const Calendar = () => {
         setCurrentEvent(null);
     };
 
+    const [calendarHeight, setCalendarHeight] = useState(500);
+    useEffect(() => {
+        const updateHeight = () => {
+            const height = window.innerHeight - 100; 
+            setCalendarHeight(height);
+        };
+        updateHeight();
+
+        window.addEventListener('resize', updateHeight);
+        return () => window.removeEventListener('resize', updateHeight);
+    }, []);
+
     return (
         <div className='mt-5'>
-            <div className='bg-white p-4 rounded-lg'>
+            <div className='bg-white p-4 rounded-lg '>
                 <BigCalendar
                     localizer={localizer}                
                     events={events}
                     startAccessor="start"
                     endAccessor="end"
-                    style={{ height: 500 }}
+                    // style={{ height: 500 }}
+                    style={{ height: calendarHeight }}
                     selectable
                     onSelectSlot={handleDateSelect}
                     onSelectEvent={handleEventClick}

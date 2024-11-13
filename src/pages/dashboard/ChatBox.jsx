@@ -66,7 +66,7 @@ const ChatBox = () => {
             <div className="flex flex-col bg-white rounded-md md:flex-row "> 
                 <div className="w-full md:w-[33%] p-4 border-r">
                     <div className="flex items-center space-x-3">
-                        <img loading="lazy" src="https://i.pravatar.cc/40" alt="User Avatar" className="w-10 h-10 rounded-full" />
+                        <img loading="lazy" src="/img/team-2.jpeg" alt="User Avatar" className="w-10 h-10 rounded-full" />
                         <div>   
                             <h2 className="text-lg font-semibold">jon dues</h2>
                             <p className="text-sm text-green-500">Active Now</p>

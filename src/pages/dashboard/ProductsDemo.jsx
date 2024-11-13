@@ -66,8 +66,8 @@ const ProductsDemo = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-11">
+    <div className="mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
         {loading 
           ? Array.from({ length: 8 }).map((_, index) => <SkeletonCard key={index} />)
           : productData.map((product, index) => (

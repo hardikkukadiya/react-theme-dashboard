@@ -448,7 +448,7 @@ const FileManager = () => {
               <span className="text-[#1ABB9C] text-sm">View All</span>
             </div>
             <div className="mt-5 w-full">
-              <div className="shadow overflow-hidden rounded border-b border-gray-200 overflow-y-auto h-[470px] custom">
+              <div className="shadow overflow-hidden rounded border-b border-gray-200 overflow-y-auto overflow-x-auto h-[470px] custom">
                 <table className="min-w-full bg-white">
                   <thead className="text-black">
                     <tr>
@@ -461,7 +461,7 @@ const FileManager = () => {
                   <tbody>
                     {data?.map((file, index) => (
                       <tr key={index} className={`bg-${index % 2 === 0 ? 'gray-100' : 'white'} hover:bg-gray-200 transition duration-200`}>
-                        <td className="py-3 px-4 text-left text-[#1ABB9C] flex gap-2 justify-center items-center">
+                        <td className="py-3 px-4 text-left text-[#1ABB9C] flex gap-2 justify-start items-center">
                           <FaFolder />
                           <div className="text-center">{file.name}</div>
                         </td>

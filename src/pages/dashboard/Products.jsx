@@ -206,6 +206,55 @@ const Products = () => {
               </div>
             </div>
           </div>
+          {/* <div className="mb-4 grid gap-4 mt-2 md:grid-cols-12 md:items-center md:gap-2">
+            <div className="w-full md:col-span-3">
+              <Input
+                label="Search"
+                icon={<MagnifyingGlassIcon className="h-5 w-5" />}
+              />
+            </div>
+
+            <button
+              onClick={handleUploadClick}
+              className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
+            >
+              <ArrowUpTrayIcon className="w-5 h-5" />
+              <span>Upload</span>
+            </button>
+
+            <input
+              ref={fileInputRef}
+              type="file"
+              onChange={handleFileChange}
+              className="hidden"
+            />
+
+            <button
+              onClick={handleDownloadClick}
+              className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100 md:col-span-2"
+            >
+              <ArrowDownTrayIcon className="w-5 h-5" />
+              <span>Download</span>
+            </button>
+
+            <button className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
+              <FolderPlusIcon className="w-5 h-5" />
+              <span>Create folder</span>
+            </button>
+
+            <button className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
+              <FunnelIcon className="w-5 h-5" />
+              <span>Filter</span>
+            </button>
+
+            <button
+              onClick={() => setEdit(true)}
+              className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
+            >
+              <FolderPlusIcon className="w-5 h-5" />
+              <span>Add Product</span>
+            </button>
+          </div> */}
 
         </CardHeader>
 
@@ -398,8 +447,7 @@ const Products = () => {
           </Button>
         </DialogFooter>
       </Dialog>
-
-
+      
       <Dialog 
         size="md"    
         open={edit} handler={() => setEdit(false)}>
