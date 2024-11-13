@@ -1,11 +1,11 @@
 import React from "react";
 import { FaFileAlt } from "react-icons/fa";
-import { FaFolder, FaRegFolder, FaRegImage, FaRegImages, FaVideo } from "react-icons/fa6";
+import { FaDropbox, FaFolder, FaGoogleDrive, FaRegFolder, FaRegImage, FaRegImages, FaVideo } from "react-icons/fa6";
 import { IoDocumentTextOutline, IoImageOutline, IoSearch, IoVideocamOutline } from "react-icons/io5";
 import { MdPeople } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { Avatar } from "@material-tailwind/react";
-import { BiDevices } from "react-icons/bi";
+import { BiDevices, BiSolidDoorOpen } from "react-icons/bi";
 import { FiMusic, FiRefreshCcw } from "react-icons/fi";
 import { PiPlugChargingLight } from "react-icons/pi";
 import { RiDeleteBin2Line } from "react-icons/ri";
@@ -245,7 +245,7 @@ const FileManager = () => {
                 <div className="flex justify-between">
                   <div className="bg-[#1ABB9C] h-14 w-14 rounded-lg flex justify-center items-center">
                     <span className="text-white">
-                      <MdPeople size={30} />
+                      <FaGoogleDrive size={30} />
                     </span>
                   </div>
                   <div className="flex justify-center items-center">
@@ -276,7 +276,7 @@ const FileManager = () => {
                 <div className="flex justify-between">
                   <div className="bg-[#f5365c] h-14 w-14 rounded-lg flex justify-center items-center">
                     <span className="text-white">
-                      <MdPeople size={30} />
+                      <FaDropbox size={30} />
                     </span>
                   </div>
                   <div className="flex justify-center items-center">
@@ -307,7 +307,7 @@ const FileManager = () => {
                 <div className="flex justify-between">
                   <div className="bg-[#fb6340] h-14 w-14 rounded-lg flex justify-center items-center">
                     <span className="text-white">
-                      <MdPeople size={30} />
+                      <BiSolidDoorOpen size={30} />
                     </span>
                   </div>
                   <div className="flex justify-center items-center">
