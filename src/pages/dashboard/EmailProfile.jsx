@@ -8,20 +8,21 @@ const EmailProfile = ({ email }) => {
         It is a long established fact that a reader will be distracted.{" "}
       </div>
       <hr className="border-blue-gray-200 my-5" />
-      <div className="flex justify-between">
-        <div className="flex gap-3 justify-center items-center">
+      <div className="flex flex-wrap justify-between items-center">
+        <div className="flex gap-3 items-center">
           <Avatar
             src="/img/team-1.jpeg"
-            alt="Avtar"
+            alt="Avatar"
             size="md"
             className="border border-blue-gray-50 bg-blue-gray-50/50 object-cover"
           />
-          <span>{email.name}</span>
+          <span className="text-sm md:text-base">{email.name}</span>
         </div>
-        <div className="flex justify-center items-center text-gray-500">
+        <div className="flex justify-center items-center text-gray-500 text-xs md:text-sm mt-2 md:mt-0">
           Sep 15, 2020, 11:04 PM (19 hours ago)
         </div>
       </div>
+
       <div className="mt-5 text-gray-500">{email.message}</div>
       <div className="mt-4">
         <div className="text-2xl text-blue-gray-700 font-semibold">
