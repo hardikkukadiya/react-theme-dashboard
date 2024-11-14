@@ -60,7 +60,7 @@ export function Profile() {
               </div>
             </div>            
           </div>
-          <div className="gird-cols-1 mb-12 grid gap-12 px-4 lg:grid-cols-2 xl:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 px-4 mb-12 md:grid-cols-2 lg:grid-cols-2">
             <div>
               <Typography variant="h6" color="blue-gray" className="mb-3">
                 Platform Settings
@@ -87,44 +87,55 @@ export function Profile() {
                   </div>
                 ))}
               </div>
-            </div>            
-            <div className="p-4 flex">
-              <div>
+            </div>
+            <div className="p-4 flex flex-col gap-6">
               <h3 className="text-xl font-bold">Profile Information</h3>
-                <div className="flex mt-2 gap-3"><div>First Name:</div> <span className="font-semibold text-black">{profile.firstName}</span></div>
-                <div className="flex mt-2 gap-3"><div>Mobile:</div> <span className="font-semibold text-black">{profile.mobile}</span></div>
-                <div className="flex mt-2 gap-3"><div>Email:</div> <span className="font-semibold text-black">{profile.email}</span></div>
-                <div className="flex mt-2 gap-3"><div>Location:</div> <span className="font-semibold text-black">{profile.location}</span></div>
-                <div className="pt-4">Social media</div>
-                <div className="grid grid-cols-8 gap-2 mt-2">
-                  {profile.files && profile.files.length > 0 ? (
-                    profile.files.map((file, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        {file.type.startsWith('image/') ? (
-                          <img
-                            src={URL.createObjectURL(file)}
-                            loading="lazy"
-                            alt={file.name}
-                            className="w-10 h-10 object-cover rounded"
-                          />
-                        ) : (                        
-                          <span className="font-semibold text-black">{file.name}</span>
-                        )}
-                      </div>
-                    ))
-                  ) : (
-                    <span className="text-gray-500">No files uploaded.</span>
-                  )}
+              <div className="flex">
+              <div>
+              <div className="flex gap-3 mb-2">
+                <div>First Name:</div>
+                <span className="font-semibold text-black">{profile.firstName}</span>
+              </div>
+              <div className="flex gap-3 mb-2">
+                <div>Mobile:</div>
+                <span className="font-semibold text-black">{profile.mobile}</span>
+              </div>
+              <div className="flex gap-3 mb-2">
+                <div>Email:</div>
+                <span className="font-semibold text-black">{profile.email}</span>
+              </div>
+              <div className="flex gap-3 mb-2">
+                <div>Location:</div>
+                <span className="font-semibold text-black">{profile.location}</span>
+              </div>
+              <div className="pt-4">Social Media</div>
+              <div className="grid grid-cols-2 gap-2 mt-2 sm:grid-cols-4 md:grid-cols-8">
+                {profile.files && profile.files.length > 0 ? (
+                  profile.files.map((file, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      {file.type.startsWith('image/') ? (
+                        <img
+                          src={URL.createObjectURL(file)}
+                          loading="lazy"
+                          alt={file.name}
+                          className="w-10 h-10 object-cover rounded"
+                        />
+                      ) : (
+                        <span className="font-semibold text-black">{file.name}</span>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <span className="text-gray-500">No files uploaded.</span>
+                )}
                 </div>
               </div>
               <div className="w-8 h-8 cursor-pointer">
                 <HiPencilAlt size={20} color="black" onClick={handleOpen} />
+                </div>
               </div>
-              {/* <Tooltip content="Edit Profile">
-                <PencilIcon className="w-8 h-8 cursor-pointer text-blue-gray-700" onClick={handleOpen} />
-                </Tooltip> */}
             </div>
-          </div>         
+            </div>
         </CardBody>
       </Card>
       <Dialog open={open} handler={() => setOpen(!open)}>

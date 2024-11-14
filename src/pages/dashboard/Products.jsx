@@ -160,14 +160,19 @@ const Products = () => {
       <Card className="h-full w-full">
         <CardHeader floated={false} shadow={false} className="rounded-none">
           <div className="mb-4 flex flex-col justify-end gap-4 mt-2 md:flex-row md:items-center md:gap-8">
-            <div className="flex w-full shrink-0 gap-2 md:w-max mr-2">
+            {/* Search Input and Buttons Container */}
+            <div className="flex w-full shrink-0 gap-2 md:w-max mr-2 flex-col md:flex-row">
+              {/* Search Input */}
               <div className="w-full md:w-60">
                 <Input
                   label="Search"
                   icon={<MagnifyingGlassIcon className="h-5 w-5" />}
                 />
               </div>
+
+              {/* Buttons Container */}
               <div className="flex flex-wrap gap-2">
+                {/* Upload Button */}
                 <button
                   onClick={handleUploadClick}
                   className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
@@ -181,6 +186,8 @@ const Products = () => {
                   onChange={handleFileChange}
                   className="hidden"
                 />
+
+                {/* Download Button */}
                 <button
                   onClick={handleDownloadClick}
                   className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
@@ -188,14 +195,20 @@ const Products = () => {
                   <ArrowDownTrayIcon className="w-5 h-5" />
                   <span>Download</span>
                 </button>
+
+                {/* Create Folder Button */}
                 <button className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
                   <FolderPlusIcon className="w-5 h-5" />
                   <span>Create folder</span>
                 </button>
+
+                {/* Filter Button */}
                 <button className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
                   <FunnelIcon className="w-5 h-5" />
                   <span>Filter</span>
                 </button>
+
+                {/* Add Product Button */}
                 <button
                   onClick={() => setEdit(true)}
                   className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
@@ -206,56 +219,6 @@ const Products = () => {
               </div>
             </div>
           </div>
-          {/* <div className="mb-4 grid gap-4 mt-2 md:grid-cols-12 md:items-center md:gap-2">
-            <div className="w-full md:col-span-3">
-              <Input
-                label="Search"
-                icon={<MagnifyingGlassIcon className="h-5 w-5" />}
-              />
-            </div>
-
-            <button
-              onClick={handleUploadClick}
-              className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
-            >
-              <ArrowUpTrayIcon className="w-5 h-5" />
-              <span>Upload</span>
-            </button>
-
-            <input
-              ref={fileInputRef}
-              type="file"
-              onChange={handleFileChange}
-              className="hidden"
-            />
-
-            <button
-              onClick={handleDownloadClick}
-              className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100 md:col-span-2"
-            >
-              <ArrowDownTrayIcon className="w-5 h-5" />
-              <span>Download</span>
-            </button>
-
-            <button className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
-              <FolderPlusIcon className="w-5 h-5" />
-              <span>Create folder</span>
-            </button>
-
-            <button className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
-              <FunnelIcon className="w-5 h-5" />
-              <span>Filter</span>
-            </button>
-
-            <button
-              onClick={() => setEdit(true)}
-              className="flex md:col-span-2 items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100"
-            >
-              <FolderPlusIcon className="w-5 h-5" />
-              <span>Add Product</span>
-            </button>
-          </div> */}
-
         </CardHeader>
 
         <CardBody className="overflow-scroll px-0">
@@ -335,10 +298,13 @@ const Products = () => {
             </table>
           )}
         </CardBody>
-        <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
+        <CardFooter className="flex flex-col items-center justify-between border-t border-blue-gray-50 p-4 gap-4 md:flex-row md:gap-0">
+          {/* Previous Button */}
           <Button variant="outlined" size="sm">
             Previous
           </Button>
+
+          {/* Pagination Icons */}
           <div className="flex items-center gap-2">
             <IconButton variant="outlined" size="sm">
               1
@@ -362,10 +328,13 @@ const Products = () => {
               10
             </IconButton>
           </div>
+
+          {/* Next Button */}
           <Button variant="outlined" size="sm">
             Next
           </Button>
-        </CardFooter>        
+        </CardFooter>
+        
       </Card>
       <Dialog open={view} handler={() => setView(false)}>
         <DialogHeader>View Product Details</DialogHeader>
