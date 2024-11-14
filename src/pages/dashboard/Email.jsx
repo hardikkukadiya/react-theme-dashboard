@@ -155,22 +155,21 @@ const Email = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 px-2">
-          <div className="h-16 flex items-center justify-between">
-            <div className="flex items-center">
+        <div className="flex-1 px-2">         
+          <div className="h-auto md:h-16 flex flex-wrap items-center justify-between px-2 md:px-4 space-y-2 md:space-y-0">
+            <div className="flex items-center flex-wrap space-y-2 md:space-y-0">
               <div className="relative flex items-center px-0.5 space-x-0.5">
                 <input type="checkbox" className="focus:ring-0" />
               </div>
               <div className="flex items-center ml-3">
                 <button
                   title="Reload"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
-                >
+                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100">
                   <span><LuRefreshCcw size={17} /></span>
                 </button>
               </div>
-              <span className="bg-gray-300 h-6 w-[.5px] mx-3"></span>
-              <div className="flex items-center space-x-2">
+              <span className="bg-gray-300 h-6 w-[.5px] mx-3 hidden md:inline"></span>
+              <div className="flex items-center space-x-2 mt-2 md:mt-0">
                 <button
                   title="Archive"
                   className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
@@ -190,8 +189,8 @@ const Email = () => {
                   <span><RiDeleteBinLine size={17} /></span>
                 </button>
               </div>
-              <span className="bg-gray-300 h-6 w-[.5px] mx-3"></span>
-              <div className="flex items-center space-x-2">
+              <span className="bg-gray-300 h-6 w-[.5px] mx-3 hidden md:inline"></span>
+              <div className="flex items-center space-x-2 mt-2 md:mt-0">
                 <button
                   title="Mark As Read"
                   className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
@@ -212,7 +211,7 @@ const Email = () => {
                 </button>
               </div>
             </div>
-            <div className="px-2 flex items-center space-x-4 ml-auto">
+            <div className="flex items-center space-x-4 ml-auto mt-2 md:mt-0">
               <span className="text-sm text-gray-500">1-15 of 1,323</span>
               <div className="flex items-center space-x-2">
                 <button
@@ -230,6 +229,8 @@ const Email = () => {
               </div>
             </div>
           </div>
+
+
           <div className="bg-gray-100 mb-6 rounded-md overflow-y-auto max-h-screen custom">
             {selectedEmail ? (
               <div className="p-4">
