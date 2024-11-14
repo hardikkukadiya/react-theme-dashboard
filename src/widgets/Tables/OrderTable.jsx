@@ -132,7 +132,7 @@ const OrderTable = () => {
                       ))}
                     </tr>
                   </thead>
-                  <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                  {/* <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                     {orders.map((order, index) => (
                       <tr key={index}>
                         <td className="px-3 py-3 text-md font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
@@ -188,7 +188,73 @@ const OrderTable = () => {
                         </td>
                       </tr>
                     ))}
+                  </tbody> */}
+                  <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                    {orders.map((order, index) => (
+                      <tr key={index}>
+                        {/* Checkbox and ID */}
+                        <td className="px-3 py-3 text-md font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+                          <div className="flex items-center gap-x-3">
+                            <input
+                              type="checkbox"
+                              className="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:border-gray-700"
+                            />
+                            <span className="text-black">{order.id}</span>
+                          </div>
+                        </td>
+
+                        {/* Product Image and Name */}
+                        <td className="px-3 py-3 text-md text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                          <div className="flex items-center gap-x-2">
+                            <Zoom>
+                              <img
+                                className="object-cover w-8 h-8 rounded-full flex-shrink-0"
+                                src={order.product.imgSrc}
+                                loading="lazy"
+                                alt={order.product.name}
+                              />
+                            </Zoom>
+                            <h2 className="text-md font-medium dark:text-white truncate max-w-[150px] sm:max-w-none">
+                              {order.product.name}
+                            </h2>
+                          </div>
+                        </td>
+
+                        {/* Customer */}
+                        <td className="px-3 py-3 text-md dark:text-gray-300 whitespace-nowrap">
+                          {order.customer}
+                        </td>
+
+                        {/* Date */}
+                        <td className="px-3 py-3 text-md dark:text-gray-300 whitespace-nowrap">
+                          {order.date}
+                        </td>
+
+                        {/* Price */}
+                        <td className="px-3 py-3 text-md dark:text-gray-300 whitespace-nowrap">
+                          {order.price}
+                        </td>
+
+                        {/* Status */}
+                        <td className="px-3 py-3 text-md whitespace-nowrap">
+                          <span
+                            className={`${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.color} border ${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.borderColor} px-4 py-1.5 rounded-2xl hover:text-white cursor-pointer min-w-[100px] text-center block`}
+                          >
+                            {order.status}
+                          </span>
+                        </td>
+
+                        {/* Actions */}
+                        <td className="px-3 py-3">
+                          <div className="flex justify-center items-center gap-4 cursor-pointer">
+                            <RiDeleteBin6Line />
+                            <LuUploadCloud />
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
+
                 </table>
               </div>
             </div>

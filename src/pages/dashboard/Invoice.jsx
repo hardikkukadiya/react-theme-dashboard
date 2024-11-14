@@ -32,19 +32,28 @@ const Invoice = () => {
           </div>
         </div>
         <hr className="border-blue-gray-200 my-8" />
-        <div className="grid grid-cols-12">
-          <div className="col-span-6">
-            <img src="/img/logo-icon.png" loading="lazy" className="w-[80px] h-[80px]"></img>
+        <div className="grid grid-cols-12 gap-4 items-center">
+          {/* Logo Section */}
+          <div className="col-span-12 md:col-span-6">
+            <img
+              src="/img/logo-icon.png"
+              loading="lazy"
+              className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] mx-auto md:mx-0"
+              alt="Company Logo"
+            />
           </div>
-          <div className="col-span-6 text-end">
-            <div className={` text-[32px] ${textColorClass}`}>Arboshiki</div>
-            <span className="text-gray-600">
-              455 Foggy Heights, AZ 85004, US
-            </span>
-            <span className="text-gray-600">(123) 456-789</span>
-            <span className="text-gray-600">company@example.com</span>
+
+          {/* Company Information Section */}
+          <div className="col-span-12 md:col-span-6 text-center md:text-end">
+            <div className={`text-2xl md:text-[32px] ${textColorClass}`}>Arboshiki</div>
+            <div className="text-gray-600">
+              <p>455 Foggy Heights, AZ 85004, US</p>
+              <p>(123) 456-789</p>
+              <p>company@example.com</p>
+            </div>
           </div>
         </div>
+
         <hr className="border-blue-gray-200 my-8" />
       </div>
       <div>
@@ -65,153 +74,161 @@ const Invoice = () => {
         </div>
         <div className="flex items-center justify-center">
           <div className="min-w-full mt-10 mx-auto pb-8">
-            <table className="min-w-full border-collapse border border-gray-200">
-              <thead>
-                <tr className="border border-b-2 border-white">
-                  <th className="bg-[#eee] text-gray-60text-4xl py-2">#</th>
-                  <th className="bg-[#eee] text-gray-600 px-4 py-2">
-                    DESCRIPTION
-                  </th>
-                  <th className="bg-[#eee] text-gray-600">HOUR PRICE</th>
-                  <th className="bg-[#eee] text-gray-600 px-4 py-2">HOURS</th>
-                  <th className="bg-[#eee] text-gray-600 px-4 py-2">TOTAL</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border border-b-2 border-white">
-                  <td
-                    className={`border border-[#ddd] ${textColorClass} text-2xl bg-[#ddd] px-4 py-6`}
-                  >
-                    04
-                  </td>
-                  <td className="border border-gray-200 px-4 py-6 bg-[#eee]">
-                    <div className={` text-xl ${textColorClass}`}>
-                      Youtube channel{" "}
-                    </div>
-                    <div className="text-gray-600">
-                      Useful videos to improve your Javascript skills. Subscribe
-                      and stay tuned :)
-                    </div>
-                  </td>
-                  <td className="border border-gray-200 bg-[#ddd] px-4 py-6">
-                    $0.00
-                  </td>
-                  <td className="border bg-[#eee] border-gray-200 px-4 py-6">
-                    100
-                  </td>
-                  <td
-                    className={`border border-gray-200 px-4 py-6 text-end bg-[#ddd] ${textColorClass}`}
-                  >
-                    $0.00
-                  </td>
-                </tr>
-                <tr className="border border-b-2 border-white">
-                  <td
-                    className={`border border-[#ddd] ${textColorClass} text-2xl bg-[#ddd] px-4 py-6`}
-                  >
-                    01
-                  </td>
-                  <td className="border bg-[#eee] border-gray-200 px-4 py-6">
-                    <div className={` text-xl ${textColorClass}`}>
-                      Website Design{" "}
-                    </div>
-                    <div className="text-gray-600">
-                      Creating a recognizable design solution based on the
-                      company’s existing visual identity
-                    </div>
-                  </td>
-                  <td className="border border-gray-200 px-4 bg-[#ddd] py-8">
-                    $40.00
-                  </td>
-                  <td className="border bg-[#eee] border-gray-200 px-4 py-6">
-                    30
-                  </td>
-                  <td
-                    className={`border border-gray-200 px-4 py-6 text-end bg-[#ddd] ${textColorClass}`}
-                  >
-                    $1,200.00
-                  </td>
-                </tr>
-                <tr className="border border-b-2 border-white">
-                  <td
-                    className={`border border-[#ddd] ${textColorClass} text-2xl bg-[#ddd] px-4 py-6`}
-                  >
-                    02
-                  </td>
-                  <td className="border border-gray-200 px-4 py-6 bg-[#eee]">
-                    <div className={` text-xl ${textColorClass}`}>
-                      Website Development{" "}
-                    </div>
-                    <div className="text-gray-600">
-                      Developing a Content Management System-based Website
-                    </div>
-                  </td>
-                  <td className="border border-gray-200 bg-[#ddd] px-4 py-6">
-                    $40.00
-                  </td>
-                  <td className="border border-gray-200 px-4 py-6 bg-[#eee]">
-                    80
-                  </td>
-                  <td
-                    className={`border border-gray-200 px-4 py-6 text-end bg-[#ddd] ${textColorClass}`}
-                  >
-                    $3,200.00
-                  </td>
-                </tr>
-                <tr className="border border-b-2 border-white">
-                  <td
-                    className={`border border-[#ddd] ${textColorClass} text-2xl bg-[#ddd] px-4 py-6`}
-                  >
-                    03
-                  </td>
-                  <td className="border border-gray-200 px-4 py-6 bg-[#eee]">
-                    <div className={` text-xl ${textColorClass}`}>
-                      {" "}
-                      Search Engines Optimization{" "}
-                    </div>
-                    <div className="text-gray-600">
-                      Optimize the site for search engines (SEO)
-                    </div>
-                  </td>
-                  <td className="border border-gray-200 px-4 bg-[#ddd] py-8">
-                    $40.00
-                  </td>
-                  <td className="border border-gray-200 px-4 py-6 bg-[#eee]">
-                    20
-                  </td>
-                  <td
-                    className={`border border-gray-200 px-4 py-6 text-end bg-[#ddd] ${textColorClass}`}
-                  >
-                    $800.00
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="min-w-full border-collapse border border-gray-200">
+                <thead>
+                  <tr className="border border-b-2 border-white">
+                    <th className="bg-[#eee] text-gray-600 text-base md:text-4xl py-2">#</th>
+                    <th className="bg-[#eee] text-gray-600 text-base md:text-lg px-2 md:px-4 py-2">
+                      DESCRIPTION
+                    </th>
+                    <th className="bg-[#eee] text-gray-600 text-base md:text-lg px-2 py-2">
+                      HOUR PRICE
+                    </th>
+                    <th className="bg-[#eee] text-gray-600 text-base md:text-lg px-2 md:px-4 py-2">
+                      HOURS
+                    </th>
+                    <th className="bg-[#eee] text-gray-600 text-base md:text-lg px-2 md:px-4 py-2">
+                      TOTAL
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border border-b-2 border-white">
+                    <td
+                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                    >
+                      04
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
+                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                        Youtube channel
+                      </div>
+                      <div className="text-gray-600">
+                        Useful videos to improve your Javascript skills. Subscribe and stay tuned :)
+                      </div>
+                    </td>
+                    <td className="border border-gray-200 bg-[#ddd] px-2 md:px-4 py-4 md:py-6">
+                      $0.00
+                    </td>
+                    <td className="border bg-[#eee] border-gray-200 px-2 md:px-4 py-4 md:py-6">
+                      100
+                    </td>
+                    <td
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                    >
+                      $0.00
+                    </td>
+                  </tr>
+
+                  <tr className="border border-b-2 border-white">
+                    <td
+                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                    >
+                      01
+                    </td>
+                    <td className="border bg-[#eee] border-gray-200 px-2 md:px-4 py-4 md:py-6">
+                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                        Website Design
+                      </div>
+                      <div className="text-gray-600">
+                        Creating a recognizable design solution based on the company’s existing visual identity
+                      </div>
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 bg-[#ddd] py-4 md:py-6">
+                      $40.00
+                    </td>
+                    <td className="border bg-[#eee] border-gray-200 px-2 md:px-4 py-4 md:py-6">
+                      30
+                    </td>
+                    <td
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                    >
+                      $1,200.00
+                    </td>
+                  </tr>
+
+                  <tr className="border border-b-2 border-white">
+                    <td
+                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                    >
+                      02
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
+                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                        Website Development
+                      </div>
+                      <div className="text-gray-600">
+                        Developing a Content Management System-based Website
+                      </div>
+                    </td>
+                    <td className="border border-gray-200 bg-[#ddd] px-2 md:px-4 py-4 md:py-6">
+                      $40.00
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
+                      80
+                    </td>
+                    <td
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                    >
+                      $3,200.00
+                    </td>
+                  </tr>
+
+                  <tr className="border border-b-2 border-white">
+                    <td
+                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                    >
+                      03
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
+                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                        Search Engines Optimization
+                      </div>
+                      <div className="text-gray-600">Optimize the site for search engines (SEO)</div>
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 bg-[#ddd] py-4 md:py-6">
+                      $40.00
+                    </td>
+                    <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
+                      20
+                    </td>
+                    <td
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                    >
+                      $800.00
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <div className="mt-4">
-              <div className="grid grid-cols-12">
-                <div className="col-span-6 items-center justify-center flex">
-                  <p className=" text-center text-4xl text-gray-600">
+              <div className="grid grid-cols-12 gap-4 md:gap-0">
+                {/* Thank you message */}
+                <div className="col-span-12 md:col-span-6 items-center justify-center flex">
+                  <p className="text-center text-3xl md:text-4xl text-gray-600">
                     Thank you!
                   </p>
                 </div>
-                <div className="col-span-6 text-end">
-                  <div className="flex justify-end gap-24">
-                    <span className="text-lg">SUBTOTAL</span>
-                    <span className="text-lg">$5,200.00</span>
+
+                {/* Totals Section */}
+                <div className="col-span-12 md:col-span-6 text-end">
+                  <div className="flex justify-between md:justify-end md:gap-24">
+                    <span className="text-base md:text-lg">SUBTOTAL</span>
+                    <span className="text-base md:text-lg">$5,200.00</span>
                   </div>
-                  <hr className="border-blue-gray-200 my-3" />
-                  <div className="flex justify-end gap-24">
-                    <span className="text-lg">TAX 25%</span>
-                    <span className="text-lg">$1,300.00</span>
+                  <hr className="border-blue-gray-200 my-2 md:my-3" />
+                  <div className="flex justify-between md:justify-end md:gap-24">
+                    <span className="text-base md:text-lg">TAX 25%</span>
+                    <span className="text-base md:text-lg">$1,300.00</span>
                   </div>
-                  <hr className="border-[#ddd] my-3" />
-                  <div className="flex justify-end gap-24">
-                    <div className={`${textColorClass} font-semibold text-xl`}>
+                  <hr className="border-[#ddd] my-2 md:my-3" />
+                  <div className="flex justify-between md:justify-end md:gap-24">
+                    <div className={`${textColorClass} font-semibold text-lg md:text-xl`}>
                       GRAND TOTAL
                     </div>
-                    <span className={`${textColorClass} text-xl`}>
-                      $6,500.00
-                    </span>
+                    <span className={`${textColorClass} text-lg md:text-xl`}>$6,500.00</span>
                   </div>
                 </div>
               </div>

@@ -11,7 +11,7 @@ const EmailProfile = ({ email }) => {
       <div className="flex justify-between">
         <div className="flex gap-3 justify-center items-center">
           <Avatar
-            src="https://demos.creative-tim.com/material-dashboard/assets/img/team-2.jpg"
+            src="/img/team-1.jpeg"
             alt="Avtar"
             size="md"
             className="border border-blue-gray-50 bg-blue-gray-50/50 object-cover"
