@@ -417,18 +417,24 @@ const Products = () => {
         </DialogFooter>
       </Dialog>
       
-      <Dialog 
-        size="md"    
-        open={edit} handler={() => setEdit(false)}>
+      <Dialog size="md" open={edit} handler={() => setEdit(false)}>
         <DialogHeader>{editIndex !== null ? "Edit Product" : "Add Product"}</DialogHeader>
-        <DialogBody className="h-[450px] overflow-y-auto custom">
-          <form className="grid grid-cols-12 gap-x-4">
+        <DialogBody className="h-[400px] overflow-y-auto custom">
+          <form className="grid grid-cols-12 gap-x-4 gap-y-6">
+            {/* Product Image Section */}
             <div className="col-span-12 mt-3">
               <Typography variant="h6">Product Image</Typography>
-              <div className="border border-dashed border-gray-500 relative  rounded-lg">
-                <input type="file" onChange={handleimgChange} accept="image/png, image/gif, image/jpeg, image/jpg" className="cursor-pointer relative block opacity-0 p-10 z-50" />
+              <div className="border border-dashed border-gray-500 relative rounded-lg">
+                <input
+                  type="file"
+                  onChange={handleimgChange}
+                  accept="image/png, image/gif, image/jpeg, image/jpg"
+                  className="cursor-pointer relative block opacity-0 p-10 z-50"
+                />
                 <div className="text-center mt-5 absolute top-0 right-0 left-0">
-                  <div className="flex justify-center items-center mb-3 text-blue-600"><FiUpload size={35} /></div>
+                  <div className="flex justify-center items-center mb-3 text-blue-600">
+                    <FiUpload size={35} />
+                  </div>
                   <div className="text-lg text-blue-600 font-normal">Select Files</div>
                 </div>
               </div>
@@ -436,56 +442,67 @@ const Products = () => {
                 <img loading="lazy" src={formData.img} alt="Product" className="mt-2 w-20 h-20 object-cover" />
               )}
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Product Name */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Product Name</Typography>
               <Input name="name" value={formData.name} onChange={handleInputChange} size="lg" placeholder="Product Name" />
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Amount */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Amount</Typography>
-              <Input  name="amount" value={formData.amount} onChange={handleInputChange} size="lg" type="number" placeholder="Amount" />
+              <Input name="amount" value={formData.amount} onChange={handleInputChange} size="lg" type="number" placeholder="Amount" />
             </div>
+
+            {/* Description */}
             <div className="col-span-12 mt-2">
-              <Typography variant="h6">Descripation</Typography>
-              <Input name="descripation" value={formData.descripation} onChange={handleInputChange} size="lg" placeholder="descripation" type="text" />
+              <Typography variant="h6">Description</Typography>
+              <Input name="description" value={formData.description} onChange={handleInputChange} size="lg" placeholder="Description" type="text" />
             </div>
-            <div className="col-span-6 mt-2">
-              <Typography variant="h6">color</Typography>
-              <Input name="color" value={formData.color} onChange={handleInputChange} size="lg" placeholder="color" type="color" />
+
+            {/* Color */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
+              <Typography variant="h6">Color</Typography>
+              <Input name="color" value={formData.color} onChange={handleInputChange} size="lg" placeholder="Color" type="color" />
             </div>
-            <div className="col-span-6 mt-2">
-              <Typography variant="h6">size</Typography>
-              <Input name="size" value={formData.size} onChange={handleInputChange} size="lg" placeholder="size" type="text" />
+
+            {/* Size */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
+              <Typography variant="h6">Size</Typography>
+              <Input name="size" value={formData.size} onChange={handleInputChange} size="lg" placeholder="Size" type="text" />
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Quantity */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Quantity</Typography>
-              <Input name="quantity" value={formData.quantity} onChange={handleInputChange} size="lg" placeholder="quantity" type="number" />
+              <Input name="quantity" value={formData.quantity} onChange={handleInputChange} size="lg" placeholder="Quantity" type="number" />
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Weight */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Weight</Typography>
               <Input name="weight" value={formData.weight} onChange={handleInputChange} size="lg" placeholder="Weight" />
             </div>
-            <div className="col-span-6 mt-2">
-              <Typography variant="h6">Stock status</Typography>
+
+            {/* Stock Status */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
+              <Typography variant="h6">Stock Status</Typography>
               <Select name="status" value={formData.status} onChange={(value) => setFormData({ ...formData, status: value })} size="lg">
                 <Option value="paid">Paid</Option>
                 <Option value="pending">Pending</Option>
                 <Option value="cancelled">Cancelled</Option>
               </Select>
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Categories */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Categories</Typography>
-              {/* <CreatableSelect
-                isMulti
-                value={formData.categories}
-                onChange={handleCreatableChange}
-                options={categoriesOptions}
-                placeholder="categories"
-              /> */}
               <Select
                 name="categories"
                 value={formData.categories}
                 onChange={(value) => setFormData({ ...formData, categories: value })}
-                placeholder="select a categories"
+                placeholder="Select a category"
                 size="lg"
               >
                 <Option value="Electronics">Electronics</Option>
@@ -493,56 +510,60 @@ const Products = () => {
                 <Option value="Home Appliances">Home Appliances</Option>
               </Select>
             </div>
-            <div className="col-span-6 mt-2">
-              <Typography variant="h6">Type of product</Typography>
-              {/* <CreatableSelect
-                isMulti
-                value={formData.typeProduct}
-                onChange={handleProductChange}
-                options={productsOptions}
-                placeholder="typeProduct"
-              /> */}
+
+            {/* Type of Product */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
+              <Typography variant="h6">Type of Product</Typography>
               <Select
-                name="Product"
+                name="productType"
                 value={formData.typeProduct}
                 onChange={(value) => setFormData({ ...formData, typeProduct: value })}
-                placeholder="select a Product"
+                placeholder="Select a product"
                 size="lg"
               >
-                <Option value="clothe">clothe</Option>
-                <Option value="phones">phones</Option>
-                <Option value="watch">watch</Option>
-                <Option value="laptop">laptop</Option>                
+                <Option value="clothe">Clothes</Option>
+                <Option value="phones">Phones</Option>
+                <Option value="watches">Watches</Option>
+                <Option value="laptops">Laptops</Option>
               </Select>
-            </div>       
-            <div className="col-span-6 mt-2">
+            </div>
+
+            {/* Gender */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Gender</Typography>
               <Select
                 name="gender"
                 value={formData.gender}
                 onChange={(value) => setFormData({ ...formData, gender: value })}
-                placeholder="select a gender"
-                size="lg"                
-              >                
+                placeholder="Select gender"
+                size="lg"
+              >
                 <Option value="Male">Male</Option>
                 <Option value="Female">Female</Option>
               </Select>
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Special Price */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Special Price</Typography>
-              <Input name="specialPrice" value={formData.specialPrice} onChange={handleInputChange} size="lg" placeholder="price" />
+              <Input name="specialPrice" value={formData.specialPrice} onChange={handleInputChange} size="lg" placeholder="Special Price" />
             </div>
-            <div className="col-span-6 mt-2">
+
+            {/* Date */}
+            <div className="col-span-12 sm:col-span-6 mt-2">
               <Typography variant="h6">Date</Typography>
               <Input name="date" value={formData.date} onChange={handleInputChange} size="lg" type="date" />
-            </div> 
+            </div>
+
+            {/* Country */}
             <div className="col-span-12 mt-2">
-              <Typography variant="h6">country</Typography>
-              <Input name="country" value={formData.country} onChange={handleInputChange} size="lg" placeholder="country" />
-            </div>           
-                       
+              <Typography variant="h6">Country</Typography>
+              <Input name="country" value={formData.country} onChange={handleInputChange} size="lg" placeholder="Country" />
+            </div>
           </form>
         </DialogBody>
+
+        {/* Dialog Footer */}
         <DialogFooter className="flex justify-end">
           <Button onClick={handleSave} className="mr-2" color="blue">{editIndex !== null ? "Save" : "Add"}</Button>
           <Button onClick={() => setEdit(false)} className="ml-2" color="red">Cancel</Button>
