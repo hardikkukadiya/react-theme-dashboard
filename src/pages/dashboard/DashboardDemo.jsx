@@ -29,9 +29,9 @@ const DashboardDemo = () => {
             <p className="text-[#172b4d] my-1 text-2xl">8.4K</p>
             <p className="text-[#f5365c] text-sm">$24 from last week</p>
           </div>
-          <i className="p-4 bg-gradient-to-r from-[#8965e0] to-[#bc65e0] text-white rounded-full cursor-pointer hover:bg-gradient-to-l from-[#d4a6e7] to-[#8965e0]">
+          <span className="p-4 bg-gradient-to-r from-[#8965e0] to-[#bc65e0] text-white rounded-full cursor-pointer hover:bg-gradient-to-l from-[#d4a6e7] to-[#8965e0]">
             <HiUsers size={20} />
-          </i>
+          </span>
         </div>
 
         <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
@@ -53,9 +53,9 @@ const DashboardDemo = () => {
             <p className="text-[#172b4d] my-1 text-2xl">34.46%</p>
             <p className="text-[#f5365c] text-sm">12.2% from last week</p>
           </div>
-          <i className="p-4 bg-gradient-to-r from-[#f7971e] to-[#ffd200] text-white rounded-full hover:bg-gradient-to-l from-[#ffe15e] to-[#f7971e] cursor-pointer">
+          <span className="p-4 bg-gradient-to-r from-[#f7971e] to-[#ffd200] text-white rounded-full hover:bg-gradient-to-l from-[#ffe15e] to-[#f7971e] cursor-pointer">
             <FaChartLine size={20} />
-          </i>
+          </span>
         </div>
           </div>
           

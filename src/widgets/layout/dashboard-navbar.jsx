@@ -111,7 +111,7 @@ export function DashboardNavbar() {
             <MenuList className="w-max border-0">
               <MenuItem className="flex items-center gap-3">
                 <Avatar
-                  src="https://demos.creative-tim.com/material-dashboard/assets/img/team-2.jpg"
+                  src="/img/team-3.jpeg"
                   alt="item-1"
                   size="sm"
                   variant="circular"
@@ -135,7 +135,7 @@ export function DashboardNavbar() {
               </MenuItem>
               <MenuItem className="flex items-center gap-4">
                 <Avatar
-                  src="https://demos.creative-tim.com/material-dashboard/assets/img/small-logos/logo-spotify.svg"
+                  src="/img/team-3.jpeg"
                   alt="item-1"
                   size="sm"
                   variant="circular"

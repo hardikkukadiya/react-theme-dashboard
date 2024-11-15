@@ -87,7 +87,7 @@ const UserDashboardCard = () => {
         <div className="h-[400px] overflow-y-auto custom px-2">
           <ul className="space-y-4 mt-2">
             <UserListItem
-              imgSrc="https://docs.material-tailwind.com/img/face-2.jpg"
+             imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
@@ -95,7 +95,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
-              imgSrc="https://docs.material-tailwind.com/img/face-2.jpg"
+             imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
@@ -103,7 +103,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
-              imgSrc="https://docs.material-tailwind.com/img/face-2.jpg"
+             imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
@@ -111,7 +111,7 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
-              imgSrc="https://docs.material-tailwind.com/img/face-2.jpg"
+             imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
@@ -119,12 +119,12 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
-              imgSrc="https://docs.material-tailwind.com/img/face-2.jpg"
+             imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
             <UserListItem
-              imgSrc="https://docs.material-tailwind.com/img/face-2.jpg"
+             imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
