@@ -294,8 +294,8 @@ const Email = () => {
             <div className="bg-blue-600 w-full flex justify-between px-4 py-3 rounded-md text-white cursor-pointer">
               New Message <span onClick={handleClick}><IoMdCloseCircleOutline size={25} /></span>
             </div>
-            <form
-              action="https://api.web3forms.com/submit"
+            <form             
+              action=""
               method="POST"
               id="form"
             >
