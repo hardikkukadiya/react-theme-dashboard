@@ -1,15 +1,15 @@
 import React from "react";
 import { FiPrinter } from "react-icons/fi";
 import { IoMdDownload } from "react-icons/io";
-import { useMaterialTailwindController } from "../../context";
+// import { useMaterialTailwindController } from "../../context";
 
 const Invoice = () => {
-  const [controller] = useMaterialTailwindController();
-  const { sidenavColor } = controller;
-  const textColorClass = sidenavColor
-    ? `text-${sidenavColor}-500`
-    : "text-gray-700";
-  const bgColorClass = sidenavColor ? `bg-${sidenavColor}-500` : "bg-gray-700";
+  // const [controller] = useMaterialTailwindController();
+  // const { sidenavColor } = controller;
+  // const textColorClass = sidenavColor
+  //   ? `text-${sidenavColor}-500`
+  //   : "text-gray-700";
+  // const bgColorClass = sidenavColor ? `bg-${sidenavColor}-500` : "bg-gray-700";
   return (
     <div className="mt-5 bg-white px-4 py-4 rounded-lg">
       <div>
@@ -45,7 +45,7 @@ const Invoice = () => {
 
           {/* Company Information Section */}
           <div className="col-span-12 md:col-span-6 text-center md:text-end">
-            <div className={`text-2xl md:text-[32px] ${textColorClass}`}>Arboshiki</div>
+            <div className={`text-2xl md:text-[32px] text-black`}>Arboshiki</div>
             <div className="text-gray-600">
               <p>455 Foggy Heights, AZ 85004, US</p>
               <p>(123) 456-789</p>
@@ -60,14 +60,14 @@ const Invoice = () => {
         <div className="grid grid-cols-12">
           <div className="col-span-6 text-start">
             <div className="text-gray-800">INVOICE TO:</div>
-            <div className={`text-3xl ${textColorClass} `}>John Doe</div>
+            <div className={`text-3xl text-black `}>John Doe</div>
             <div className="text-gray-800">
               796 Silver Harbour, TX 79273, US
             </div>
-            <div className={`${textColorClass}`}>john@example.com</div>
+            <div className={`text-black`}>john@example.com</div>
           </div>
           <div className="col-span-6 text-end">
-            <div className={`text-xl ${textColorClass}`}>INVOICE 340</div>
+            <div className={`text-xl text-black`}>INVOICE 340</div>
             <div className="text-gray-700">Date of Invoice: 01/10/2018</div>
             <div className="text-gray-700">Due Date: 30/10/2018</div>
           </div>
@@ -96,12 +96,12 @@ const Invoice = () => {
                 <tbody>
                   <tr className="border border-b-2 border-white">
                     <td
-                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                      className={`border border-[#ddd] text-black text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
                     >
                       04
                     </td>
                     <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
-                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                      <div className={`text-base md:text-xl text-black`}>
                         Youtube channel
                       </div>
                       <div className="text-gray-600">
@@ -115,7 +115,7 @@ const Invoice = () => {
                       100
                     </td>
                     <td
-                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] text-black`}
                     >
                       $0.00
                     </td>
@@ -123,12 +123,12 @@ const Invoice = () => {
 
                   <tr className="border border-b-2 border-white">
                     <td
-                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                      className={`border border-[#ddd] text-black text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
                     >
                       01
                     </td>
                     <td className="border bg-[#eee] border-gray-200 px-2 md:px-4 py-4 md:py-6">
-                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                      <div className={`text-base md:text-xl text-black`}>
                         Website Design
                       </div>
                       <div className="text-gray-600">
@@ -142,7 +142,7 @@ const Invoice = () => {
                       30
                     </td>
                     <td
-                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] text-black`}
                     >
                       $1,200.00
                     </td>
@@ -150,12 +150,12 @@ const Invoice = () => {
 
                   <tr className="border border-b-2 border-white">
                     <td
-                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                      className={`border border-[#ddd] text-black text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
                     >
                       02
                     </td>
                     <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
-                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                      <div className={`text-base md:text-xl text-black`}>
                         Website Development
                       </div>
                       <div className="text-gray-600">
@@ -169,7 +169,7 @@ const Invoice = () => {
                       80
                     </td>
                     <td
-                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] text-black`}
                     >
                       $3,200.00
                     </td>
@@ -177,12 +177,12 @@ const Invoice = () => {
 
                   <tr className="border border-b-2 border-white">
                     <td
-                      className={`border border-[#ddd] ${textColorClass} text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
+                      className={`border border-[#ddd] text-black text-base md:text-2xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6`}
                     >
                       03
                     </td>
                     <td className="border border-gray-200 px-2 md:px-4 py-4 md:py-6 bg-[#eee]">
-                      <div className={`text-base md:text-xl ${textColorClass}`}>
+                      <div className={`text-base md:text-xl text-black`}>
                         Search Engines Optimization
                       </div>
                       <div className="text-gray-600">Optimize the site for search engines (SEO)</div>
@@ -194,7 +194,7 @@ const Invoice = () => {
                       20
                     </td>
                     <td
-                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] ${textColorClass}`}
+                      className={`border border-gray-200 px-2 md:px-4 py-4 md:py-6 text-end bg-[#ddd] text-black`}
                     >
                       $800.00
                     </td>
@@ -225,10 +225,10 @@ const Invoice = () => {
                   </div>
                   <hr className="border-[#ddd] my-2 md:my-3" />
                   <div className="flex justify-between md:justify-end md:gap-24">
-                    <div className={`${textColorClass} font-semibold text-lg md:text-xl`}>
+                    <div className={`text-black font-semibold text-lg md:text-xl`}>
                       GRAND TOTAL
                     </div>
-                    <span className={`${textColorClass} text-lg md:text-xl`}>$6,500.00</span>
+                    <span className={`text-black text-lg md:text-xl`}>$6,500.00</span>
                   </div>
                 </div>
               </div>
