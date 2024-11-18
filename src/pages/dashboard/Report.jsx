@@ -28,7 +28,7 @@ import {
 } from "@/data";
 import { CheckCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
 
-export function DashboardDemo() {
+export function Report() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -247,4 +247,4 @@ export function DashboardDemo() {
   );
 }
 
-export default DashboardDemo;
+export default Report;

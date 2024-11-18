@@ -21,7 +21,7 @@ const Products = lazy(() => import("./pages/dashboard/Products"));
 const Invoice = lazy(() => import("./pages/dashboard/Invoice"));
 const TodoList = lazy(() => import("./pages/dashboard/TodoList"));
 const Email = lazy(() => import("./pages/dashboard/Email"));
-const DashboardDemo = lazy(() => import("./pages/dashboard/DashboardDemo"));
+const Report = lazy(() => import("./pages/dashboard/Report"));
 const FileManager = lazy(() => import("./pages/dashboard/FileManager"));
 const Calendar = lazy(() => import("./pages/dashboard/Calendar"));
 const ChatBox = lazy(() => import("./pages/dashboard/ChatBox"));
@@ -44,8 +44,8 @@ export const routes = [
       {
         icon: <TbReportSearch {...icon} />,
         name: "Report",
-        path: "/dashboardDemo",
-        element: <DashboardDemo />,
+        path: "/report",
+        element: <Report />,
       },     
        {
         icon: <FiShoppingCart {...icon} />,
