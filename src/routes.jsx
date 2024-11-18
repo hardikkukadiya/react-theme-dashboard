@@ -6,6 +6,7 @@ import {
   ServerStackIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/solid";
+import { TbReportSearch } from "react-icons/tb";
 import {FiShoppingCart} from "react-icons/fi"  
 import { LuListTodo } from "react-icons/lu";
 import { FaFileArrowUp, FaRegCalendar } from "react-icons/fa6";
@@ -26,20 +27,6 @@ const Calendar = lazy(() => import("./pages/dashboard/Calendar"));
 const ChatBox = lazy(() => import("./pages/dashboard/ChatBox"));
 const Faq = lazy(() => import("./pages/dashboard/Faq"));
 const ProductsDemo = lazy(() => import("./pages/dashboard/ProductsDemo"));
-// import { SignIn, SignUp } from "@/pages/auth";
-// import { Home, Profile} from "@/pages/dashboard";
-// import Order from "./pages/dashboard/Order";
-// import Products from "./pages/dashboard/Products";
-// import Invoice from "./pages/dashboard/Invoice";
-// import TodoList from "./pages/dashboard/TodoList";
-// import Email from "./pages/dashboard/Email";
-// import DashboardDemo from "./pages/dashboard/DashboardDemo";
-// import FileManager from "./pages/dashboard/FileManager";
-// import Calendar from "./pages/dashboard/Calendar";
-// import ChatBox from "./pages/dashboard/ChatBox";
-// import Faq from "./pages/dashboard/Faq";
-// import ProductsDemo from "./pages/dashboard/ProductsDemo";
-
 const icon = {
   className: "w-5 h-5 text-inherit",
 };
@@ -55,8 +42,8 @@ export const routes = [
         element: <Home />,
       },
       {
-        icon: <HomeIcon {...icon} />,
-        name: "Dashboard demo",
+        icon: <TbReportSearch {...icon} />,
+        name: "Report",
         path: "/dashboardDemo",
         element: <DashboardDemo />,
       },     
