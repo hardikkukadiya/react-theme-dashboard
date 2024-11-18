@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { LuUploadCloud } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Zoom from "react-medium-image-zoom";
@@ -132,63 +133,6 @@ const OrderTable = () => {
                       ))}
                     </tr>
                   </thead>
-                  {/* <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                    {orders.map((order, index) => (
-                      <tr key={index}>
-                        <td className="px-3 py-3 text-md font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
-                          <div className="flex items-center gap-x-3">
-                            <input
-                              type="checkbox"
-                              className="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:border-gray-700"
-                            />
-                            <span className="text-black">{order.id}</span>
-                          </div>
-                        </td>
-                        <td className="px-3 py-3 text-md text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                          <div className="flex items-center gap-x-2">
-                            <Zoom>
-                              <img
-                                className="object-cover w-8 h-8 rounded-full"
-                                src={order.product.imgSrc}
-                                loading="lazy"
-                                alt={order.product.name}
-                              />
-                            </Zoom>
-                            <h2 className="text-md font-medium dark:text-white">
-                              {order.product.name}
-                            </h2>
-                          </div>
-                        </td>
-                        <td className="px-3 py-3 text-md dark:text-gray-300 whitespace-nowrap">
-                          {order.customer}
-                        </td>
-                        <td className="px-3 py-3 text-md dark:text-gray-300 whitespace-nowrap">
-                          {order.date}
-                        </td>
-                        <td className="px-3 py-3 text-md dark:text-gray-300 whitespace-nowrap">
-                          {order.price}
-                        </td>
-                        <td className="px-3 py-3 text-md whitespace-nowrap">
-                          <span
-                            className={`${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.color} border ${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.borderColor} px-4 py-1.5 rounded-2xl hover:text-white cursor-pointer min-w-[100px] text-center block`}
-                            style={{
-                              minWidth: "120px",
-                              display: "inline-block",
-                            }}
-                          >
-                            {order.status}
-                          </span>
-                        </td>
-
-                        <td className="px-3 py-3">
-                          <div className="flex justify-center items-center gap-4 cursor-pointer">
-                            <RiDeleteBin6Line />
-                            <LuUploadCloud />
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody> */}
                   <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                     {orders.map((order, index) => (
                       <tr key={index}>
@@ -238,7 +182,7 @@ const OrderTable = () => {
                         {/* Status */}
                         <td className="px-3 py-3 text-md whitespace-nowrap">
                           <span
-                            className={`${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.color} border ${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.borderColor} px-4 py-1.5 rounded-2xl hover:text-white cursor-pointer min-w-[100px] text-center block`}
+                            className={`${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.color} border ${statusOptions.find((status) => status.label.toLowerCase() === order.status.toLowerCase())?.borderColor} px-4 py-1.5 rounded-2xl hover:text-white capitalize cursor-pointer min-w-[100px] text-center block`}
                           >
                             {order.status}
                           </span>
@@ -267,21 +211,7 @@ const OrderTable = () => {
           href="#"
           className="flex items-center px-5 py-2 text-md text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-5 h-5 rtl:-scale-x-100"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-            />
-          </svg>
-
+          <div><FaArrowLeftLong /></div>
           <span>previous</span>
         </a>
 
@@ -332,24 +262,9 @@ const OrderTable = () => {
 
         <a
           href="#"
-          className="flex items-center px-5 py-2 text-md text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
-        >
+          className="flex items-center px-5 py-2 text-md text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800">
           <span>Next</span>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-5 h-5 rtl:-scale-x-100"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
+          <div><FaArrowRightLong /></div>
         </a>
       </div>
     </div>
