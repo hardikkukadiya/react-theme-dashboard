@@ -12,7 +12,7 @@ const Home = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
           <div>
-            <h3 className="text-[#6c757d] text-[16px] font-[500]">Total Orders</h3>
+            <div className="text-[#6c757d] text-[16px] font-[500]">Total Orders</div>
             <p className="text-[#172b4d] my-1 text-2xl">$4805</p>
             <p className="text-[#2dce89] text-sm">$34 from last week</p>
           </div>
@@ -23,9 +23,9 @@ const Home = () => {
 
         <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
           <div>
-            <h3 className="text-[#6c757d] text-[16px] font-[500]">
+            <div className="text-[#6c757d] text-[16px] font-[500]">
               Total Customers
-            </h3>
+            </div>
             <p className="text-[#172b4d] my-1 text-2xl">8.4K</p>
             <p className="text-[#f5365c] text-sm">$24 from last week</p>
           </div>
@@ -36,9 +36,9 @@ const Home = () => {
 
         <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
           <div>
-            <h3 className="text-[#6c757d] text-[16px] font-[500]">
+            <div className="text-[#6c757d] text-[16px] font-[500]">
               Store Visitors
-            </h3>
+            </div>
             <p className="text-[#172b4d] my-1 text-2xl">59K</p>
             <p className="text-[#2dce89] text-sm">$34 from last week</p>
           </div>
@@ -49,7 +49,7 @@ const Home = () => {
 
         <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
           <div>
-            <h3 className="text-[#6c757d] text-[16px] font-[500]">Bounce Rate</h3>
+            <div className="text-[#6c757d] text-[16px] font-[500]">Bounce Rate</div>
             <p className="text-[#172b4d] my-1 text-2xl">34.46%</p>
             <p className="text-[#f5365c] text-sm">12.2% from last week</p>
           </div>
