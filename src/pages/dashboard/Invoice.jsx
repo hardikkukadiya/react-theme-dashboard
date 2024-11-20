@@ -77,14 +77,14 @@ const Invoice = () => {
                     <tr className="border-b-2 border-white" key={index}>
                       <TableCell isHeader>{item.id}</TableCell>
                       <TableCell>
-                        <div className="text-base md:text-lg text-black">
+                        <div className="text-base md:text-lg text-black text-start">
                           {item.description}
                         </div>
-                        <div className="text-gray-600 text-base">{item.details}</div>
-                      </TableCell>                      
+                        <div className="text-gray-600 text-base text-start">{item.details}</div>
+                      </TableCell>                       
                       <TableCell>${item.hourPrice}</TableCell>
                       <TableCell>{item.hours}</TableCell>
-                      <TableCell className="text-end">${item.total}</TableCell>
+                        <TableCell>${item.total}</TableCell>                  
                     </tr>
                   ))}
                 </tbody>
@@ -139,7 +139,7 @@ const TableHeader = ({ children }) => (
 
 const TableCell = ({ children, isHeader = false }) => (
   <td
-    className={`border border-[#ddd] text-black text-base md:text-xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6 ${isHeader ? "bg-[#ddd]" : "bg-[#eee]"
+    className={`border border-[#ddd] text-black text-end text-base md:text-xl bg-[#ddd] px-2 md:px-4 py-4 md:py-6 ${isHeader ? "bg-[#ddd]" : "bg-[#eee]"
       }`}
   >
     {children}

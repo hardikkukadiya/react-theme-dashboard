@@ -89,12 +89,6 @@ export const routes = [
         path: "/products",
         element: <Products />,
       },
-        {
-        icon: <FiShoppingCart {...icon} />,
-        name: "ProductsDemo",
-        path: "/productsDemo",
-        element: <ProductsDemo />,
-      },
       {
         icon: <FiShoppingCart {...icon} />,
         name: "order",

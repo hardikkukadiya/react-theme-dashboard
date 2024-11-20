@@ -4,7 +4,7 @@ import { FaDropbox, FaFolder, FaGoogleDrive, FaPlus, FaRegFolder, FaRegImage, Fa
 import { IoDocumentTextOutline, IoImageOutline, IoSearch, IoVideocamOutline } from "react-icons/io5";
 import { MdPeople } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
-import { Avatar } from "@material-tailwind/react";
+import { Avatar, Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
 import { BiDevices, BiSolidDoorOpen } from "react-icons/bi";
 import { FiMusic, FiRefreshCcw } from "react-icons/fi";
 import { PiPlugChargingLight } from "react-icons/pi";
@@ -237,7 +237,19 @@ const FileManager = () => {
                   </div>
                   <div className="flex justify-center items-center">
                     <span>
-                      <BsThreeDots size={25} />
+                      {/* <BsThreeDots size={25} /> */}
+                      <Menu placement="left-start">
+                        <MenuHandler>
+                          <div className="cursor-pointer">
+                            <BsThreeDots size={25} />
+                          </div>
+                        </MenuHandler>
+                        <MenuList>
+                          <MenuItem>Action</MenuItem>
+                          <MenuItem>Another Action</MenuItem>
+                          <MenuItem>Something else here</MenuItem>
+                        </MenuList>
+                      </Menu>
                     </span>
                   </div>
                 </div>
@@ -268,7 +280,18 @@ const FileManager = () => {
                   </div>
                   <div className="flex justify-center items-center">
                     <span>
-                      <BsThreeDots size={25} />
+                      <Menu placement="left-start">
+                        <MenuHandler>
+                          <div className="cursor-pointer">
+                            <BsThreeDots size={25} />
+                          </div>
+                        </MenuHandler>
+                        <MenuList>
+                          <MenuItem>Action</MenuItem>
+                          <MenuItem>Another Action</MenuItem>
+                          <MenuItem>Something else here</MenuItem>
+                        </MenuList>
+                      </Menu>
                     </span>
                   </div>
                 </div>
@@ -299,7 +322,18 @@ const FileManager = () => {
                   </div>
                   <div className="flex justify-center items-center">
                     <span>
-                      <BsThreeDots size={25} />
+                      <Menu placement="left-start">
+                        <MenuHandler>
+                          <div className="cursor-pointer">
+                            <BsThreeDots size={25} />
+                          </div>
+                        </MenuHandler>
+                        <MenuList>
+                          <MenuItem>Action</MenuItem>
+                          <MenuItem>Another Action</MenuItem>
+                          <MenuItem>Something else here</MenuItem>
+                        </MenuList>
+                      </Menu>
                     </span>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { LuUploadCloud } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -41,7 +41,7 @@ const OrderTable = () => {
       status: "Completed",
     },
     {
-      id: "#3068",
+      id: "#3069",
       product: {
         name: "Mark Johnson",
         imgSrc: "/img/clothes.png",
@@ -52,7 +52,7 @@ const OrderTable = () => {
       status: "pending",
     },
     {
-      id: "#3068",
+      id: "#3061",
       product: {
         name: "Mark Johnson",
         imgSrc: "/img/clothes.png",
@@ -63,7 +63,7 @@ const OrderTable = () => {
       status: "Completed",
     },
     {
-      id: "#3068",
+      id: "#3062",
       product: {
         name: "Mark Johnson",
         imgSrc: "/img/clothes.png",
@@ -92,7 +92,29 @@ const OrderTable = () => {
       borderColor: "border-[#2dce89] , hover:bg-[#2dce89]",
     },
   ];
+  const [selectedOrders, setSelectedOrders] = useState(new Set()); // To track selected orders
 
+  const handleHeaderCheckboxChange = (e) => {
+    if (e.target.checked) {
+      // Select all orders
+      setSelectedOrders(new Set(orders.map((order) => order.id)));
+    } else {
+      // Deselect all orders
+      setSelectedOrders(new Set());
+    }
+  };
+
+  const handleCheckboxChange = (orderId) => {
+    const updatedSelectedOrders = new Set(selectedOrders);
+    if (updatedSelectedOrders.has(orderId)) {
+      updatedSelectedOrders.delete(orderId);
+    } else {
+      updatedSelectedOrders.add(orderId);
+    }
+    setSelectedOrders(updatedSelectedOrders);
+  };
+
+  const isAllSelected = orders.length > 0 && selectedOrders.size === orders.length;
   return (
     <div>
       <div className="flex flex-col">
@@ -109,6 +131,8 @@ const OrderTable = () => {
                         <div className="flex items-center gap-x-3">
                           <input
                             type="checkbox"
+                            checked={isAllSelected}
+                            onChange={handleHeaderCheckboxChange}
                             className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700"
                           />
                           <button className="flex items-center gap-x-2">
@@ -141,6 +165,8 @@ const OrderTable = () => {
                           <div className="flex items-center gap-x-3">
                             <input
                               type="checkbox"
+                              checked={selectedOrders.has(order.id)}
+                              onChange={() => handleCheckboxChange(order.id)}
                               className="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:border-gray-700"
                             />
                             <span className="text-black">{order.id}</span>

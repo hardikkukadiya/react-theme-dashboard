@@ -1,4 +1,4 @@
-import { Avatar } from "@material-tailwind/react";
+import { Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
 import React from "react";
 import { HiDotsHorizontal, HiOutlineDotsVertical } from "react-icons/hi";
 import { MdEmail, MdKeyboardVoice } from "react-icons/md";
@@ -80,7 +80,20 @@ const UserDashboardCard = () => {
         <div className="flex justify-between">
           <div>New Customers</div>
           <div>
-            <HiDotsHorizontal size={20} />
+            <Menu placement="left-start">
+              <MenuHandler>
+                <div className="cursor-pointer">
+                  <HiDotsHorizontal
+                    size={20}
+                  />
+                </div>
+              </MenuHandler>
+              <MenuList>
+                <MenuItem>Action</MenuItem>
+                <MenuItem>Another Action</MenuItem>
+                <MenuItem>Something else here</MenuItem>
+              </MenuList>
+            </Menu>
           </div>
         </div>
         <hr className="border-blue-gray-200 my-2" />
@@ -138,7 +151,20 @@ const UserDashboardCard = () => {
         <div className="flex justify-between">
           <div>Top Products</div>
           <div>
-            <HiDotsHorizontal size={20} />
+            <Menu placement="left-start">
+              <MenuHandler>
+                <div className="cursor-pointer">
+                  <HiDotsHorizontal
+                    size={20}
+                  />
+                </div>
+              </MenuHandler>
+              <MenuList>
+                <MenuItem>Action</MenuItem>
+                <MenuItem>Another Action</MenuItem>
+                <MenuItem>Something else here</MenuItem>
+              </MenuList>
+            </Menu>
           </div>
         </div>
         <hr className="border-blue-gray-200 my-2" />
@@ -205,7 +231,20 @@ const UserDashboardCard = () => {
         <div className="flex justify-between">
           <div>Social Leads</div>
           <div>
-            <HiDotsHorizontal size={20} />
+            <Menu placement="left-start">
+              <MenuHandler>
+                <div className="cursor-pointer">
+                  <HiDotsHorizontal
+                    size={20}
+                  />
+                </div>
+              </MenuHandler>
+              <MenuList>
+                <MenuItem>Action</MenuItem>
+                <MenuItem>Another Action</MenuItem>
+                <MenuItem>Something else here</MenuItem>
+              </MenuList>
+            </Menu>
           </div>
         </div>
         <hr className="border-blue-gray-200 my-2" />

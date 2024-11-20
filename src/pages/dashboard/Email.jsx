@@ -14,6 +14,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 
 const Email = () => {
   const [selectedEmail, setSelectedEmail] = useState(null);
+  const [selectedEmails, setSelectedEmails] = useState(new Set());
   const [compose, setCompose] = useState(false);
   const emails = [
     { id: 1, name: "John Doe", message: "Lorem ipsum dolor sit amet" },
@@ -41,6 +42,29 @@ const Email = () => {
   const handleBackClick = () => {
     setSelectedEmail(null);
   };
+  const handleSelectAllChange = (e) => {
+    if (e.target.checked) {
+      // Select all emails
+      setSelectedEmails(new Set(emails.map((email) => email.id)));
+    } else {
+      // Deselect all emails
+      setSelectedEmails(new Set());
+    }
+  };
+
+  // Handle individual checkbox change
+  const handleCheckboxChange = (emailId) => {
+    const updatedSelectedEmails = new Set(selectedEmails);
+    if (updatedSelectedEmails.has(emailId)) {
+      updatedSelectedEmails.delete(emailId);
+    } else {
+      updatedSelectedEmails.add(emailId);
+    }
+    setSelectedEmails(updatedSelectedEmails);
+  };
+
+  // Check if all emails are selected
+  const isAllSelected = emails.length > 0 && selectedEmails.size === emails.length;
 
   return (
     <div className="mt-5">
@@ -146,7 +170,8 @@ const Email = () => {
           <div className="h-auto md:h-16 flex flex-wrap items-center justify-between px-2 md:px-4 space-y-2 md:space-y-0">
             <div className="flex items-center flex-wrap space-y-2 md:space-y-0">
               <div className="relative flex items-center px-0.5 space-x-0.5">
-                <input type="checkbox" className="focus:ring-0" />
+                <input type="checkbox" checked={isAllSelected}
+                  onChange={handleSelectAllChange} className="focus:ring-0" />
               </div>
               <div className="flex items-center ml-3">
                 <button
@@ -238,6 +263,8 @@ const Email = () => {
                   >
                     <input
                       type="checkbox"
+                      checked={selectedEmails.has(email.id)}
+            onChange={() => handleCheckboxChange(email.id)}
                       className="focus:ring-0 border-2 border-gray-400"
                     />
                     <div className="w-full flex items-center justify-between p-1 my-1 cursor-pointer">
