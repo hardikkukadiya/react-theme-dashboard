@@ -23,14 +23,14 @@ const UserListItem = ({ imgSrc, name, email }) => (
       </div>
     </div>
     <div className="flex space-x-2">
-      <button className="p-2 bg-gray-200 rounded-full">
-        <MdEmail />
+      <button className="p-1.5 bg-gray-200 rounded-full">
+        <MdEmail size={13} />
       </button>
-      <button className="p-2 bg-gray-200 rounded-full">
-        <MdKeyboardVoice />
+      <button className="p-1.5 bg-gray-200 rounded-full">
+        <MdKeyboardVoice size={13} />
       </button>
-      <button className="p-2 bg-gray-200 rounded-full">
-        <HiOutlineDotsVertical />
+      <button className="p-1.5 bg-gray-200 rounded-full">
+        <HiOutlineDotsVertical size={13} />
       </button>
     </div>
   </li>
@@ -132,12 +132,15 @@ const UserDashboardCard = () => {
           <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
-             imgSrc="/img/team-4.jpeg"
+              imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />
+          </ul>{" "}          
+          <hr className="my-2" />
+          <ul className="space-y-4 mt-2">
             <UserListItem
-             imgSrc="/img/team-4.jpeg"
+              imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />

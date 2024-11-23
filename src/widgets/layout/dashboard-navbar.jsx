@@ -72,37 +72,39 @@ export function DashboardNavbar() {
           <Typography variant="h6" color="blue-gray">
             {page}
           </Typography>
-        </div>
-        <div className="flex items-center">
-          <div className="mr-auto md:mr-4 md:w-56">
+        </div>      
+        <div className="flex flex-wrap items-center justify-around gap-2">
+          <div className="w-full md:w-56">
             <Input label="Search" />
           </div>
           <IconButton
             variant="text"
             color="blue-gray"
-            className="grid xl:hidden"
+            className="block xl:hidden"
             onClick={() => setOpenSidenav(dispatch, !openSidenav)}
           >
             <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
           </IconButton>
           <Link to="/auth/auth/sign-in">
-            <Button
-              variant="text"
-              color="blue-gray"
-              className="hidden items-center gap-1 px-4 xl:flex normal-case"
-            >
-              <UserCircleIcon className="h-5 w-5 text-blue-gray-500" />
-              Sign In
-            </Button>
-            <IconButton
-              variant="text"
-              color="blue-gray"
-              className="grid xl:hidden"
-            >
-              <UserCircleIcon className="h-5 w-5 text-blue-gray-500" />
-            </IconButton>
+            <div className="flex items-center gap-4">
+              <Button
+                variant="text"
+                color="blue-gray"
+                className="hidden items-center gap-1 xl:flex normal-case"
+              >
+                <UserCircleIcon className="h-5 w-5 text-blue-gray-500" />
+                Sign In
+              </Button>
+              <IconButton
+                variant="text"
+                color="blue-gray"
+                className="block xl:hidden"
+              >
+                <UserCircleIcon className="h-5 w-5 text-blue-gray-500" />
+              </IconButton>
+            </div>
           </Link>
-          <Menu>
+          {/* <Menu>
             <MenuHandler>
               <IconButton variant="text" color="blue-gray">
                 <BellIcon className="h-5 w-5 text-blue-gray-500" />
@@ -179,7 +181,89 @@ export function DashboardNavbar() {
                 </div>
               </MenuItem>
             </MenuList>
+          </Menu> */}
+          <Menu>
+            <MenuHandler>
+              <IconButton variant="text" color="blue-gray">
+                <BellIcon className="h-5 w-5 text-blue-gray-500" />
+              </IconButton>
+            </MenuHandler>
+
+            <MenuList className="w-full max-w-sm sm:max-w-md md:max-w-lg border-0 overflow-x-hidden">
+              <MenuItem className="flex items-center gap-3">
+                <Avatar
+                  src="/img/team-3.jpeg"
+                  alt="item-1"
+                  size="sm"
+                  variant="circular"
+                />
+                <div className="flex-1">
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="mb-1 font-normal truncate"
+                  >
+                    <strong>New message</strong> from Laur
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="flex items-center gap-1 text-xs font-normal opacity-60 truncate"
+                  >
+                    <ClockIcon className="h-3.5 w-3.5" /> 13 minutes ago
+                  </Typography>
+                </div>
+              </MenuItem>
+
+              <MenuItem className="flex items-center gap-4">
+                <Avatar
+                  src="/img/team-3.jpeg"
+                  alt="item-2"
+                  size="sm"
+                  variant="circular"
+                />
+                <div className="flex-1">
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="mb-1 font-normal truncate"
+                  >
+                    <strong>New album</strong> by Travis Scott
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="flex items-center gap-1 text-xs font-normal opacity-60 truncate"
+                  >
+                    <ClockIcon className="h-3.5 w-3.5" /> 1 day ago
+                  </Typography>
+                </div>
+              </MenuItem>
+
+              <MenuItem className="flex items-center gap-4">
+                <div className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-tr from-blue-gray-800 to-blue-gray-900">
+                  <CreditCardIcon className="h-4 w-4 text-white" />
+                </div>
+                <div className="flex-1">
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="mb-1 font-normal truncate"
+                  >
+                    Payment successfully completed
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="flex items-center gap-1 text-xs font-normal opacity-60 truncate"
+                  >
+                    <ClockIcon className="h-3.5 w-3.5" /> 2 days ago
+                  </Typography>
+                </div>
+              </MenuItem>
+            </MenuList>
           </Menu>
+
           <Menu>
             <MenuHandler>
               <IconButton variant="text" color="blue-gray">
@@ -190,10 +274,10 @@ export function DashboardNavbar() {
               <MenuItem className="flex items-center gap-3">
                 <div>
                   <span className="text-lg text-[#577fec]">Google Apps Here</span>
-                </div>                     
-              </MenuItem>           
+                </div>
+              </MenuItem>
             </MenuList>
-          </Menu>         
+          </Menu>
           <IconButton
             variant="text"
             color="blue-gray"

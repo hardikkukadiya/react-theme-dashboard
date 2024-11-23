@@ -21,7 +21,7 @@ export function Dashboard() {
           sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
         }
       />
-      <div className="p-4 xl:ml-80">
+      <div className="p-4 xl:ml-72">
         <DashboardNavbar />
         <Configurator />
         {/* {!isChatBoxPath && (

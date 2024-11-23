@@ -187,7 +187,7 @@ export function Profile() {
           </div>
         </DialogBody>
         <DialogFooter>
-          <Button variant="text" color="red" onClick={() => setOpen(false)}>
+          <Button variant="text" color="red" className="mr-3 bg-red-50" onClick={() => setOpen(false)}>
             Cancel
           </Button>
           <Button variant="gradient" color="blue" onClick={handleSave}>

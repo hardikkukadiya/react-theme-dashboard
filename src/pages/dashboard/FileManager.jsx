@@ -12,37 +12,36 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 import { GoFileZip } from "react-icons/go";
 
 const ProductListItem = ({ productName, sales, price }) => {
-  // Define an icon based on the productName
   const getIcon = () => {
     switch (productName) {
       case "Documents":
-        return <FaFileAlt size={20} className="text-green-400" />; // Document icon
+        return <FaFileAlt size={20} className="text-green-400" />;
       case "Images":
-        return <FaRegImage size={20} className="text-blue-400" />; // Image icon
+        return <FaRegImage size={20} className="text-blue-400" />;
       case "Media Files":
-        return <FaVideo size={20} className="text-red-400" />; // Video/Media icon
+        return <FaVideo size={20} className="text-red-400" />;
       case "Other Files":
-        return <FaRegImages size={20} className="text-purple-400" />; // Video/Media icon
+        return <FaRegImages size={20} className="text-purple-400" />;
       default:
-        return <FaRegImages size={20} className="text-orange-400" />; // Default icon
+        return <FaRegImages size={20} className="text-orange-400" />;
     }
   };
-   
+
   return (
-    <li className="flex justify-between items-center">
-      <div className="flex items-center">
-        <div className="w-11 h-11 bg-gray-100 flex justify-center items-center rounded-md">
-          {getIcon()}
-        </div>
-        <div className="ml-3">
-          <p className="font-medium">{productName}</p>
-          <p className="text-sm text-gray-500">{sales}</p>
+    <div className="flex justify-between items-center bg-gray-50 p-2 rounded-md hover:bg-gray-100 transition">
+      <div className="flex items-center gap-3 min-w-0">
+        {getIcon()}
+        <div className="min-w-0">
+          <p className="text-sm font-medium text-gray-700 truncate">{productName}</p>
+          <p className="text-xs text-gray-500 truncate">{sales}</p>
         </div>
       </div>
-      <p className="font-semibold text-blue-600">{price}</p>
-    </li>
+      <span className="text-sm font-medium text-gray-600 flex-shrink-0">{price}</span>
+    </div>
   );
 };
+
+
 
 const FileManager = () => {
   const data = [
@@ -136,20 +135,22 @@ const FileManager = () => {
               </div>
             </div>
           </div>
-          <div className="h-auto sm:h-[420px] bg-white rounded-md p-3 overflow-y-auto custom">
+          <div className="h-auto sm:h-[420px] bg-white rounded-md p-3 overflow-y-auto custom shadow-md">         
             <div className="flex justify-between">
               <span className="text-lg sm:text-xl text-blue-600">45.5 GB</span>
               <span className="text-lg sm:text-xl text-gray-600">50 GB</span>
             </div>
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-1">
               <span className="text-sm sm:text-base text-gray-600">Used</span>
-              <span className="text-sm sm:text-base text-blue-600">Upgrade</span>
+              <button className="text-sm sm:text-base text-blue-600 hover:underline focus:outline-none">
+                Upgrade
+              </button>
             </div>
-            <div className="mt-2.5">
+            <div className="mt-2">
               <div className="relative pt-1">
                 <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
                   <div
-                    style={{width:'10%'}}
+                    style={{ width: '10%' }}
                     className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
                   ></div>
                   <div
@@ -163,50 +164,13 @@ const FileManager = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <ul className="space-y-2 sm:space-y-4 mt-3">
-                <ProductListItem
-                  productName="Documents"
-                  sales="1,756 files"
-                  price="15.3 GB"
-                />
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-2 sm:space-y-4 mt-3">
-                <ProductListItem
-                  productName="Images"
-                  sales="123 files"
-                  price="256 MB"
-                />
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-2 sm:space-y-4 mt-3">
-                <ProductListItem
-                  productName="Media Files"
-                  sales="24 files"
-                  price="3.4 GB"
-                />
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-2 sm:space-y-4 mt-3">
-                <ProductListItem
-                  productName="Other Files"
-                  sales="24 files"
-                  price="3.4 GB"
-                />
-              </ul>
-            </div>
-            <div>
-              <ul className="space-y-2 sm:space-y-4 mt-3">
-                <ProductListItem
-                  productName="Unknown Files"
-                  sales="24 files"
-                  price="178 GB"
-                />
-              </ul>
+            {/* Product List */}
+            <div className="mt-2 space-y-2">
+              <ProductListItem productName="Documents" sales="1,756 files" price="15.3 GB" />
+              <ProductListItem productName="Images" sales="123 files" price="256 MB" />
+              <ProductListItem productName="Media Files" sales="24 files" price="3.4 GB" />
+              <ProductListItem productName="Other Files" sales="24 files" price="3.4 GB" />
+              <ProductListItem productName="Unknown Files" sales="24 files" price="178 GB" />
             </div>
           </div>
         </div>

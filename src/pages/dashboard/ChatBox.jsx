@@ -3,8 +3,11 @@ import { BsChatDots } from 'react-icons/bs'
 import { FaPhone, FaRegFaceSmile, FaSquareFontAwesomeStroke } from 'react-icons/fa6'
 import { FiPaperclip, FiSend } from 'react-icons/fi'
 import { IoMdNotificationsOutline } from 'react-icons/io'
-import { RiArrowDropDownLine, RiContactsBook3Line } from 'react-icons/ri'
+import { RiArrowDropDownLine, RiContactsBook3Line, RiContactsFill } from 'react-icons/ri'
 import EmojiPicker from 'emoji-picker-react';
+import { BiSolidContact } from 'react-icons/bi'
+import { MdOutlineContacts } from 'react-icons/md'
+import { IoNotifications } from 'react-icons/io5'
 
 
 const ChatBox = () => {
@@ -87,27 +90,31 @@ const ChatBox = () => {
                             <span className='text-sm mt-1.5'>Calls</span>
                         </div>
                         <div className="flex flex-col items-center text-gray-800 hover:text-green-800 cursor-pointer">
-                            <div><RiContactsBook3Line size={20} /></div>
+                            <div><RiContactsFill size={20} /></div>
                             <span className='text-sm mt-1.5'>Contacts</span>
                         </div>
                         <div className="flex flex-col items-center text-gray-800 hover:text-green-800 cursor-pointer">
-                            <div><IoMdNotificationsOutline size={20} /></div>
+                            <div><IoNotifications size={20} /></div>
                             <span className='text-sm mt-1.5'>Notifications</span>
                         </div>
                     </div>
-
-                    <div className='mt-6'>
-                        <div className='flex flex-col md:flex-row justify-between'>
-                            <div className='border border-gray-400 px-4 md:p-1 py-1 rounded-2xl flex justify-center items-center gap-2 cursor-pointer mb-2 md:mb-0'>
-                                <span>Meet now</span>
-                                <span><RiArrowDropDownLine size={20} /></span>
+                    <div className="mt-6">
+                        <div className="flex xl:flex-row flex-col justify-between gap-3">
+                            <div className="flex-grow border border-gray-400 px-2 py-2 md:py-1 rounded-2xl flex justify-center items-center gap-2 cursor-pointer hover:bg-gray-100 transition">
+                                <span className="text-sm md:text-base">Meet now</span>
+                                <span>
+                                    <RiArrowDropDownLine size={20} />
+                                </span>
                             </div>
-                            <div className='border border-gray-400 px-4 py-1 rounded-2xl flex justify-center items-center gap-2 cursor-pointer'>
-                                <span>New Chat</span>
-                                <span><RiArrowDropDownLine size={20} /></span>
+                            <div className="flex-grow border border-gray-400 px-2 py-2 md:py-1 rounded-2xl flex justify-center items-center gap-2 cursor-pointer hover:bg-gray-100 transition">
+                                <span className="text-sm md:text-base">New Chat</span>
+                                <span>
+                                    <RiArrowDropDownLine size={20} />
+                                </span>
                             </div>
                         </div>
                     </div>
+
 
                     <div className="mt-6">
                         <h3 className="text-gray-500">RECENT CHATS</h3>
