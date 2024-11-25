@@ -102,49 +102,42 @@ const UserDashboardCard = () => {
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />           
-          </ul>{" "}
+          </ul> <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />           
-          </ul>{" "}
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />           
-          </ul>{" "}
+          </ul><hr className="my-2" />          
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />           
-          </ul>{" "}          
+          </ul><hr className="my-2" />          
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />           
-          </ul>{" "}          
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
             />           
-          </ul>{" "}
-          <ul className="space-y-4 mt-2">
-            <UserListItem
-              imgSrc="/img/team-4.jpeg"
-              name="Emy Jackson"
-              email="emy_jac@xyz.com"
-            />           
-          </ul>{" "}
+          </ul><hr className="my-2" />
         </div>
       </div>
 
@@ -175,7 +168,7 @@ const UserDashboardCard = () => {
               sales={278}
               price="$24K.00"
             />
-          </ul>{" "}
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -183,7 +176,7 @@ const UserDashboardCard = () => {
               sales={278}
               price="$24K.00"
             />
-          </ul>{" "}
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -191,7 +184,7 @@ const UserDashboardCard = () => {
               sales={278}
               price="$24K.00"
             />
-          </ul>{" "}
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -199,7 +192,7 @@ const UserDashboardCard = () => {
               sales={278}
               price="$24K.00"
             />
-          </ul>{" "}
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -207,7 +200,7 @@ const UserDashboardCard = () => {
               sales={278}
               price="$24K.00"
             />
-          </ul>{" "}
+          </ul><hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -215,15 +208,7 @@ const UserDashboardCard = () => {
               sales={278}
               price="$24K.00"
             />
-          </ul>{" "}
-          <ul className="space-y-4 mt-2">
-            <ProductListItem
-              imgSrc="/img/yellow.png"
-              productName="Yellow Tshirt"
-              sales={278}
-              price="$24K.00"
-            />
-          </ul>{" "}
+          </ul><hr className="my-2" />
         </div>
       </div>
 
