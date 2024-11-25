@@ -1,15 +1,16 @@
 import React from "react";
 import { FaFileAlt } from "react-icons/fa";
-import { FaDropbox, FaFolder, FaGoogleDrive, FaPlus, FaRegFolder, FaRegImage, FaRegImages, FaVideo } from "react-icons/fa6";
-import { IoDocumentTextOutline, IoImageOutline, IoSearch, IoVideocamOutline } from "react-icons/io5";
-import { MdPeople } from "react-icons/md";
+import { FaDropbox, FaFolder, FaGoogleDrive, FaPlus,FaRegImage, FaRegImages, FaVideo } from "react-icons/fa6";
+import { IoDocumentTextOutline, IoImageOutline, IoSearch} from "react-icons/io5";
 import { BsThreeDots } from "react-icons/bs";
 import { Avatar, Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
 import { BiDevices, BiSolidDoorOpen } from "react-icons/bi";
-import { FiMusic, FiRefreshCcw } from "react-icons/fi";
+import { FiMusic, FiVideo } from "react-icons/fi";
 import { PiPlugChargingLight } from "react-icons/pi";
 import { RiDeleteBin2Line } from "react-icons/ri";
-import { GoFileZip } from "react-icons/go";
+import { IoMdFolderOpen } from "react-icons/io";
+import { HiOutlineRefresh } from "react-icons/hi";
+import { TbFileZip } from "react-icons/tb";
 
 const ProductListItem = ({ productName, sales, price }) => {
   const getIcon = () => {
@@ -40,8 +41,6 @@ const ProductListItem = ({ productName, sales, price }) => {
     </div>
   );
 };
-
-
 
 const FileManager = () => {
   const data = [
@@ -74,7 +73,7 @@ const FileManager = () => {
               <div>
                 <div className="flex gap-4 items-center p-2.5 mt-3 border-b border-gray-300 cursor-pointer hover:bg-blue-600 text-gray-700 hover:text-white">
                   <span>
-                    <FaRegFolder size={20} />
+                    <IoMdFolderOpen size={20} />
                   </span>
                   <span>All File</span>
                 </div>
@@ -86,7 +85,7 @@ const FileManager = () => {
                 </div>
                 <div className="flex gap-4 items-center p-2.5 border-b border-gray-300 pb-2.5 cursor-pointer hover:bg-blue-600 text-gray-700 hover:text-white">
                   <span>
-                    <FiRefreshCcw size={20} />
+                    <HiOutlineRefresh size={20} />
                   </span>
                   <span>Recents</span>
                 </div>
@@ -116,7 +115,7 @@ const FileManager = () => {
                 </div>
                 <div className="flex gap-4 items-center p-2.5 border-b border-gray-300 pb-2.5 cursor-pointer hover:bg-blue-600 text-gray-700 hover:text-white">
                   <span>
-                    <IoVideocamOutline size={20} />
+                    <FiVideo size={20} />
                   </span>
                   <span>Videos</span>
                 </div>
@@ -128,7 +127,7 @@ const FileManager = () => {
                 </div>
                 <div className="flex gap-4 items-center p-2.5 cursor-pointer hover:bg-blue-600 text-gray-700 hover:text-white">
                   <span>
-                    <GoFileZip size={20} />
+                    <TbFileZip size={20} />
                   </span>
                   <span>Zip File</span>
                 </div>

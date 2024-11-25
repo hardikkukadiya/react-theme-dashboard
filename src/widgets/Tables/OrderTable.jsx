@@ -118,8 +118,8 @@ const OrderTable = () => {
   return (
     <div>
       <div className="flex flex-col">
-        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 mt-5">
-          <div className="inline-block min-w-full align-middle md:px-6 lg:px-8">
+        <div className="overflow-x-auto mt-5">
+          <div className="inline-block min-w-full align-middle">
             <div className="bg-white p-4 rounded-md">
               <span className="text-2xl">Orders Summary</span>
               <hr className="my-4" />

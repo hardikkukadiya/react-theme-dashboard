@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
-import { CgCloseO } from "react-icons/cg";
 import {
   Button,
   IconButton,
   Typography,
 } from "@material-tailwind/react";
 import { useMaterialTailwindController, setOpenSidenav } from "../../context";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 
 export function Sidenav({ brandName, routes }) {
   const [controller, dispatch] = useMaterialTailwindController();
@@ -115,7 +115,7 @@ export function Sidenav({ brandName, routes }) {
           className="absolute top-5 right-5 grid xl:hidden"
           onClick={() => setOpenSidenav(dispatch, false)}
         >
-          <CgCloseO className="h-5 w-5 text-black" />
+          <XMarkIcon className="h-5 w-5 text-black" />
         </IconButton>
       </div>
 

@@ -74,18 +74,16 @@ const SocialListItem = ({ imgSrc, platform, count, growth }) => (
 
 const UserDashboardCard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
-      {/* New Customers Section */}
-      <div className="bg-white rounded-lg shadow-md p-4">
-        <div className="flex justify-between">
-          <div>New Customers</div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 ">
+  
+      <div className="bg-white rounded-lg shadow-md p-4 flex flex-col">
+        <div className="flex justify-between items-center">
+          <div className="text-lg font-semibold">New Customers</div>
           <div>
             <Menu placement="left-start">
               <MenuHandler>
                 <div className="cursor-pointer">
-                  <HiDotsHorizontal
-                    size={20}
-                  />
+                  <HiDotsHorizontal size={20} />
                 </div>
               </MenuHandler>
               <MenuList>
@@ -97,69 +95,67 @@ const UserDashboardCard = () => {
           </div>
         </div>
         <hr className="border-blue-gray-200 my-2" />
-        <div className="h-[400px] overflow-y-auto custom px-2">
-          <ul className="space-y-4 mt-2">
-            <UserListItem
-             imgSrc="/img/team-4.jpeg"
-              name="Emy Jackson"
-              email="emy_jac@xyz.com"
-            />
-          </ul>{" "}
-          <hr className="my-2" />
-          <ul className="space-y-4 mt-2">
-            <UserListItem
-             imgSrc="/img/team-4.jpeg"
-              name="Emy Jackson"
-              email="emy_jac@xyz.com"
-            />
-          </ul>{" "}
-          <hr className="my-2" />
-          <ul className="space-y-4 mt-2">
-            <UserListItem
-             imgSrc="/img/team-4.jpeg"
-              name="Emy Jackson"
-              email="emy_jac@xyz.com"
-            />
-          </ul>{" "}
-          <hr className="my-2" />
-          <ul className="space-y-4 mt-2">
-            <UserListItem
-             imgSrc="/img/team-4.jpeg"
-              name="Emy Jackson"
-              email="emy_jac@xyz.com"
-            />
-          </ul>{" "}
-          <hr className="my-2" />
+        <div className="h-[300px] md:h-[400px] overflow-y-auto custom px-2">
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
-            />
+            />           
+          </ul>{" "}
+          <ul className="space-y-4 mt-2">
+            <UserListItem
+              imgSrc="/img/team-4.jpeg"
+              name="Emy Jackson"
+              email="emy_jac@xyz.com"
+            />           
+          </ul>{" "}
+          <ul className="space-y-4 mt-2">
+            <UserListItem
+              imgSrc="/img/team-4.jpeg"
+              name="Emy Jackson"
+              email="emy_jac@xyz.com"
+            />           
+          </ul>{" "}
+          <ul className="space-y-4 mt-2">
+            <UserListItem
+              imgSrc="/img/team-4.jpeg"
+              name="Emy Jackson"
+              email="emy_jac@xyz.com"
+            />           
           </ul>{" "}          
-          <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <UserListItem
               imgSrc="/img/team-4.jpeg"
               name="Emy Jackson"
               email="emy_jac@xyz.com"
-            />
+            />           
+          </ul>{" "}          
+          <ul className="space-y-4 mt-2">
+            <UserListItem
+              imgSrc="/img/team-4.jpeg"
+              name="Emy Jackson"
+              email="emy_jac@xyz.com"
+            />           
           </ul>{" "}
-          <hr className="my-2" />
+          <ul className="space-y-4 mt-2">
+            <UserListItem
+              imgSrc="/img/team-4.jpeg"
+              name="Emy Jackson"
+              email="emy_jac@xyz.com"
+            />           
+          </ul>{" "}
         </div>
       </div>
 
-      {/* Top Products Section */}
-      <div className="bg-white rounded-lg shadow-md p-4">
-        <div className="flex justify-between">
-          <div>Top Products</div>
+      <div className="bg-white rounded-lg shadow-md p-4 flex flex-col">
+        <div className="flex justify-between items-center">
+          <div className="text-lg font-semibold">Top Products</div>
           <div>
             <Menu placement="left-start">
               <MenuHandler>
                 <div className="cursor-pointer">
-                  <HiDotsHorizontal
-                    size={20}
-                  />
+                  <HiDotsHorizontal size={20} />
                 </div>
               </MenuHandler>
               <MenuList>
@@ -171,7 +167,7 @@ const UserDashboardCard = () => {
           </div>
         </div>
         <hr className="border-blue-gray-200 my-2" />
-        <div className="h-[400px] overflow-y-auto custom px-2">
+        <div className="h-[300px] md:h-[400px] overflow-y-auto custom px-2">
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -180,7 +176,6 @@ const UserDashboardCard = () => {
               price="$24K.00"
             />
           </ul>{" "}
-          <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -189,7 +184,6 @@ const UserDashboardCard = () => {
               price="$24K.00"
             />
           </ul>{" "}
-          <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -198,7 +192,6 @@ const UserDashboardCard = () => {
               price="$24K.00"
             />
           </ul>{" "}
-          <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -207,7 +200,6 @@ const UserDashboardCard = () => {
               price="$24K.00"
             />
           </ul>{" "}
-          <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -216,7 +208,6 @@ const UserDashboardCard = () => {
               price="$24K.00"
             />
           </ul>{" "}
-          <hr className="my-2" />
           <ul className="space-y-4 mt-2">
             <ProductListItem
               imgSrc="/img/yellow.png"
@@ -225,21 +216,25 @@ const UserDashboardCard = () => {
               price="$24K.00"
             />
           </ul>{" "}
-          <hr className="my-2" />
+          <ul className="space-y-4 mt-2">
+            <ProductListItem
+              imgSrc="/img/yellow.png"
+              productName="Yellow Tshirt"
+              sales={278}
+              price="$24K.00"
+            />
+          </ul>{" "}
         </div>
       </div>
 
-      {/* Social Leads Section */}
-      <div className="bg-white rounded-lg shadow-md p-4">
-        <div className="flex justify-between">
-          <div>Social Leads</div>
+      <div className="bg-white rounded-lg shadow-md p-4 flex flex-col">
+        <div className="flex justify-between items-center">
+          <div className="text-lg font-semibold">Social Leads</div>
           <div>
             <Menu placement="left-start">
               <MenuHandler>
                 <div className="cursor-pointer">
-                  <HiDotsHorizontal
-                    size={20}
-                  />
+                  <HiDotsHorizontal size={20} />
                 </div>
               </MenuHandler>
               <MenuList>
@@ -251,7 +246,7 @@ const UserDashboardCard = () => {
           </div>
         </div>
         <hr className="border-blue-gray-200 my-2" />
-        <div className="h-[400px] overflow-y-auto custom px-4">
+        <div className="h-[300px] md:h-[400px] overflow-y-auto custom px-2">
           <ul className="space-y-4">
             <SocialListItem
               imgSrc="/img/twitter.png"
@@ -309,6 +304,7 @@ const UserDashboardCard = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

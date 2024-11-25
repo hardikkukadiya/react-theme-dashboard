@@ -9,8 +9,8 @@ import OrderTable from "@/widgets/Tables/OrderTable";
 const Home = () => {
   return (
     <div className="mt-5">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="bg-white p-5 mt-2 mb-2 rounded-lg flex justify-between items-center shadow">
           <div>
             <div className="text-[#6c757d] text-[16px] font-[500]">Total Orders</div>
             <p className="text-[#172b4d] my-1 text-2xl">$4805</p>
@@ -21,7 +21,7 @@ const Home = () => {
           </span>
         </div>
 
-        <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
+        <div className="bg-white  p-5 mt-2 mb-2 rounded-lg flex justify-between items-center shadow">
           <div>
             <div className="text-[#6c757d] text-[16px] font-[500]">
               Total Customers
@@ -34,7 +34,7 @@ const Home = () => {
           </span>
         </div>
 
-        <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
+        <div className="bg-white  p-5 mt-2 mb-2 rounded-lg flex justify-between items-center shadow">
           <div>
             <div className="text-[#6c757d] text-[16px] font-[500]">
               Store Visitors
@@ -47,7 +47,7 @@ const Home = () => {
           </span>
         </div>
 
-        <div className="bg-white  p-5 m-2 rounded-lg flex justify-between items-center shadow">
+        <div className="bg-white  p-5 mt-2 mb-2 rounded-lg flex justify-between items-center shadow">
           <div>
             <div className="text-[#6c757d] text-[16px] font-[500]">Bounce Rate</div>
             <p className="text-[#172b4d] my-1 text-2xl">34.46%</p>

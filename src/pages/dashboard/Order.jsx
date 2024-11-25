@@ -26,7 +26,6 @@ const Order = () => {
   const TABLE_HEAD = [
     {
       head: "Number",
-      icon: <Checkbox />,
     },
     {
       head: "Customer",
@@ -91,7 +90,7 @@ const Order = () => {
           <CardHeader
             floated={false}
             shadow={false}
-            className="mb-2 rounded-none p-2"
+            className="mb-2 rounded-none p-2 flex justify-end items-end"
           >
             <div className="w-full md:w-96">
               <div className="h-12 bg-gray-200 rounded animate-pulse"></div>
@@ -99,11 +98,10 @@ const Order = () => {
           </CardHeader>
           <table className="w-full min-w-max table-auto text-left">
             <thead>
-              <tr>
+              <tr>                
                 {TABLE_HEAD.map(({ head, icon }) => (
                   <th key={head} className="border-b border-gray-300 p-4">
-                    <div className="flex items-center gap-1">
-                      {icon}
+                    <div className="flex items-center gap-1">                
                       <Typography
                         color="blue-gray"
                         variant="small"
@@ -121,7 +119,12 @@ const Order = () => {
                 <tr key={index}>
                   <td className="p-4">
                     <div className="flex items-center gap-1">
-                      <Checkbox />
+                      {/* <input
+                        type="checkbox"
+                        // checked={isAllSelected}
+                        // onChange={handleHeaderCheckboxChange}
+                        className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700"
+                      /> */}
                       <div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div>
                     </div>
                   </td>
@@ -154,7 +157,7 @@ const Order = () => {
           <CardHeader
             floated={false}
             shadow={false}
-            className="mb-2 rounded-none p-2"
+            className="mb-2 rounded-none p-2 flex justify-end items-end"
           >
             <div className="w-full md:w-96">
               <Input
@@ -169,7 +172,12 @@ const Order = () => {
                 {TABLE_HEAD.map(({ head, icon }) => (
                   <th key={head} className="border-b border-gray-300 p-4">
                     <div className="flex items-center gap-1">
-                      {icon}
+                    {/* <input
+                      type="checkbox"
+                      // checked={isAllSelected}
+                      // onChange={handleHeaderCheckboxChange}
+                      className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700"
+                    /> */}
                       <Typography
                         color="blue-gray"
                         variant="small"
@@ -194,7 +202,12 @@ const Order = () => {
                     <tr key={number}>
                       <td className={classes}>
                         <div className="flex items-center gap-1">
-                          <Checkbox />
+                          {/* <input
+                            type="checkbox"
+                            // checked={isAllSelected}
+                            // onChange={handleHeaderCheckboxChange}
+                            className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700 mr-2"
+                          /> */}
                           <Typography
                             variant="small"
                             color="blue-gray"
