@@ -11,6 +11,8 @@ import { HiOutlineMail, HiOutlineMailOpen, HiOutlineSaveAs } from "react-icons/h
 import { FiStar } from "react-icons/fi";
 import { GrFormPrevious } from "react-icons/gr";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Email = () => {
   const [selectedEmail, setSelectedEmail] = useState(null);
@@ -63,8 +65,19 @@ const Email = () => {
     setSelectedEmails(updatedSelectedEmails);
   };
 
-  // Check if all emails are selected
   const isAllSelected = emails.length > 0 && selectedEmails.size === emails.length;
+  
+  const handleSubmit = () => {
+    const emailInput = document.getElementById("email").value; 
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/; 
+
+    if (emailRegex.test(emailInput)) {
+      toast.success("Message sent successfully");
+      setCompose(!compose);
+    } else {
+      toast.error("Please enter a valid email address"); 
+    }
+  };
 
   return (
     <div className="mt-5">
@@ -308,16 +321,12 @@ const Email = () => {
             <div className="bg-blue-600 w-full flex justify-between px-4 py-3 rounded-md text-white cursor-pointer">
               New Message <span onClick={handleClick}><IoMdCloseCircleOutline size={25} /></span>
             </div>
-            <form             
-              action=""
-              method="POST"
-              id="form"
-            >
+            <form>
               <div className="mb-6 mt-3">
                 <input
-                  type="text"
-                  name="name"
-                  id="name"
+                  type="email"
+                  name="email"
+                  id="email"               
                   placeholder="John Doe@gmail.com"
                   required
                   className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
@@ -344,12 +353,12 @@ const Email = () => {
                 ></textarea>
               </div>
               <div className="mb-6">
-                <button
-                  type="submit"
-                  className="w-full px-3 py-4 text-white bg-blue-600 rounded-md focus:bg-indigo-600 focus:outline-none"
+                <div                 
+                  onClick={handleSubmit}
+                  className="w-full px-3 cursor-pointer py-4 text-white bg-blue-600 rounded-md focus:bg-indigo-600 focus:outline-none"
                 >
                   Send Message
-                </button>
+                </div>
               </div>
             </form>
           </div>
@@ -357,8 +366,8 @@ const Email = () => {
       ) : (
         ""
       )}
+<ToastContainer position="top-right" autoClose={2500} />
     </div>
-
   );
 };
 

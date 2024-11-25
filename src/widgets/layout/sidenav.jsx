@@ -7,20 +7,14 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useMaterialTailwindController, setOpenSidenav } from "../../context";
-import { useState } from "react";
 
-export function Sidenav({ brandImg, brandName, routes }) {
+export function Sidenav({ brandName, routes }) {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavColor, sidenavType, openSidenav } = controller;
-   const [openDropdown, setOpenDropdown] = useState(null);
   const sidenavTypes = {
     dark: "bg-gradient-to-br from-gray-800 to-gray-900",
     white: "bg-white shadow-sm",
     transparent: "bg-transparent",
-  };
-
-  const handleDropdown = (name) => {
-    setOpenDropdown(openDropdown === name ? null : name);
   };
   
   return (
