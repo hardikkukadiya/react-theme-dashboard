@@ -110,76 +110,28 @@ export function DashboardNavbar() {
                 <BellIcon className="h-5 w-5 text-blue-gray-500" />
               </IconButton>
             </MenuHandler>
-
-            <MenuList className="w-full max-w-sm sm:max-w-md md:max-w-lg border-0 overflow-x-hidden">
-              <MenuItem className="flex items-center gap-3">
+            <MenuList className="w-max border-0">
+              <MenuItem className="flex items-center gap-1 p-0.5 bg-none hover:bg-none">
                 <Avatar
-                  src="/img/team-3.jpeg"
+                  src="/img/team-1.jpeg"
                   alt="item-1"
                   size="sm"
                   variant="circular"
                 />
-                <div className="flex-1">
+                <div>
                   <Typography
                     variant="small"
                     color="blue-gray"
-                    className="mb-1 font-normal truncate"
+                    className="mb-1 font-normal"
                   >
                     <strong>New message</strong> from Laur
                   </Typography>
                   <Typography
                     variant="small"
                     color="blue-gray"
-                    className="flex items-center gap-1 text-xs font-normal opacity-60 truncate"
+                    className="flex items-center gap-1 text-xs font-normal opacity-60"
                   >
                     <ClockIcon className="h-3.5 w-3.5" /> 13 minutes ago
-                  </Typography>
-                </div>
-              </MenuItem>
-
-              <MenuItem className="flex items-center gap-4">
-                <Avatar
-                  src="/img/team-3.jpeg"
-                  alt="item-2"
-                  size="sm"
-                  variant="circular"
-                />
-                <div className="flex-1">
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="mb-1 font-normal truncate"
-                  >
-                    <strong>New album</strong> by Travis Scott
-                  </Typography>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="flex items-center gap-1 text-xs font-normal opacity-60 truncate"
-                  >
-                    <ClockIcon className="h-3.5 w-3.5" /> 1 day ago
-                  </Typography>
-                </div>
-              </MenuItem>
-
-              <MenuItem className="flex items-center gap-4">
-                <div className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-tr from-blue-gray-800 to-blue-gray-900">
-                  <CreditCardIcon className="h-4 w-4 text-white" />
-                </div>
-                <div className="flex-1">
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="mb-1 font-normal truncate"
-                  >
-                    Payment successfully completed
-                  </Typography>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="flex items-center gap-1 text-xs font-normal opacity-60 truncate"
-                  >
-                    <ClockIcon className="h-3.5 w-3.5" /> 2 days ago
                   </Typography>
                 </div>
               </MenuItem>
