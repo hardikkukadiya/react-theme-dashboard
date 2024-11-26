@@ -315,7 +315,7 @@ const Email = () => {
           </div>
         </div>
       </div>
-      {compose ? (
+      {/* {compose ? (
         <div className="fixed bottom-0 right-0 mb-4 mr-4">
           <div className="w-full lg:w-[566px] h-auto my-10 bg-white dark:bg-gray-800 p-5 rounded-md shadow-sm">
             <div className="bg-blue-600 w-full flex justify-between px-4 py-3 rounded-md text-white cursor-pointer">
@@ -359,6 +359,56 @@ const Email = () => {
                 >
                   Send Message
                 </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      ) : (
+        ""
+      )} */}
+      {compose ? (
+        <div className="fixed bottom-0 right-0 mb-2 mr-4">
+          <div className="w-full max-w-full sm:max-w-md lg:max-w-lg xl:max-w-[566px] h-auto my-10 bg-white dark:bg-gray-800 p-5 rounded-md shadow-sm max-h-[90vh] overflow-auto">
+            <div className="bg-blue-600 w-full flex justify-between px-4 py-3 rounded-md text-white cursor-pointer">
+              New Message
+              <span onClick={handleClick}>
+                <IoMdCloseCircleOutline size={25} />
+              </span>
+            </div>
+            <form>
+              <div className="mb-6 mt-3">
+                <input
+                  ref={emailRef}
+                  placeholder="John Doe@gmail.com"
+                  className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                />
+              </div>
+              <div className="mb-6">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="subject"
+                  className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                />
+              </div>
+              <div className="mb-6">
+                <textarea
+                  rows={5}
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                ></textarea>
+              </div>
+              <div className="mb-6">
+                <button
+                  type="submit"
+                  onClick={handleSubmit}
+                  className="w-full px-3 py-4 text-white bg-blue-600 rounded-md focus:bg-indigo-600 focus:outline-none"
+                >
+                  Send Message
+                </button>
               </div>
             </form>
           </div>
