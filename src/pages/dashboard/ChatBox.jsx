@@ -66,7 +66,7 @@ const ChatBox = () => {
 
     return (
         <div className='mt-5'>
-            <div className="flex flex-col bg-white rounded-md md:flex-row min-h-screen"> 
+            <div className="flex flex-col bg-white rounded-md md:flex-row h-fit"> 
                 <div className="w-full md:w-[33%] p-4 border-r">
                     <div className="flex items-center space-x-3">
                         <img loading="lazy" src="/img/team-2.jpeg" alt="User Avatar" className="w-10 h-10 rounded-full" />
@@ -118,7 +118,7 @@ const ChatBox = () => {
 
                     <div className="mt-6">
                         <h3 className="text-gray-500">RECENT CHATS</h3>
-                        <div className="mt-3 space-y-1 overflow-y-auto custom h-[50vh]">
+                        <div className="mt-3 space-y-1 overflow-y-auto custom h-[30vh]">
                             <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
                                     <img loading="lazy" src="/img/team-4.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
@@ -184,7 +184,7 @@ const ChatBox = () => {
                     </div>
                 </div>
 
-                <div className="flex-grow w-full md:w-3/4 flex flex-col justify-between h-[100vh]">
+                <div className="flex-grow w-full md:w-3/4 flex flex-col justify-between h-[80vh]">
                     <div className="flex-grow p-6 space-y-4 overflow-y-auto custom">
                         {messages.length === 0 ? (
                             <p className="bg-gray-200 text-gray-700 p-3 rounded-lg max-w-xs">
