@@ -67,7 +67,16 @@ const Products = () => {
         setProducts(updatedProducts);
         toast.success("Product deleted");
     };
+// const handleDelete = (index) => {
+//         const updatedProducts = products.filter((_, i) => i !== index);
+//         setProducts(updatedProducts);
+//         toast.success("Product deleted");
 
+//         // Adjust page if the current page becomes empty after deletion
+//         if (updatedProducts.length < currentPage * ITEMS_PER_PAGE && currentPage > 1) {
+//             setCurrentPage((prevPage) => prevPage - 1);
+//         }
+//     };
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });

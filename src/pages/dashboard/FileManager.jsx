@@ -60,10 +60,11 @@ const FileManager = () => {
   return (
     <div className="mt-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {/* 704*318 than   sm:grid-cols-2 this css is not working proper plz check give me a proper responsive design  */}
         <div className="space-y-4">
           <div className="h-auto sm:h-[600px] bg-white rounded-md p-4 overflow-y-auto">
             <div className="h-16 flex items-center">
-              <div className="w-full sm:w-48 cursor-pointer mx-auto bg-blue-600 hover:bg-blue-700 flex items-center justify-center text-gray-100 py-1.5 rounded space-x-2 transition duration-150">              
+              <div className="w-full cursor-pointer mx-auto bg-blue-600 hover:bg-blue-700 flex items-center justify-center text-gray-100 py-1.5 rounded space-x-2 transition duration-150">              
                 <div><FaPlus /></div>
                 <span>Add File</span>
               </div>
