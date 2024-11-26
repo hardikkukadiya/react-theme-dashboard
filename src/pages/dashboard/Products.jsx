@@ -180,18 +180,14 @@ const Products = () => {
 
                     </div>
                     <div className="mb-4 flex flex-col justify-end gap-4 mt-2 md:flex-row md:items-center md:gap-8">
-                        {/* Search Input and Buttons Container */}
                         <div className="flex w-full shrink-0 gap-2 md:w-max mr-2 flex-col md:flex-row">
-                            {/* Search Input */}
                             <div className="w-full md:w-60">
                                 <Input
                                     label="Search"
                                     icon={<MagnifyingGlassIcon className="h-5 w-5" />}
                                 />
-                            </div>
-                            {/* Buttons Container */}
+                            </div>                        
                             <div className="flex flex-wrap gap-2">
-                                {/* Upload Button */}
                                 <button
                                     className="flex items-center px-4 py-2 space-x-2 border rounded-lg hover:bg-gray-100">
                                     <ArrowUpTrayIcon className="w-5 h-5" />

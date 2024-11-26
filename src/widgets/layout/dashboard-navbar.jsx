@@ -1,6 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
 import { RxDashboard } from "react-icons/rx";
-import { FcGoogle } from "react-icons/fc";
 import {
   Navbar,
   Typography,
@@ -19,7 +18,6 @@ import {
   Cog6ToothIcon,
   BellIcon,
   ClockIcon,
-  CreditCardIcon,
   Bars3Icon,
 } from "@heroicons/react/24/solid";
 import {
