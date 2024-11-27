@@ -64,15 +64,15 @@ const TodoList = () => {
         </div>
         <ul className="space-y-2">
           {tasks.map(task => (
-            <li key={task.id} className="flex items-center justify-between p-2 border border-gray-200 rounded-md">
-              <div className="flex items-start">
+            <li key={task.id} className="flex items-start justify-between p-2 border border-gray-200 rounded-md">
+              <div className="flex items-start mt-1">
                 <input
                   type="checkbox"
                   checked={task.completed}
                   onChange={() => toggleTaskCompletion(task.id)}
                   className="mr-2 mt-1.5"
                 />
-                <span className={`text-gray-800 break-all  ${task.completed ? 'line-through' : ''}`} style={{ whiteSpace: 'pre-wrap' }}>
+                <span className={`text-gray-800 break-all ${task.completed ? 'line-through' : ''}`} style={{ whiteSpace: 'pre-wrap' }}>
                   {task.text}
                 </span>
               </div>
