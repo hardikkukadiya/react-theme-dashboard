@@ -115,12 +115,12 @@ const Products = () => {
         { img: "/img/one.png", name: "Face Wash", amount: "2,500", date: "Wed 3:00pm", status: "paid" },
         { img: "/img/two.png", name: "Nail Paint",amount: "5,000", date: "Wed 1:00pm", status: "paid" },
         { img: "/img/three.png", name: "Earrings",amount: "5,000", date: "Wed 1:00pm", status: "pending" },
-        { img: "/img/four.png", name: "Daisy Love spray" ,amount: "5,000", date: "Wed 1:00pm", status: "cancel" },
+        { img: "/img/four.png", name: "Daisy Love spray" ,amount: "5,000", date: "Wed 1:00pm", status: "cancelled" },
         { img: "/img/five.png", name: "Dimond Ring", amount: "5,000", date: "Wed 1:00pm", status: "pending" },
-        { img: "/img/six.png", name: "Bag", amount: "5,000", date: "Wed 1:00pm", status: "cancel" },
-        { img: "/img/seven.png", name: "Face Serum", amount: "5,000", date: "Wed 1:00pm", status: "cancel" },
+        { img: "/img/six.png", name: "Bag", amount: "5,000", date: "Wed 1:00pm", status: "cancelled" },
+        { img: "/img/seven.png", name: "Face Serum", amount: "5,000", date: "Wed 1:00pm", status: "cancelled" },
         { img: "/img/eight.png", name: "Dimond Earrings", amount: "5,000", date: "Wed 1:00pm", status: "paid" },
-        { img: "/img/2020.png", name: "Google Pixel", amount: "5,000", date: "Wed 1:00pm", status: "cancel" },       
+        { img: "/img/2020.png", name: "Google Pixel", amount: "5,000", date: "Wed 1:00pm", status: "cancelled" },       
     ];
     const handleFileChange = (event) => {
         const file = event.target.files[0];
