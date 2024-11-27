@@ -94,19 +94,19 @@ export function Profile() {
               <div>
               <div className="flex gap-3 mb-2">
                 <div>First Name:</div>
-                <span className="font-semibold text-black">{profile.firstName}</span>
+                <span className="font-semibold text-black break-all">{profile.firstName}</span>
               </div>
               <div className="flex gap-3 mb-2">
                 <div>Mobile:</div>
-                <span className="font-semibold text-black">{profile.mobile}</span>
+                    <span className="font-semibold text-black break-all">{profile.mobile}</span>
               </div>
               <div className="flex gap-3 mb-2">
                 <div>Email:</div>
-                <span className="font-semibold text-black">{profile.email}</span>
+                    <span className="font-semibold text-black break-all">{profile.email}</span>
               </div>
               <div className="flex gap-3 mb-2">
                 <div>Location:</div>
-                <span className="font-semibold text-black">{profile.location}</span>
+                    <span className="font-semibold text-black break-all">{profile.location}</span>
               </div>
               <div className="pt-4">Social Media</div>
               <div className="grid grid-cols-2 gap-2 mt-2 sm:grid-cols-4 md:grid-cols-8">
