@@ -179,17 +179,17 @@ const Email = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 px-2">         
+        <div className="flex-1 px-2">                  
           <div className="h-auto md:h-16 flex flex-wrap items-center justify-between px-2 md:px-4 space-y-2 md:space-y-0">
             <div className="flex items-center flex-wrap space-y-2 md:space-y-0">
               <div className="relative flex items-center px-0.5 space-x-0.5">
-                <input type="checkbox" checked={isAllSelected}
-                  onChange={handleSelectAllChange} className="focus:ring-0" />
+                <input type="checkbox" checked={isAllSelected} onChange={handleSelectAllChange} className="focus:ring-0" />
               </div>
               <div className="flex items-center ml-3">
                 <button
                   title="Reload"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100">
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                >
                   <span><LuRefreshCcw size={17} /></span>
                 </button>
               </div>
@@ -197,19 +197,19 @@ const Email = () => {
               <div className="flex items-center space-x-2 mt-2 md:mt-0">
                 <button
                   title="Archive"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
                 >
                   <span><HiOutlineSaveAs size={17} /></span>
                 </button>
                 <button
                   title="Mark As Spam"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
                 >
                   <span><IoWarningOutline size={17} /></span>
                 </button>
                 <button
                   title="Delete"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
                 >
                   <span><RiDeleteBinLine size={17} /></span>
                 </button>
@@ -218,19 +218,19 @@ const Email = () => {
               <div className="flex items-center space-x-2 mt-2 md:mt-0">
                 <button
                   title="Mark As Read"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
                 >
                   <span><HiOutlineMailOpen size={17} /></span>
                 </button>
                 <button
                   title="Mark As Unread"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
                 >
                   <span><HiOutlineMail size={17} /></span>
                 </button>
                 <button
                   title="Add Star"
-                  className="text-gray-700 px-2 py-1 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
+                  className="text-gray-700 px-2 py-1 ml-2 border border-gray-300 rounded-lg shadow hover:bg-gray-200 transition duration-100"
                 >
                   <span><FiStar size={17} /></span>
                 </button>
@@ -254,7 +254,6 @@ const Email = () => {
               </div>
             </div>
           </div>
-
 
           <div className="bg-gray-100 mb-6 rounded-md overflow-y-auto max-h-screen custom">
             {selectedEmail ? (

@@ -4,6 +4,7 @@ import { HiDotsHorizontal, HiOutlineDotsVertical } from "react-icons/hi";
 import { MdEmail, MdKeyboardVoice } from "react-icons/md";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { Link } from "react-router-dom";
 
 // Reusable component for a user/customer list item
 const UserListItem = ({ imgSrc, name, email }) => (
@@ -23,15 +24,15 @@ const UserListItem = ({ imgSrc, name, email }) => (
       </div>
     </div>
     <div className="flex space-x-2">
-      <button className="p-1.5 bg-gray-200 rounded-full">
+      <Link to={"/dashboard/email"} className="p-1.5 bg-gray-200 rounded-full">
         <MdEmail size={13} />
-      </button>
-      <button className="p-1.5 bg-gray-200 rounded-full">
+      </Link>
+      {/* <button className="p-1.5 bg-gray-200 rounded-full">
         <MdKeyboardVoice size={13} />
-      </button>
-      <button className="p-1.5 bg-gray-200 rounded-full">
+      </button> */}
+      {/* <button className="p-1.5 bg-gray-200 rounded-full">
         <HiOutlineDotsVertical size={13} />
-      </button>
+      </button> */}
     </div>
   </li>
 );
