@@ -17,10 +17,11 @@ export function Sidenav({ brandName, routes }) {
     transparent: "bg-transparent",
   };
   
-  return (   
+  return (
+   
     <aside
       className={`${sidenavTypes[sidenavType]} ${openSidenav ? "translate-x-0" : "-translate-x-80"
-        } fixed inset-y-0 left-0 z-50 h-full w-72 bg-white  transition-transform duration-300 border border-blue-gray-100 overflow-y-auto custom`}
+        } fixed inset-y-0 left-0 z-50 h-full w-72 bg-white  transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100 overflow-y-auto custom`}
     >
       {/* Header Section */}
       <div className="relative flex items-center justify-between py-6 px-6 ">
@@ -38,7 +39,7 @@ export function Sidenav({ brandName, routes }) {
           color="white"
           size="sm"
           ripple={false}
-          className="absolute top-5 right-5 grid md:hidden"
+          className="absolute top-5 right-5 grid xl:hidden"
           onClick={() => setOpenSidenav(dispatch, false)}
         >
           <XMarkIcon className="h-5 w-5 text-black" />
