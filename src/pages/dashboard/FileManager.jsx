@@ -6,7 +6,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { Avatar, Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
 import { BiDevices, BiSolidDoorOpen } from "react-icons/bi";
 import { FiMusic, FiVideo } from "react-icons/fi";
-import { PiPlugChargingLight } from "react-icons/pi";
+import { PiPlugChargingBold } from "react-icons/pi";
 import { RiDeleteBin2Line } from "react-icons/ri";
 import { IoMdFolderOpen } from "react-icons/io";
 import { HiOutlineRefresh } from "react-icons/hi";
@@ -59,10 +59,9 @@ const FileManager = () => {
   
   return (
     <div className="mt-5">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {/* 704*318 than   sm:grid-cols-2 this css is not working proper plz check give me a proper responsive design  */}
-        <div className="space-y-4">
-          <div className="h-auto sm:h-[600px] bg-white rounded-md p-4 overflow-y-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0 md:gap-4">       
+        <div className="space-y-4 pb-3 md:pb-0">
+          <div className="h-auto sm:h-[600px] bg-white rounded-md p-4 overflow-y-auto custom">
             <div className="h-16 flex items-center">
               <div className="w-full cursor-pointer mx-auto bg-blue-600 hover:bg-blue-700 flex items-center justify-center text-gray-100 py-1.5 rounded space-x-2 transition duration-150">              
                 <div><FaPlus /></div>
@@ -92,7 +91,7 @@ const FileManager = () => {
                 </div>
                 <div className="flex gap-4 items-center p-2.5 border-b border-gray-300 pb-2.5 cursor-pointer hover:bg-blue-600 text-gray-700 hover:text-white">
                   <span>
-                    <PiPlugChargingLight size={20} />
+                    <PiPlugChargingBold size={20} />
                   </span>
                   <span>Important</span>
                 </div>
