@@ -27,7 +27,7 @@ export function SignIn() {
               <div className="py-8 text-base space-y-6 text-gray-700">               
                 <div className="relative">
                   <input
-                    autocomplete="off"
+                    autoComplete="off"
                     id="email"
                     name="email"
                     type="email"
@@ -35,7 +35,7 @@ export function SignIn() {
                     placeholder="Email address"
                   />
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Email Address
@@ -43,7 +43,7 @@ export function SignIn() {
                 </div>               
                 <div className="relative">
                   <input
-                    autocomplete="off"
+                    autoComplete="off"
                     id="password"
                     name="password"
                     type="password"
@@ -51,7 +51,7 @@ export function SignIn() {
                     placeholder="Password"
                   />
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                   >
                     Password
