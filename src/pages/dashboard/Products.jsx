@@ -10,8 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import {
     Card, CardHeader, Typography, Button, CardBody, Chip, CardFooter, Avatar, IconButton, Input, DialogFooter, DialogBody, DialogHeader, Dialog,
-    Select, Option, DialogTitle, DialogContent, DialogContentText, DialogActions
-} from "@material-tailwind/react";
+    Select, Option} from "@material-tailwind/react";
 import html2canvas from "html2canvas";
 import { FaRegEdit } from "react-icons/fa";
 import { AiOutlineEye } from "react-icons/ai";
@@ -34,6 +33,7 @@ const Products = () => {
     const [edit, setEdit] = useState(false);
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
+    const [deleteIndex, setDeleteIndex] = useState(null);
     const [formData, setFormData] = useState({
         img: "",
         name: "",
@@ -62,21 +62,23 @@ const Products = () => {
         setEdit(true);
     };
 
-    const handleDelete = (index) => {
-        const updatedProducts = products.filter((_, i) => i !== index);
+   const confirmDelete = () => {
+    if (deleteIndex !== null) {
+        const updatedProducts = products.filter((_, i) => i !== deleteIndex);
         setProducts(updatedProducts);
+        setDeleteIndex(null);
+        setOpen(false);
         toast.success("Product deleted");
+    } else {
+        console.warn("Delete index is null!");
+    }
     };
-// const handleDelete = (index) => {
-//         const updatedProducts = products.filter((_, i) => i !== index);
-//         setProducts(updatedProducts);
-//         toast.success("Product deleted");
+      const handleDelete = (index) => {
+        setDeleteIndex(index);
+        setOpen(true); 
+    };
 
-//         // Adjust page if the current page becomes empty after deletion
-//         if (updatedProducts.length < currentPage * ITEMS_PER_PAGE && currentPage > 1) {
-//             setCurrentPage((prevPage) => prevPage - 1);
-//         }
-//     };
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -620,22 +622,28 @@ const Products = () => {
                 </DialogFooter>
             </Dialog>
 
-            <Dialog open={open} onClose={() => setOpen(false)}>
-                <DialogTitle>Confirm Delete</DialogTitle>
-                <DialogContent>
-                    <DialogContentText>
-                        Are you sure you want to delete this data?
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={() => setOpen(false)} color="primary">
-                        Cancel
-                    </Button>
-                    <Button onClick={handleDelete} color="primary">
-                        Delete
-                    </Button>
-                </DialogActions>
-            </Dialog>
+            {open && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white rounded-lg shadow-lg p-6 w-96">
+                        <h3 className="text-lg font-bold text-gray-800 mb-4">Confirm Delete</h3>
+                        <p className="text-gray-600 mb-6">Are you sure you want to delete this product?</p>
+                        <div className="flex justify-end space-x-3">
+                            <button
+                                onClick={() => setOpen(false)}
+                                className="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={confirmDelete}
+                                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+                            >
+                                Yes, Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             <ToastContainer position="top-right" autoClose={2500} />
         </div>

@@ -1,17 +1,18 @@
-import {  Dialog, DialogBody, DialogFooter, DialogHeader, Button } from '@material-tailwind/react';
 import React, { useState } from 'react';
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState('');
   const [editingTaskId, setEditingTaskId] = useState(null);
-  const [open, setOpen] = useState(false); // State to control dialog visibility
+  const [open, setOpen] = useState(false);
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [taskToDelete, setTaskToDelete] = useState(null);
 
   const addTask = () => {
     if (input.trim()) {
       setTasks([...tasks, { id: Date.now(), text: input, completed: false }]);
       setInput('');
-      setOpen(false); // Close dialog after adding the task
+      setOpen(false); 
     }
   };
 
@@ -22,13 +23,24 @@ const TodoList = () => {
       ));
       setInput('');
       setEditingTaskId(null);
-      setOpen(false); // Close dialog after updating the task
+      setOpen(false);
     }
   };
-
-  const removeTask = (id) => {
-    setTasks(tasks.filter(task => task.id !== id));
+  const confirmDelete = () => {
+    if (taskToDelete !== null) {
+      setTasks(tasks.filter(task => task.id !== taskToDelete));
+      setTaskToDelete(null); 
+      setConfirmOpen(false); 
+    }
   };
+  // const removeTask = (id) => {
+  //   setTasks(tasks.filter(task => task.id !== id));
+  // };
+  const requestDelete = (id) => {
+    setTaskToDelete(id); // Set the task to be deleted
+    setConfirmOpen(true); // Open confirmation dialog
+  };
+
 
   const toggleTaskCompletion = (id) => {
     setTasks(tasks.map(task =>
@@ -39,7 +51,7 @@ const TodoList = () => {
   const startEditing = (task) => {
     setInput(task.text);
     setEditingTaskId(task.id);
-    setOpen(true); // Open the dialog for editing
+    setOpen(true);
   };
 
   const handleSubmit = () => {
@@ -57,7 +69,7 @@ const TodoList = () => {
         <div className="flex justify-end mb-4">
           <button
             className="bg-blue-500 text-white rounded-md w-28 py-1"
-            onClick={() => setOpen(true)} // Open the pop-up to add a new todo
+            onClick={() => setOpen(true)} 
           >
             Add todo
           </button>
@@ -84,7 +96,8 @@ const TodoList = () => {
                   Edit
                 </button>
                 <button
-                  onClick={() => removeTask(task.id)}
+                  // onClick={() => removeTask(task.id)}
+                  onClick={() => requestDelete(task.id)}
                   className="bg-red-500 text-white rounded-md px-2 py-1"
                 >
                   Delete
@@ -95,36 +108,64 @@ const TodoList = () => {
         </ul>
       </div>
 
-      {/* Dialog for adding/editing tasks */}
-      <Dialog open={open} handler={() => setOpen(!open)}>
-        <DialogHeader>{editingTaskId ? 'Edit Todo' : 'Add Todo'}</DialogHeader>
-        <DialogBody>
-          <textarea
-            className="border border-gray-300 rounded-md px-2 py-1 w-full"
-            rows="4" // Make it a multiline input
-            placeholder="Enter todo..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-        </DialogBody>
-        <DialogFooter>
-          <Button
-            variant="text"
-            color="red"
-            onClick={() => setOpen(false)}
-            className="mr-1"
-          >
-            Cancel
-          </Button>
-          <Button
-            variant="gradient"
-            color="blue"
-            onClick={handleSubmit}
-          >
-            {editingTaskId ? 'Update todo' : 'Add todo'}
-          </Button>
-        </DialogFooter>
-      </Dialog>
+      {/* Dialog for adding/editing tasks */}  
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-96 p-6">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              {editingTaskId ? "Edit Todo" : "Add Todo"}
+            </h3>
+            <textarea
+              className="border border-gray-300 rounded-md px-2 py-1 w-full"
+              rows="4"
+              placeholder="Enter todo..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <div className="mt-6 flex justify-end space-x-2">
+              <button
+                onClick={() => setOpen(false)}
+                className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleSubmit}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                {editingTaskId ? "Update Todo" : "Add Todo"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}     
+      {confirmOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-96 p-6">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              Confirm Delete
+            </h3>
+            <p className="text-gray-600">
+              Are you sure you want to delete this task? This action cannot be
+              undone.
+            </p>
+            <div className="mt-6 flex justify-end space-x-2">
+              <button
+                onClick={() => setConfirmOpen(false)}
+                className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmDelete}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
+              >
+                Yes, Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

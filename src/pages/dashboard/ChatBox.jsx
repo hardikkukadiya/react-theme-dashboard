@@ -1,14 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { BsChatDots } from 'react-icons/bs'
-import { FaPhone, FaRegFaceSmile, FaSquareFontAwesomeStroke } from 'react-icons/fa6'
+import { FaPhone, FaRegFaceSmile } from 'react-icons/fa6'
 import { FiPaperclip, FiSend } from 'react-icons/fi'
-import { IoMdNotificationsOutline } from 'react-icons/io'
-import { RiArrowDropDownLine, RiContactsBook3Line, RiContactsFill } from 'react-icons/ri'
+import { RiArrowDropDownLine, RiContactsFill } from 'react-icons/ri'
 import EmojiPicker from 'emoji-picker-react';
-import { BiSolidContact } from 'react-icons/bi'
-import { MdOutlineContacts } from 'react-icons/md'
 import { IoNotifications } from 'react-icons/io5'
-
 
 const ChatBox = () => {
     const [messages, setMessages] = useState([]);
@@ -118,8 +114,8 @@ const ChatBox = () => {
 
                     <div className="mt-6">
                         <h3 className="text-gray-500">RECENT CHATS</h3>
-                        <div className="mt-3 space-y-1 overflow-y-auto custom h-[30vh]">
-                            <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
+                        <div className=" space-y-1 overflow-y-auto custom h-[30vh]">
+                            <div className="flex items-center justify-between p-2 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
                                     <img loading="lazy" src="/img/team-4.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
@@ -130,7 +126,7 @@ const ChatBox = () => {
                                 <span className="text-xs text-gray-400">9:51 AM</span>
                             </div>
 
-                            <div className="flex items-center justify-between bg-[#dcedff] p-3 cursor-pointer">
+                            <div className="flex items-center justify-between bg-[#dcedff] p-2 cursor-pointer">
                                 <div className="flex items-center space-x-3">
                                     <img loading="lazy" src="/img/team-2.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
@@ -140,7 +136,7 @@ const ChatBox = () => {
                                 </div>
                                 <span className="text-xs text-gray-400">4:32 PM</span>
                             </div>
-                            <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
+                            <div className="flex items-center justify-between p-2 hover:bg-[#dcedff] cursor-pointer">
                                 <div className="flex items-center space-x-3">
                                     <img loading="lazy" src="/img/team-3.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
                                     <div>
@@ -150,36 +146,7 @@ const ChatBox = () => {
                                 </div>
                                 <span className="text-xs text-gray-400">9:51 AM</span>
                             </div>
-                            <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
-                                <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="/img/team-4.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
-                                    <div>
-                                        <p className="font-medium">Louis Litt</p>
-                                        <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
-                                    </div>
-                                </div>
-                                <span className="text-xs text-gray-400">9:51 AM</span>
-                            </div>
-                            <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
-                                <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="/img/team-2.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
-                                    <div>
-                                        <p className="font-medium">Louis Litt</p>
-                                        <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
-                                    </div>
-                                </div>
-                                <span className="text-xs text-gray-400">9:51 AM</span>
-                            </div>
-                            <div className="flex items-center justify-between p-3 hover:bg-[#dcedff] cursor-pointer">
-                                <div className="flex items-center space-x-3">
-                                    <img loading="lazy" src="/img/team-1.jpeg" alt="Chat User" className="w-8 h-8 rounded-full" />
-                                    <div>
-                                        <p className="font-medium">Louis Litt</p>
-                                        <p className="text-sm text-gray-500 truncate w-36">Wrong. You take the gun. swdsaff sdfasdfa..</p>
-                                    </div>
-                                </div>
-                                <span className="text-xs text-gray-400">9:51 AM</span>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
