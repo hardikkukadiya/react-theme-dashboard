@@ -168,7 +168,7 @@ const Email = () => {
               <div className="flex justify-start gap-4">
                 <Avatar
                   src="/img/fena.jpg"
-                  alt="FenaRudani"
+                  alt="jon dues"
                   size="sm"
                   variant="rounded"
                   className="rounded-lg shadow-lg shadow-blue-gray-500/40"
