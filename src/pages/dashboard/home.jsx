@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import { FaChartLine } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { PiStorefrontBold } from "react-icons/pi";

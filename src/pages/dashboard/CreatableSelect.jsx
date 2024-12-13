@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
 const CreatableSelect = ({ value, onChange, options, placeholder }) => {
     const [inputValue, setInputValue] = useState('');

@@ -8,8 +8,8 @@ export function Auth() {
         {routes.map(
           ({ layout, pages }) =>
             layout === "auth" &&
-            pages.map(({ path, element , page }) => (
-              <Route key={page} exact path={path} element={element} />
+            pages.map(({ path, element }) => (
+              <Route key={path} exact path={path} element={element} />
             ))
         )}
       </Routes>

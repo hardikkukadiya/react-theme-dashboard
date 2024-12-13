@@ -1,13 +1,11 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
 import { Sidenav, DashboardNavbar, Configurator } from "../widgets/layout";
 import routes from "../routes";
 import { useMaterialTailwindController } from "../context";
-import ErrorBoundary from "../ErrorBoundary"; // Import your ErrorBoundary component
+import ErrorBoundary from "../ErrorBoundary";
 
 export function Dashboard() {
-  const location = useLocation();
 
   const [controller] = useMaterialTailwindController();
   const { sidenavType } = controller;

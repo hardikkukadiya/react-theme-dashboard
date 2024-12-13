@@ -1,5 +1,5 @@
 import { Avatar } from "@material-tailwind/react";
-import React from "react";
+ 
 
 const EmailProfile = ({ email }) => {
   return (

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from "react";
 import { BsChatDots } from 'react-icons/bs'
 import { FaPhone, FaRegFaceSmile } from 'react-icons/fa6'
 import { FiPaperclip, FiSend } from 'react-icons/fi'

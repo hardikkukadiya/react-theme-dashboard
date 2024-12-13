@@ -1,5 +1,4 @@
 import { Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
-import React from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import Zoom from "react-medium-image-zoom";

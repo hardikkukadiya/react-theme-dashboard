@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect, startTransition } from 'react';
+import { Suspense, useState, useEffect, startTransition } from "react";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Dashboard, Auth } from './layouts';
 import './App.css';

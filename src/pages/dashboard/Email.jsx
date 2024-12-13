@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import EmailProfile from "./EmailProfile";
 import { IoBookmarkOutline, IoDocumentTextOutline, IoVideocam, IoWarningOutline } from "react-icons/io5";
 import { MdBookmarkBorder, MdOutlineInbox, MdOutlineNavigateNext, MdOutlineWatchLater, MdPeople } from "react-icons/md";

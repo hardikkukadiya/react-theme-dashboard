@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import {
   Typography,
   Alert,
@@ -44,7 +44,7 @@ export function Notifications() {
               color={color}
               onClose={() => setShowAlerts((current) => ({ ...current, [color]: false }))}
             >
-              A simple {color} alert with an <a href="#">example link</a>. Give
+              A simple {color} alert with an <span>example link</span>. Give
               it a click if you like.
             </Alert>
           ))}
@@ -75,7 +75,7 @@ export function Notifications() {
                 [color]: false,
               }))}
             >
-              A simple {color} alert with an <a href="#">example link</a>. Give
+              A simple {color} alert with an <span>example link</span>. Give
               it a click if you like.
             </Alert>
           ))}

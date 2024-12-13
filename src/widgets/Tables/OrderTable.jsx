@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { LuUploadCloud } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Zoom from "react-medium-image-zoom";
