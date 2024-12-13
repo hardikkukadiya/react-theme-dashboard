@@ -26,7 +26,6 @@ const FileManager = lazy(() => import("./pages/dashboard/FileManager"));
 const Calendar = lazy(() => import("./pages/dashboard/Calendar"));
 const ChatBox = lazy(() => import("./pages/dashboard/ChatBox"));
 const Faq = lazy(() => import("./pages/dashboard/Faq"));
-const ProductsDemo = lazy(() => import("./pages/dashboard/ProductsDemo"));
 const icon = {
   className: "w-5 h-5 text-inherit",
 };

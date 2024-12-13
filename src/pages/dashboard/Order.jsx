@@ -3,7 +3,6 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import {
   Card,
   Input,
-  Checkbox,
   CardHeader,
   IconButton,
   Typography,
@@ -99,7 +98,7 @@ const Order = () => {
           <table className="w-full min-w-max table-auto text-left">
             <thead>
               <tr>                
-                {TABLE_HEAD.map(({ head, icon }) => (
+                {TABLE_HEAD.map(({ head }) => (
                   <th key={head} className="border-b border-gray-300 p-4">
                     <div className="flex items-center gap-1">                
                       <Typography
@@ -119,12 +118,6 @@ const Order = () => {
                 <tr key={index}>
                   <td className="p-4">
                     <div className="flex items-center gap-1">
-                      {/* <input
-                        type="checkbox"
-                        // checked={isAllSelected}
-                        // onChange={handleHeaderCheckboxChange}
-                        className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700"
-                      /> */}
                       <div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div>
                     </div>
                   </td>
@@ -169,15 +162,9 @@ const Order = () => {
           <table className="w-full min-w-max table-auto text-left">
             <thead>
               <tr>
-                {TABLE_HEAD.map(({ head, icon }) => (
+                {TABLE_HEAD.map(({ head }) => (
                   <th key={head} className="border-b border-gray-300 p-4">
                     <div className="flex items-center gap-1">
-                    {/* <input
-                      type="checkbox"
-                      // checked={isAllSelected}
-                      // onChange={handleHeaderCheckboxChange}
-                      className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700"
-                    /> */}
                       <Typography
                         color="blue-gray"
                         variant="small"
@@ -202,12 +189,6 @@ const Order = () => {
                     <tr key={number}>
                       <td className={classes}>
                         <div className="flex items-center gap-1">
-                          {/* <input
-                            type="checkbox"
-                            // checked={isAllSelected}
-                            // onChange={handleHeaderCheckboxChange}
-                            className="text-blue-500 border-gray-400 rounded dark:bg-gray-900 dark:border-gray-700 mr-2"
-                          /> */}
                           <Typography
                             variant="small"
                             color="blue-gray"

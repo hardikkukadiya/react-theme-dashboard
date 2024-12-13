@@ -1,7 +1,7 @@
 import { Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
 import React from "react";
-import { HiDotsHorizontal, HiOutlineDotsVertical } from "react-icons/hi";
-import { MdEmail, MdKeyboardVoice } from "react-icons/md";
+import { HiDotsHorizontal } from "react-icons/hi";
+import { MdEmail } from "react-icons/md";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { Link } from "react-router-dom";
@@ -27,12 +27,6 @@ const UserListItem = ({ imgSrc, name, email }) => (
       <Link to={"/dashboard/email"} className="p-1.5 bg-gray-200 rounded-full">
         <MdEmail size={13} />
       </Link>
-      {/* <button className="p-1.5 bg-gray-200 rounded-full">
-        <MdKeyboardVoice size={13} />
-      </button> */}
-      {/* <button className="p-1.5 bg-gray-200 rounded-full">
-        <HiOutlineDotsVertical size={13} />
-      </button> */}
     </div>
   </li>
 );

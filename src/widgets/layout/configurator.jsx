@@ -1,11 +1,9 @@
-import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
   Button,
   IconButton,
   Switch,
   Typography,
-  Chip,
 } from "@material-tailwind/react";
 import {
   useMaterialTailwindController,
@@ -15,36 +13,10 @@ import {
   setFixedNavbar,
 } from "../../context";
 
-function formatNumber(number, decPlaces) {
-  decPlaces = Math.pow(10, decPlaces);
-
-  const abbrev = ["K", "M", "B", "T"];
-
-  for (let i = abbrev.length - 1; i >= 0; i--) {
-    var size = Math.pow(10, (i + 1) * 3);
-
-    if (size <= number) {
-      number = Math.round((number * decPlaces) / size) / decPlaces;
-
-      if (number == 1000 && i < abbrev.length - 1) {
-        number = 1;
-        i++;
-      }
-
-      number += abbrev[i];
-
-      break;
-    }
-  }
-
-  return number;
-}
-
 export function Configurator() {
   const [controller, dispatch] = useMaterialTailwindController();
   const { openConfigurator, sidenavColor, sidenavType, fixedNavbar } =
     controller;
-  // const [stars, setStars] = React.useState(0);
 
   const sidenavColors = {
     white: "from-gray-100 to-gray-100 border-gray-200",
@@ -55,15 +27,6 @@ export function Configurator() {
     pink: "from-pink-400 to-pink-600",
     blue: "from-blue-400 to-blue-600",
   };
-
-  // React.useEffect(() => {
-  //   const stars = fetch(
-  //     "https://api.github.com/repos/creativetimofficial/material-tailwind-dashboard-react"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => setStars(formatNumber(data.stargazers_count, 1)));
-  // }, []);
-
   return (
     <aside
       className={`fixed top-0 right-0 z-50 h-screen max-w-full sm:w-80 md:w-96 bg-white px-2.5 shadow-lg transition-transform duration-300 ${openConfigurator ? "translate-x-0" : "translate-x-full"
@@ -93,12 +56,12 @@ export function Configurator() {
           </Typography>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             {Object.keys(sidenavColors).map((color) => (
-              <span
+              <div
                 key={color}
                 className={`h-6 w-6 cursor-pointer rounded-full border bg-gradient-to-br transition-transform hover:scale-105 ${sidenavColors[color]
                   } ${sidenavColor === color ? "border-black" : "border-transparent"
                   }`}
-                onClick={() => setSidenavColor(dispatch, color)}
+                onClick={() => setSidenavColor(dispatch, color)} 
               />
             ))}
           </div>

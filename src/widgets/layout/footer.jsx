@@ -12,8 +12,7 @@ export function Footer({ brandName, brandLink, routes }) {
           &copy; {year}, made with{" "}
           <HeartIcon className="-mt-0.5 inline-block h-3.5 w-3.5 text-red-600" /> by{" "}
           <a
-            href={brandLink}
-            target="_blank"
+            href={brandLink}            
             className="transition-colors hover:text-blue-500 font-bold"
           >
             {brandName}
@@ -25,8 +24,7 @@ export function Footer({ brandName, brandLink, routes }) {
             <li key={name}>
               <Typography
                 as="a"
-                href={path}
-                target="_blank"
+                href={path}                
                 variant="small"
                 className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
               >

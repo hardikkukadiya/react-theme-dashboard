@@ -1,5 +1,5 @@
 import {
-  Card, CardBody, Avatar, Typography, Switch, Tooltip, Dialog, DialogBody, DialogFooter, DialogHeader, Input, Textarea , Button
+  Card, CardBody, Avatar, Typography, Switch, Dialog, DialogBody, DialogFooter, DialogHeader, Input, Textarea , Button
 } from "@material-tailwind/react";
 import { platformSettingsData } from "@/data";
 import { useState } from "react";
@@ -172,9 +172,9 @@ export function Profile() {
             <div className="grid grid-cols-12 ">
               <div className="col-span-12">                             
                 <div>
-                  <label className="block mb-2 text-sm font-medium text-gray-700">
+                  <div className="block mb-2 text-sm font-medium text-gray-700">
                     Upload Social Icons
-                  </label>
+                  </div>
                   <input
                     type="file"
                     multiple

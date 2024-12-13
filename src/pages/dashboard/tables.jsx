@@ -90,8 +90,7 @@ export function Tables() {
                       </td>
                       <td className={className}>
                         <Typography
-                          as="a"
-                          href="#"
+                          as="a"                        
                           className="text-xs font-semibold text-blue-gray-600"
                         >
                           Edit
@@ -197,7 +196,6 @@ export function Tables() {
                       <td className={className}>
                         <Typography
                           as="a"
-                          href="#"
                           className="text-xs font-semibold text-blue-gray-600"
                         >
                           <EllipsisVerticalIcon

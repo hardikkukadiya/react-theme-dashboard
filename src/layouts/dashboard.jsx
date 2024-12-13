@@ -8,7 +8,6 @@ import ErrorBoundary from "../ErrorBoundary"; // Import your ErrorBoundary compo
 
 export function Dashboard() {
   const location = useLocation();
-  const isChatBoxPath = location.pathname === '/dashboard/chatBox';
 
   const [controller] = useMaterialTailwindController();
   const { sidenavType } = controller;
@@ -24,17 +23,6 @@ export function Dashboard() {
       <div className="p-4 xl:ml-72">
         <DashboardNavbar />
         <Configurator />
-        {/* {!isChatBoxPath && (
-          <IconButton
-            size="lg"
-            color="white"
-            className="fixed bottom-8 right-8 z-40 rounded-full shadow-blue-gray-900/10"
-            ripple={false}
-            onClick={() => setOpenConfigurator(dispatch, true)}
-          >
-            <Cog6ToothIcon className="h-5 w-5" />
-          </IconButton>
-        )} */}
         <ErrorBoundary>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
