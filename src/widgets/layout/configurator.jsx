@@ -49,7 +49,7 @@ export function Configurator() {
           <XMarkIcon strokeWidth={2.5} className="h-5 w-5" />
         </IconButton>
       </div>
-      <div className="py-4 px-4 overflow-y-auto max-w-full">
+      <div className="py-4 px-4 max-w-full">
         <div className="mb-12">
           <Typography variant="h6" color="blue-gray">
             Sidenav Colors

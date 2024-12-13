@@ -65,7 +65,7 @@ export function SignIn() {
               </div>
             </div>           
             <div className="flex flex-wrap text-sm mb-4 justify-center sm:justify-between">
-              <p className="text-center sm:text-left">Don't have an account?</p>
+              <p className="text-center sm:text-left">Don&apos;t have an account?</p>
               <a
                 className="ml-2 underline text-blue-700 cursor-pointer"
                 href="/auth/auth/sign-up"
