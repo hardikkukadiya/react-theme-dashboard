@@ -18,7 +18,7 @@ const Faq = () => {
           className={`border-b-0 transition-colors ${open === 1 ? "text-black hover:!text-black" : ""
             }`}
         >          
-          What is Faq?
+          What is Faq ?
           <span></span>
         </AccordionHeader>
         
