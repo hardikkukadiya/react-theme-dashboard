@@ -6,7 +6,6 @@ import {
   ServerStackIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/solid";
-import { TbReportSearch } from "react-icons/tb";
 import {FiShoppingCart} from "react-icons/fi"  
 import { LuListTodo } from "react-icons/lu";
 import { FaFileArrowUp, FaRegCalendar } from "react-icons/fa6";
@@ -29,7 +28,6 @@ const Faq = lazy(() => import("./pages/dashboard/Faq"));
 const icon = {
   className: "w-5 h-5 text-inherit",
 };
-
 export const routes = [
   {
     layout: "dashboard",
@@ -39,13 +37,7 @@ export const routes = [
         name: "dashboard",
         path: "/home",
         element: <Home />,
-      },
-      {
-        icon: <TbReportSearch {...icon} />,
-        name: "Report",
-        path: "/report",
-        element: <Report />,
-      },     
+      },   
        {
         icon: <FiShoppingCart {...icon} />,
         name: "Invoice",

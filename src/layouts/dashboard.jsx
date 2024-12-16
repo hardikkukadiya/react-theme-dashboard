@@ -35,7 +35,6 @@ export function Dashboard() {
           </Suspense>
         </ErrorBoundary>
         <div className="text-blue-gray-600">
-          {/* <Footer /> */}
         </div>
       </div>
     </div>

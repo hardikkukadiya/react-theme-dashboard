@@ -1,7 +1,12 @@
 import { useState } from "react";
 
 const TodoList = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { id: 1, text: "Buy groceries", completed: false },
+    { id: 2, text: "Walk the dog", completed: false },
+    { id: 3, text: "Read a book", completed: false },
+    { id: 4, text: "Finish homework", completed: false },
+  ]);
   const [input, setInput] = useState('');
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [open, setOpen] = useState(false);
@@ -12,7 +17,7 @@ const TodoList = () => {
     if (input.trim()) {
       setTasks([...tasks, { id: Date.now(), text: input, completed: false }]);
       setInput('');
-      setOpen(false); 
+      setOpen(false);
     }
   };
 
@@ -26,21 +31,19 @@ const TodoList = () => {
       setOpen(false);
     }
   };
+
   const confirmDelete = () => {
     if (taskToDelete !== null) {
       setTasks(tasks.filter(task => task.id !== taskToDelete));
-      setTaskToDelete(null); 
-      setConfirmOpen(false); 
+      setTaskToDelete(null);
+      setConfirmOpen(false);
     }
   };
-  // const removeTask = (id) => {
-  //   setTasks(tasks.filter(task => task.id !== id));
-  // };
+
   const requestDelete = (id) => {
     setTaskToDelete(id); // Set the task to be deleted
     setConfirmOpen(true); // Open confirmation dialog
   };
-
 
   const toggleTaskCompletion = (id) => {
     setTasks(tasks.map(task =>
@@ -69,7 +72,7 @@ const TodoList = () => {
         <div className="flex justify-end mb-4">
           <button
             className="bg-blue-500 text-white rounded-md w-28 py-1"
-            onClick={() => setOpen(true)} 
+            onClick={() => setOpen(true)}
           >
             Add todo
           </button>
@@ -96,7 +99,6 @@ const TodoList = () => {
                   Edit
                 </button>
                 <button
-                  // onClick={() => removeTask(task.id)}
                   onClick={() => requestDelete(task.id)}
                   className="bg-red-500 text-white rounded-md px-2 py-1"
                 >
@@ -108,11 +110,11 @@ const TodoList = () => {
         </ul>
       </div>
 
-      {/* Dialog for adding/editing tasks */}  
+      {/* Dialog for adding/editing tasks */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-96 p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <h3 class Name="text-lg font-semibold text-gray-800 mb-4">
               {editingTaskId ? "Edit Todo" : "Add Todo"}
             </h3>
             <textarea
@@ -138,7 +140,7 @@ const TodoList = () => {
             </div>
           </div>
         </div>
-      )}     
+      )}
       {confirmOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-96 p-6">

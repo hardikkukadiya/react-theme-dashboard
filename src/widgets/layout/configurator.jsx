@@ -61,7 +61,7 @@ export function Configurator() {
                 className={`h-6 w-6 cursor-pointer rounded-full border bg-gradient-to-br transition-transform hover:scale-105 ${sidenavColors[color]
                   } ${sidenavColor === color ? "border-black" : "border-transparent"
                   }`}
-                onClick={() => setSidenavColor(dispatch, color)} 
+                onClick={() => setSidenavColor(dispatch, color)}  // Sidenav Colors
               />
             ))}
           </div>
@@ -88,7 +88,7 @@ export function Configurator() {
             </Button>
             <Button
               variant={sidenavType === "white" ? "gradient" : "outlined"}
-              onClick={() => setSidenavType(dispatch, "white")}
+              onClick={() => setSidenavType(dispatch, "white")} 
             >
               White
             </Button>
@@ -102,7 +102,7 @@ export function Configurator() {
             <Switch
               id="navbar-fixed"
               value={fixedNavbar}
-              onChange={() => setFixedNavbar(dispatch, !fixedNavbar)}
+              onChange={() => setFixedNavbar(dispatch, !fixedNavbar)} // Header static
             />
           </div>
         </div>

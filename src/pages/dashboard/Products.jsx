@@ -23,24 +23,17 @@ import { FiUpload } from "react-icons/fi";
 import { TbLayoutGridFilled } from "react-icons/tb";
 import { FaList } from "react-icons/fa6";
 import ProductsDemo from "./ProductsDemo";
-// import CreatableSelect from 'react-select/creatable';
+import { useNewContext } from "@/app/context";
 const ITEMS_PER_PAGE = 10;
 
 const Products = () => {
+    const { view, setView, formData, setFormData } = useNewContext();
     const fileInputRef = useRef(null);
     const [open, setOpen] = useState(false);
-    const [view, setView] = useState(false);
     const [edit, setEdit] = useState(false);
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
     const [deleteIndex, setDeleteIndex] = useState(null);
-    const [formData, setFormData] = useState({
-        img: "",
-        name: "",
-        amount: "",
-        date: "",
-        status: "pending"
-    });
     const [editIndex, setEditIndex] = useState(null);
     const [isGridView, setIsGridView] = useState(false);
     const handleToggleView = (view) => {
@@ -52,6 +45,7 @@ const Products = () => {
             setLoading(false);
         }, 1000);
     }, []);
+
     const handleView = (index) => {
         setFormData(products[index]);
         setView(true);
@@ -165,8 +159,8 @@ const Products = () => {
     };
     return (
         <div className="mt-5">
-            <Card className="h-full w-full">
-                <CardHeader floated={false} shadow={false} className="rounded-none">
+            <Card className="h-full w-full">        
+                <CardHeader floated={false} shadow={false} className="rounded-none">                    
                     <div className="bg-gray-200 text-sm text-gray-500 leading-none border-2 border-gray-100 rounded-full inline-flex">
                         <button
                             className={`inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-blue-400 rounded-full px-4 py-2 ${isGridView ? '' : 'bg-white text-blue-400'}`}
@@ -291,7 +285,7 @@ const Products = () => {
                                                     <div className="flex items-center gap-3">
                                                         <Zoom>
                                                         <Avatar
-                                                            src={product.img || "/default-image.png"}
+                                                            src={product.img || "/img/default-image.png"}
                                                             alt={product.name}
                                                             size="md"
                                                             />
@@ -395,7 +389,7 @@ const Products = () => {
                         <div className="col-span-12">
                             <div className="flex justify-center items-center">
                                 <Zoom>
-                                    <Avatar src={formData.img || "/default-image.png"} alt={formData.name} size="xxl" />
+                                    <Avatar src={formData.img || "/img/default-image.png"} alt={formData.name} size="xxl" />
                                 </Zoom>
                             </div>
                         </div>

@@ -289,19 +289,19 @@ const Email = () => {
                             <span className="text-gray-500 hover:text-gray-900"><IoBookmarkOutline /></span>
                           </button>
                         </div>
-                        <span
+                        <div
                           onClick={() => handleEmailClick(email)}
                           className="w-24 sm:w-36 text-sm pr-2 truncate"
                         >
                           {email.name}
-                        </span>
+                        </div>
                         <span className="mx-1">-</span>
-                        <span
+                        <div
                           onClick={() => handleEmailClick(email)}
                           className="w-64 sm:w-96 text-gray-600 text-sm truncate"
                         >
                           {email.message}
-                        </span>
+                        </div>
                       </div>
                       <div className="flex items-center justify-end">
                         <span className="text-sm text-gray-500">3:05 PM</span>
@@ -318,7 +318,7 @@ const Email = () => {
         <div className="fixed bottom-0 right-0 mb-2 mr-4">
           <div className="w-full max-w-full sm:max-w-md lg:max-w-lg xl:max-w-[566px] h-auto my-1 bg-white dark:bg-gray-800 p-5 rounded-md shadow-sm max-h-[90vh] overflow-auto border-2 border-gray-200">
             <div className="bg-blue-600 w-full flex justify-between px-4 py-3 rounded-md text-white cursor-pointer">
-              New Message <span onClick={handleClick}><IoMdCloseCircleOutline size={25} /></span>
+              New Message <div onClick={handleClick}><IoMdCloseCircleOutline size={25} /></div>
             </div>
             <form>
               <div className="mb-6 mt-3">

@@ -4,7 +4,7 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 const ProductCard = ({ image, name, description, specialPrice, discount, amount }) => {
   return (
-    <div className="w-full transform overflow-hidden rounded-lg bg-white dark:bg-slate-800 duration-300 hover:scale-105 hover:shadow-lg">
+    <div className="w-full transform overflow-hidden rounded-lg bg-white dark:bg-slate-800 duration-300       hover:scale-105 hover:shadow-lg">
       <Zoom>
         <img
           className="h-48 w-full object-cover object-center cursor-pointer"
@@ -48,7 +48,7 @@ const ProductsDemo = ({ products, loading }) => {
           : products.map((product, index) => (
             <ProductCard
               key={index}
-              image={product.img || "/default-image.png"}
+              image={product.img || "/img/default-image.png"}
               name={product.name}
               description={product.description || "No description available."}
               specialPrice={product.specialPrice || "0.00"}

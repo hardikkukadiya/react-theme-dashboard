@@ -115,8 +115,11 @@ const Order = () => {
               </tr>
             </thead>
             <tbody>
-              {Array.from({ length: 4 }).map((_, index) => (
-                <tr key={index}>
+              {/* {Array.from({ length: 4 }).map((_, index) => ( */}
+              {Array.from({ length: 4 }, (_, index) => ({
+                id: `placeholder-${index}-${Date.now()}`, // Generate a unique ID
+              })).map((item) => (
+                <tr key={item.id}>
                   <td className="p-4">
                     <div className="flex items-center gap-1">
                       <div className="h-4 bg-gray-200 rounded animate-pulse w-24"></div>
