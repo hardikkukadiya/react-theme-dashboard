@@ -403,7 +403,7 @@ const Products = () => {
                         </div>
                         <div className="col-span-4">
                             <Typography className="text-black" variant="h6">Descripation</Typography>
-                            <div className="font-semibold">{formData.descripation || "-"}</div>
+                            <div className="font-semibold break-all truncate">{formData.description || "-"}</div>
                         </div>
                         <div className="col-span-4">
                             <Typography className="text-black" variant="h6">Color</Typography>
