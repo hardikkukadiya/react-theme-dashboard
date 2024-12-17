@@ -12,6 +12,29 @@ const TodoList = () => {
   const [open, setOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState(null);
+  const [draggedTask, setDraggedTask] = useState(null);
+  const handleDragStart = (e, task) => {
+    setDraggedTask(task);
+    // Set the drag data
+    e.dataTransfer.setData("text/plain", task.id);
+  };
+  const handleDragOver = (e) => {
+    e.preventDefault(); // This is necessary to allow dropping
+  };
+
+  const handleDrop = (e, targetTask) => {
+    e.preventDefault();
+    const draggedIndex = tasks.findIndex((task) => task.id === draggedTask.id);
+    const targetIndex = tasks.findIndex((task) => task.id === targetTask.id);
+
+    if (draggedIndex !== targetIndex) {
+      const newTasks = [...tasks];
+      newTasks.splice(draggedIndex, 1); // Remove dragged task
+      newTasks.splice(targetIndex, 0, draggedTask); // Insert at target
+      setTasks(newTasks);
+    }
+    setDraggedTask(null); // Clear the dragged task
+  };
 
   const addTask = () => {
     if (input.trim()) {
@@ -79,7 +102,13 @@ const TodoList = () => {
         </div>
         <ul className="space-y-2">
           {tasks.map(task => (
-            <li key={task.id} className="flex items-start justify-between p-2 border border-gray-200 rounded-md">
+            <li
+              key={task.id}
+              draggable
+              onDragStart={(e) => handleDragStart(e, task)}
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(e, task)}
+              className="flex items-start justify-between p-2 border border-gray-200 rounded-md cursor-move">
               <div className="flex items-start mt-1">
                 <input
                   type="checkbox"
@@ -172,10 +201,12 @@ const TodoList = () => {
         </button>
       </div>
     </div>
-  </div>
-)}
+    </div>
+      )}
     </div>
   );
 };
 
 export default TodoList;
+
+
