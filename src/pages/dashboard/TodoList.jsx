@@ -13,8 +13,11 @@ const TodoList = () => {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState(null);
   const [draggedTask, setDraggedTask] = useState(null);
+  const [dragging, setDragging] = useState(false);
+
   const handleDragStart = (e, task) => {
     setDraggedTask(task);
+    setDragging(true);
     // Set the drag data
     e.dataTransfer.setData("text/plain", task.id);
   };
@@ -33,6 +36,7 @@ const TodoList = () => {
       newTasks.splice(targetIndex, 0, draggedTask); // Insert at target
       setTasks(newTasks);
     }
+    setDragging(false);
     setDraggedTask(null); // Clear the dragged task
   };
 
@@ -99,16 +103,18 @@ const TodoList = () => {
           >
             Add todo
           </button>
-        </div>
+        </div>       
         <ul className="space-y-2">
-          {tasks.map(task => (
+          {tasks.map((task) => (
             <li
               key={task.id}
               draggable
               onDragStart={(e) => handleDragStart(e, task)}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, task)}
-              className="flex items-start justify-between p-2 border border-gray-200 rounded-md cursor-move">
+              className={`flex items-start justify-between p-2 border border-gray-200 rounded-md cursor-move ${dragging ? "opacity-50 scale-95" : ""
+                } transition-all duration-300 ease-in-out`} // Add transition for scaling and opacity
+            >
               <div className="flex items-start mt-1">
                 <input
                   type="checkbox"
@@ -116,11 +122,14 @@ const TodoList = () => {
                   onChange={() => toggleTaskCompletion(task.id)}
                   className="mr-2 mt-1.5"
                 />
-                <span className={`text-gray-800 break-all ${task.completed ? 'line-through' : ''}`} style={{ whiteSpace: 'pre-wrap' }}>
+                <span
+                  className={`text-gray-800 break-all ${task.completed ? "line-through" : ""}`}
+                  style={{ whiteSpace: "pre-wrap" }}
+                >
                   {task.text}
                 </span>
               </div>
-              <div className='flex'>
+              <div className="flex">
                 <button
                   onClick={() => startEditing(task)}
                   className="bg-blue-500 text-white rounded-md px-2 py-1 mr-2"
