@@ -7,7 +7,7 @@ import { useMaterialTailwindController } from "../context";
 export function Dashboard() {
 
   const [controller] = useMaterialTailwindController();
-  const { sidenavType } = controller;
+  const { sidenavType, openSidenav } = controller;
 
   return (
     <div className="min-h-screen bg-blue-gray-50/50">
@@ -17,7 +17,7 @@ export function Dashboard() {
           sidenavType === "dark" ? "/img/logo-ct.png" : "/img/logo-ct-dark.png"
         }
       />
-      <div className="p-4 xl:ml-72">
+      <div className={`p-4 ${openSidenav ? 'xl:ml-72' : 'xl:ml-0'}`}>
         <DashboardNavbar />
         <Configurator />
           <Suspense fallback={<div>Loading...</div>}>
