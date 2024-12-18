@@ -618,7 +618,7 @@ const Products = () => {
 
             {open && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white rounded-lg shadow-lg p-6 w-96">
+                    <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-96 p-6">
                         <h3 className="text-lg font-bold text-gray-800 mb-4">Confirm Delete</h3>
                         <p className="text-gray-600 mb-6">Are you sure you want to delete this product?</p>
                         <div className="flex justify-end space-x-3">
