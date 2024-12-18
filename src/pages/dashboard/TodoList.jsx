@@ -112,7 +112,7 @@ const TodoList = () => {
               onDragStart={(e) => handleDragStart(e, task)}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, task)}
-              className={`flex items-start justify-between p-2 border border-gray-200 rounded-md cursor-move ${dragging ? "opacity-50 scale-95" : ""
+              className={`flex items-start justify-between p-2 border border-gray-200 rounded-md cursor-grabbing ${dragging ? "opacity-50 scale-95" : ""
                 } transition-all duration-300 ease-in-out`} // Add transition for scaling and opacity
             >
               <div className="flex items-start mt-1">

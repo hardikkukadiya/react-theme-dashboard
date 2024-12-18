@@ -18,7 +18,7 @@ const Order = () => {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState(false);
   const [edit, setEdit] = useState(false);
-
+ 
   const handleOpen = () => setOpen(!open);
   const handleView = () => setView(!view);
   const handleEdit = () => setEdit(!edit);
@@ -74,6 +74,24 @@ const Order = () => {
       date: "10 Feb 2024",
     },
   ];
+  const [rows, setRows] = useState(TABLE_ROWS);
+  const [draggedIndex, setDraggedIndex] = useState(null);
+  const handleDragStart = (index) => {
+    setDraggedIndex(index);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const handleDrop = (index) => {
+    const reorderedRows = [...rows];
+    const draggedRow = reorderedRows.splice(draggedIndex, 1)[0];
+    reorderedRows.splice(index, 0, draggedRow);
+    setRows(reorderedRows);
+    setDraggedIndex(null);
+  };
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -115,7 +133,6 @@ const Order = () => {
               </tr>
             </thead>
             <tbody>
-              {/* {Array.from({ length: 4 }).map((_, index) => ( */}
               {Array.from({ length: 4 }, (_, index) => ({
                 id: `placeholder-${index}-${Date.now()}`, // Generate a unique ID
               })).map((item) => (
@@ -149,88 +166,65 @@ const Order = () => {
             </tbody>
           </table>
         </Card>
-      ) : (
-        <Card className="h-full w-full overflow-scroll">
-          <CardHeader
-            floated={false}
-            shadow={false}
-            className="mb-2 rounded-none p-2 flex justify-end items-end"
-          >
-            <div className="w-full md:w-96">
-              <Input
-                label="Search Invoice"
-                icon={<MagnifyingGlassIcon className="h-5 w-5" />}
-              />
-            </div>
-          </CardHeader>
-          <table className="w-full min-w-max table-auto text-left">
-            <thead>
-              <tr>
-                {TABLE_HEAD.map(({ head }) => (
-                  <th key={head} className="border-b border-gray-300 p-4">
-                    <div className="flex items-center gap-1">
-                      <Typography
-                        color="blue-gray"
-                        variant="small"
-                        className="!font-bold"
-                      >
-                        {head}
-                      </Typography>
-                    </div>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {TABLE_ROWS.map(
-                ({ number, customer, amount, issued, date }, index) => {
-                  const isLast = index === TABLE_ROWS.length - 1;
-                  const classes = isLast
-                    ? "p-4"
-                    : "p-4 border-b border-gray-300";
+      ) : (       
+          <Card className="h-full w-full overflow-scroll cursor-grabbing">
+            <CardHeader floated={false} shadow={false} className="mb-2 rounded-none p-2 flex justify-end items-end">
+              <div className="w-full md:w-96">
+                <Input label="Search Invoice" icon={<MagnifyingGlassIcon className="h-5 w-5" />} />
+              </div>
+            </CardHeader>
+
+            <table className="w-full min-w-max table-auto text-left">
+              <thead>
+                <tr>
+                  {TABLE_HEAD.map(({ head }) => (
+                    <th key={head} className="border-b border-gray-300 p-4">
+                      <div className="flex items-center gap-1">
+                        <Typography color="blue-gray" variant="small" className="!font-bold">
+                          {head}
+                        </Typography>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map(({ number, customer, amount, issued, date }, index) => {
+                  const isLast = index === rows.length - 1;
+                  const classes = isLast ? "p-4" : "p-4 border-b border-gray-300";
 
                   return (
-                    <tr key={number}>
+                    <tr
+                      key={number}
+                      draggable
+                      onDragStart={() => handleDragStart(index)} // Set dragged index
+                      onDragOver={handleDragOver} // Prevent default to allow drop
+                      onDrop={() => handleDrop(index)} // Handle drop to reorder rows
+                    >
                       <td className={classes}>
                         <div className="flex items-center gap-1">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-bold"
-                          >
+                          <Typography variant="small" color="blue-gray" className="font-bold">
                             {number}
                           </Typography>
                         </div>
                       </td>
                       <td className={classes}>
-                        <Typography
-                          variant="small"
-                          className="font-normal text-gray-600"
-                        >
+                        <Typography variant="small" className="font-normal text-gray-600">
                           {customer}
                         </Typography>
                       </td>
                       <td className={classes}>
-                        <Typography
-                          variant="small"
-                          className="font-normal text-gray-600"
-                        >
+                        <Typography variant="small" className="font-normal text-gray-600">
                           {amount}
                         </Typography>
                       </td>
                       <td className={classes}>
-                        <Typography
-                          variant="small"
-                          className="font-normal text-gray-600"
-                        >
+                        <Typography variant="small" className="font-normal text-gray-600">
                           {issued}
                         </Typography>
                       </td>
                       <td className={classes}>
-                        <Typography
-                          variant="small"
-                          className="font-normal text-gray-600"
-                        >
+                        <Typography variant="small" className="font-normal text-gray-600">
                           {date}
                         </Typography>
                       </td>
@@ -253,11 +247,10 @@ const Order = () => {
                       </td>
                     </tr>
                   );
-                }
-              )}
-            </tbody>
-          </table>
-        </Card>
+                })}
+              </tbody>
+            </table>
+          </Card>
       )}      
     </div>            
   );
