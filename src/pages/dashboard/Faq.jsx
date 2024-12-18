@@ -96,12 +96,13 @@ const Faq = () => {
           </AccordionBody>
         </Accordion>
       ))}
-
       {/* Add/Edit FAQ Modal */}
       {modalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-60">
-          <div className="bg-white rounded-lg p-8 w-96 shadow-xl transform transition-all">
-            <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700">{editId ? "Edit FAQ" : "Add FAQ"}</h2>
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 p-5">
+          <div className="bg-white rounded-lg p-6 sm:p-8 w-full max-w-md sm:max-w-lg shadow-xl transform transition-all">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center text-gray-700">
+              {editId ? "Edit FAQ" : "Add FAQ"}
+            </h2>
             <div className="mb-3">
               <label className="text-sm font-medium text-gray-600 block mb-2">Question</label>
               <input
@@ -141,7 +142,10 @@ const Faq = () => {
               />
             </div>
             <div className="flex justify-end space-x-4">
-              <button onClick={resetForm} className="bg-gray-300 text-black p-2 rounded-md hover:bg-gray-400 transition">
+              <button
+                onClick={resetForm}
+                className="bg-gray-300 text-black p-2 rounded-md hover:bg-gray-400 transition"
+              >
                 Cancel
               </button>
               <button
