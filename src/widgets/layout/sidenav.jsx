@@ -16,12 +16,12 @@ export function Sidenav({ brandName, routes }) {
     white: "bg-white shadow-sm",
     transparent: "bg-transparent",
   };
- 
+
   return (
-   
+
     <aside
-       className={`${sidenavTypes[sidenavType]} ${openSidenav ? "translate-x-0" : "-translate-x-80"
-        } fixed inset-y-0 left-0 z-50 h-full w-72 bg-white  transition-transform duration-300 border border-blue-gray-100 overflow-y-auto custom`}
+      className={`${sidenavTypes[sidenavType]} ${openSidenav ? "translate-x-0" : "-translate-x-80"
+        } fixed inset-y-0 left-0 z-50 h-full w-72 bg-white  transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100 overflow-y-auto custom`}
     >
       {/* Header Section */}
       <div className="relative flex items-center justify-between py-6 px-6 ">
@@ -46,9 +46,11 @@ export function Sidenav({ brandName, routes }) {
         </IconButton>
       </div>
 
+      {/* Navigation Links */}
       <div className="p-4">
         {routes.map(({ layout, title, pages }, key) => (
-          <ul key={key} className="mb-4 flex flex-col gap-1">             
+          <ul key={key} className="mb-4 flex flex-col gap-1">
+            {/* Section Title */}
             {title && (
               <li className="mt-4 mb-2">
                 <Typography
@@ -70,9 +72,9 @@ export function Sidenav({ brandName, routes }) {
                         isActive
                           ? sidenavColor
                           : sidenavType === "dark"
-                          ? "white"
-                          : "blue-gray"
-                      }                    
+                            ? "white"
+                            : "blue-gray"
+                      }
                       className="flex items-center gap-4 px-4 capitalize"
                       fullWidth>
                       {icon}

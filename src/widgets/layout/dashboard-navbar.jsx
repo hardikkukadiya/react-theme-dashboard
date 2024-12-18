@@ -78,19 +78,11 @@ export function DashboardNavbar() {
           <IconButton
             variant="text"
             color="blue-gray"
-            className=""
-            onClick={() => setOpenSidenav(dispatch, !openSidenav)}
-          >
-            <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
-          </IconButton>
-          {/* <IconButton
-            variant="text"
-            color="blue-gray"
             className="block xl:hidden"
             onClick={() => setOpenSidenav(dispatch, !openSidenav)}
           >
             <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
-          </IconButton> */}
+          </IconButton>
           <Link to="/auth/auth/sign-in">
             <div className="flex items-center gap-4">
               <Button
