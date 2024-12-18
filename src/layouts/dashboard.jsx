@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import { Sidenav, DashboardNavbar, Configurator } from "../widgets/layout";
 import routes from "../routes";
 import { useMaterialTailwindController } from "../context";
-import ErrorBoundary from "../ErrorBoundary";
 
 export function Dashboard() {
 
@@ -21,7 +20,6 @@ export function Dashboard() {
       <div className="p-4 xl:ml-72">
         <DashboardNavbar />
         <Configurator />
-        <ErrorBoundary>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               {routes.map(
@@ -33,7 +31,6 @@ export function Dashboard() {
               )}
             </Routes>
           </Suspense>
-        </ErrorBoundary>
         <div className="text-blue-gray-600">
         </div>
       </div>
